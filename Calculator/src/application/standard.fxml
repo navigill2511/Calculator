@@ -1,5 +1,4 @@
 <?xml version="1.0" encoding="UTF-8"?>
-
 <?import javafx.geometry.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
@@ -13,7 +12,7 @@
         </padding>
 
         <HBox alignment="CENTER" >
-            <TextField fx:id="standardTextField" promptText="0" alignment="BASELINE_RIGHT" prefHeight="45" prefWidth="172" />
+            <TextField fx:id="standardTextField" promptText="0" alignment="BASELINE_RIGHT" prefHeight="50" prefWidth="172" />
         </HBox>
 
         <HBox spacing="4" alignment="CENTER" >

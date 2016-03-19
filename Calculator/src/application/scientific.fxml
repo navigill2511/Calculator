@@ -1,10 +1,79 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.VBox?>
-
+<?import javafx.scene.layout.HBox?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.Button?>
 <AnchorPane fx:controller="application.ScientificController" xmlns:fx="http://javafx.com/fxml/1">
-<VBox>
+<VBox spacing="3" alignment="CENTER">
 
+    <padding>
+        <Insets left="5" right="5" top="5" bottom="5" />
+    </padding>
+
+    <HBox>
+        <TextField fx:id="scientificTextField" alignment="BASELINE_RIGHT" prefWidth="384" prefHeight="50" promptText="0" />
+    </HBox>
+
+    <HBox spacing="3" alignment="CENTER_LEFT">
+        <Button text="MOD" prefWidth="40" />
+        <Button text="()" prefWidth="40" />
+        <Button text="+/-" prefWidth="40" />
+        <Button text="\%" prefWidth="40" />
+        <Button text="DEL" prefWidth="40" />
+        <Button text="AC" prefWidth="40" />
+        <Button text="" prefWidth="40" />
+        <Button text="" prefWidth="40" />
+        <Button text="" prefWidth="40" />
+    </HBox>
+
+    <HBox spacing="3" alignment="CENTER_LEFT">
+        <Button text="x²" prefWidth="40" />
+        <Button text="π" prefWidth="40" />
+        <Button text="" prefWidth="40" />
+        <Button text="" prefWidth="40" />
+        <Button text="" prefWidth="40" />
+        <Button text="" prefWidth="40" />
+        <Button text="" prefWidth="40" />
+        <Button text="" prefWidth="40" />
+        <Button text="" prefWidth="40" />
+    </HBox>
+
+    <HBox spacing="3" alignment="CENTER_LEFT">
+        <Button text="" prefWidth="40" />
+        <Button text="" prefWidth="40" />
+        <Button text="" prefWidth="40" />
+        <Button text="" prefWidth="40" />
+        <Button text="" prefWidth="40" />
+        <Button text="" prefWidth="40" />
+        <Button text="" prefWidth="40" />
+        <Button text="" prefWidth="40" />
+        <Button text="" prefWidth="40" />
+    </HBox>
+
+    <HBox spacing="3" alignment="CENTER_LEFT">
+        <Button text="" prefWidth="40" />
+        <Button text="" prefWidth="40" />
+        <Button text="" prefWidth="40" />
+        <Button text="" prefWidth="40" />
+        <Button text="" prefWidth="40" />
+        <Button text="" prefWidth="40" />
+        <Button text="" prefWidth="40" />
+        <Button text="" prefWidth="40" />
+        <Button text="" prefWidth="40" />
+    </HBox>
+
+    <HBox spacing="3" alignment="CENTER_LEFT">
+        <Button text="" prefWidth="40" />
+        <Button text="" prefWidth="40" />
+        <Button text="" prefWidth="40" />
+        <Button text="" prefWidth="40" />
+        <Button text="" prefWidth="40" />
+        <Button text="" prefWidth="83" />
+        <Button text="" prefWidth="40" />
+        <Button text="" prefWidth="40" />
+    </HBox>
 
 </VBox>
 </AnchorPane>
