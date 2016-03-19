@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane fx:controller="application.StandardController" xmlns:fx="http://javafx.com/fxml/1">
+
+    <VBox spacing="4" alignment="CENTER" >
+
+        <padding>
+            <Insets left="5" right="5" top="5" bottom="5" />
+        </padding>
+
+        <HBox alignment="CENTER" >
+            <TextField fx:id="standardTextField" promptText="0" alignment="BASELINE_RIGHT" prefHeight="45" prefWidth="172" />
+        </HBox>
+
+        <HBox spacing="4" alignment="CENTER" >
+            <Button text="AC"  prefWidth="40" />
+            <Button text="+/-" prefWidth="40" />
+            <Button text="\%"  prefWidth="40" />
+            <Button text="/"   prefWidth="40" />
+        </HBox>
+
+        <HBox spacing="4" alignment="CENTER" >
+            <Button text="7"  prefWidth="40" />
+            <Button text="8"  prefWidth="40" />
+            <Button text="9"  prefWidth="40" />
+            <Button text="*"  prefWidth="40" />
+        </HBox>
+
+        <HBox spacing="4" alignment="CENTER" >
+            <Button text="4" prefWidth="40" />
+            <Button text="5" prefWidth="40" />
+            <Button text="6" prefWidth="40" />
+            <Button text="-" prefWidth="40" />
+        </HBox>
+
+        <HBox spacing="4" alignment="CENTER" >
+            <Button text="1" prefWidth="40" />
+            <Button text="2" prefWidth="40" />
+            <Button text="3" prefWidth="40" />
+            <Button text="+" prefWidth="40" />
+        </HBox>
+
+        <HBox spacing="4" alignment="CENTER" >
+            <Button text="0" prefWidth="84" />
+            <Button text="." prefWidth="40" />
+            <Button text="=" prefWidth="40" />
+        </HBox>
+
+    </VBox>
+
+</AnchorPane>
+
