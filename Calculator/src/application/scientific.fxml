@@ -5,18 +5,21 @@
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.control.Button?>
+
 <AnchorPane fx:controller="application.ScientificController" xmlns:fx="http://javafx.com/fxml/1">
 <VBox spacing="3" alignment="CENTER">
 
     <fx:include source="navigation.fxml" alignment="CENTER_LEFT" />
 
     <HBox>
+        <padding><Insets left="5" right="5" top="4" bottom="4"/></padding>
         <TextField fx:id="scientificTextField" alignment="BASELINE_RIGHT" prefWidth="384" prefHeight="50" promptText="0" />
     </HBox>
 
     <HBox spacing="3" alignment="CENTER_LEFT">
+        <padding><Insets left="5" right="5"/></padding>
         <Button text="MOD" prefWidth="40" />
-        <Button text="()" prefWidth="40" />
+        <Button text="( )" prefWidth="40" />
         <Button text="+/-" prefWidth="40" />
         <Button text="\%" prefWidth="40" />
         <Button text="DEL" prefWidth="40" />
@@ -27,8 +30,35 @@
     </HBox>
 
     <HBox spacing="3" alignment="CENTER_LEFT">
-        <Button text="x²" prefWidth="40" />
+        <padding><Insets left="5" right="5"/></padding>
         <Button text="π" prefWidth="40" />
+        <Button text="sin" prefWidth="40" />
+        <Button text="cos" prefWidth="40" />
+        <Button text="tan" prefWidth="40" />
+        <Button text="√" prefWidth="40" />
+        <Button text="7" prefWidth="40" />
+        <Button text="8" prefWidth="40" />
+        <Button text="9" prefWidth="40" />
+        <Button text="÷" prefWidth="40" />
+    </HBox>
+
+    <HBox spacing="3" alignment="CENTER_LEFT">
+        <padding><Insets left="5" right="5"/></padding>
+        <Button text="x²" prefWidth="40" />
+        <Button text="sin-¹" prefWidth="40" />
+        <Button text="cos-¹" prefWidth="40" />
+        <Button text="tan-¹" prefWidth="40" />
+        <Button text="³√" prefWidth="40" />
+        <Button text="4" prefWidth="40" />
+        <Button text="5" prefWidth="40" />
+        <Button text="6" prefWidth="40" />
+        <Button text="-" prefWidth="40" />
+    </HBox>
+
+    <HBox spacing="3" alignment="CENTER_LEFT">
+        <padding><Insets left="5" right="5"/></padding>
+        <Button text="x³" prefWidth="40" />
+        <Button text="" prefWidth="40" />
         <Button text="" prefWidth="40" />
         <Button text="" prefWidth="40" />
         <Button text="" prefWidth="40" />
@@ -39,30 +69,7 @@
     </HBox>
 
     <HBox spacing="3" alignment="CENTER_LEFT">
-        <Button text="" prefWidth="40" />
-        <Button text="" prefWidth="40" />
-        <Button text="" prefWidth="40" />
-        <Button text="" prefWidth="40" />
-        <Button text="" prefWidth="40" />
-        <Button text="" prefWidth="40" />
-        <Button text="" prefWidth="40" />
-        <Button text="" prefWidth="40" />
-        <Button text="" prefWidth="40" />
-    </HBox>
-
-    <HBox spacing="3" alignment="CENTER_LEFT">
-        <Button text="" prefWidth="40" />
-        <Button text="" prefWidth="40" />
-        <Button text="" prefWidth="40" />
-        <Button text="" prefWidth="40" />
-        <Button text="" prefWidth="40" />
-        <Button text="" prefWidth="40" />
-        <Button text="" prefWidth="40" />
-        <Button text="" prefWidth="40" />
-        <Button text="" prefWidth="40" />
-    </HBox>
-
-    <HBox spacing="3" alignment="CENTER_LEFT">
+        <padding><Insets left="5" right="5" bottom="5"/></padding>
         <Button text="" prefWidth="40" />
         <Button text="" prefWidth="40" />
         <Button text="" prefWidth="40" />

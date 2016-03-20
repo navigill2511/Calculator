@@ -3,9 +3,12 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
+<?import javafx.scene.Group?>
 <AnchorPane fx:controller="application.StandardController" xmlns:fx="http://javafx.com/fxml/1">
 
     <VBox spacing="4" alignment="CENTER" >
+
+        <fx:define><Group fx:id=""/></fx:define>
 
         <padding><Insets bottom="5" /></padding>
 
@@ -26,33 +29,33 @@
 
         <HBox spacing="4" alignment="CENTER" >
             <padding><Insets left="5" right="5" /></padding>
-            <Button text="7"  prefWidth="40" />
-            <Button text="8"  prefWidth="40" />
-            <Button text="9"  prefWidth="40" />
-            <Button text="*"  prefWidth="40" />
+            <Button text="7"  prefWidth="40" onAction="#number"/>
+            <Button text="8"  prefWidth="40" onAction="#number"/>
+            <Button text="9"  prefWidth="40" onAction="#number"/>
+            <Button text="*"  prefWidth="40" onAction="#operator"/>
         </HBox>
 
         <HBox spacing="4" alignment="CENTER" >
             <padding><Insets left="5" right="5" /></padding>
-            <Button text="4" prefWidth="40" />
-            <Button text="5" prefWidth="40" />
-            <Button text="6" prefWidth="40" />
-            <Button text="-" prefWidth="40" />
+            <Button text="4" prefWidth="40" onAction="#number"/>
+            <Button text="5" prefWidth="40" onAction="#number"/>
+            <Button text="6" prefWidth="40" onAction="#number"/>
+            <Button text="-" prefWidth="40" onAction="#operator"/>
         </HBox>
 
         <HBox spacing="4" alignment="CENTER" >
             <padding><Insets left="5" right="5" /></padding>
-            <Button text="1" prefWidth="40" />
-            <Button text="2" prefWidth="40" />
-            <Button text="3" prefWidth="40" />
-            <Button text="+" prefWidth="40" />
+            <Button text="1" prefWidth="40" onAction="#number"/>
+            <Button text="2" prefWidth="40" onAction="#number"/>
+            <Button text="3" prefWidth="40" onAction="#number"/>
+            <Button text="+" prefWidth="40" onAction="#operator"/>
         </HBox>
 
         <HBox spacing="4" alignment="CENTER" >
             <padding><Insets left="5" right="5" /></padding>
-            <Button text="0" prefWidth="84" />
-            <Button text="." prefWidth="40" />
-            <Button text="=" prefWidth="40" />
+            <Button text="0" prefWidth="84" onAction="#number"/>
+            <Button text="." prefWidth="40" onAction="#number"/>
+            <Button text="=" prefWidth="40" onAction="#calculate"/>
         </HBox>
 
     </VBox>
