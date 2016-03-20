@@ -1,8 +1,30 @@
+.root
+{
+	-fx-background-color: #F4F4F4;
+}
+
 .button
 {
+	-fx-font-size: 12;
+	-fx-min-height: 26px;
+	-fx-background-color: #D4D4D4;
+	-fx-background-radius: 2px;
+}
 
+.button:hover
+{
+	-fx-background-color: gold;
 }
 
 #standardTextField
 {
+	-fx-font-size: 25px;
+	-fx-display-caret: false;
+	-fx-prompt-text-fill: "0";
+	-fx-display-caret: false;
+}
+
+#menuInStandard
+{
+    width: 300px;
 }
