@@ -9,7 +9,7 @@
 
         <padding><Insets bottom="5" /></padding>
 
-        <fx:include fx:id="menuInStandard" source="navigation.fxml" alignment="CENTER_LEFT" />
+        <fx:include source="navigation.fxml" alignment="CENTER_LEFT" />
 
         <HBox alignment="CENTER" >
             <padding><Insets left="5" right="5" top="4" bottom="4" /></padding>

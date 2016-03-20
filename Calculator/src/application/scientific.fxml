@@ -8,9 +8,7 @@
 <AnchorPane fx:controller="application.ScientificController" xmlns:fx="http://javafx.com/fxml/1">
 <VBox spacing="3" alignment="CENTER">
 
-    <padding>
-        <Insets left="5" right="5" top="5" bottom="5" />
-    </padding>
+    <fx:include source="navigation.fxml" alignment="CENTER_LEFT" />
 
     <HBox>
         <TextField fx:id="scientificTextField" alignment="BASELINE_RIGHT" prefWidth="384" prefHeight="50" promptText="0" />
