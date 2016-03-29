@@ -10,7 +10,14 @@
         <Menu text="View">
             <MenuItem text="Standard"   onAction="#handleStandardAction"/>
             <MenuItem text="Scientific" onAction="#handleScientificAction"/>
-            <MenuItem text="Statistics" />
+                <Menu text="Scientific">
+                    <MenuItem text="Permutation/Combination" onAction="#handlePermCombAction"/>
+                    <Menu text="Probability">
+                        <MenuItem text="Single Event" onAction="#handleSingleEventProbabilityAction"/>
+                        <MenuItem text="Multiple Event" onAction="#handleMultipleEventProbabilityAction"/>
+                    </Menu>
+                    <MenuItem text="Standard Deviation" onAction="#handleStandardDeviationAction"/>
+                </Menu>
             <MenuItem text="Converter"  onAction="#handleConverterAction"/>
         </Menu>
         <Menu text="Edit">
