@@ -4,7 +4,7 @@
 <?import javafx.scene.control.Menu?>
 <?import javafx.scene.control.MenuItem?>
 
-<HBox alignment="CENTER_LEFT" prefHeight="25" fx:controller="application.MenuController" xmlns:fx="http://javafx.com/fxml/1">
+<HBox alignment="CENTER_LEFT" prefHeight="25" fx:controller="application.NavigationController" xmlns:fx="http://javafx.com/fxml/1">
 
     <MenuBar fx:id="menuBar" HBox.hgrow="ALWAYS">
         <Menu text="View">

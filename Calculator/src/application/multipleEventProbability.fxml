@@ -1,1 +1,70 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.Button?>
+
+<AnchorPane fx:controller="application.MultipleEventProbabilityController" xmlns:fx="http://javafx.com/fxml/1">
+
+    <VBox spacing="5" alignment="CENTER">
+
+        <padding><Insets bottom="5" /></padding>
+
+        <fx:include source="navigation.fxml" alignment="CENTER_LEFT" />
+
+        <HBox alignment="CENTER">
+            <padding><Insets top="10" bottom="10" /></padding>
+            <Label fx:id="singleEventProbabilityLabel" text="Single Event Probability"/>
+        </HBox>
+
+        <VBox spacing="5">
+            <HBox >
+                <Label text="Possible outcomes" prefWidth="140"/>
+                <TextField prefWidth="120"/>
+            </HBox>
+
+            <HBox>
+                <Label text="Events occurred in A" prefWidth="140"/>
+                <TextField prefWidth="120"/>
+            </HBox>
+
+            <HBox>
+                <Label text="Events occurred in B" prefWidth="140"/>
+                <TextField prefWidth="120"/>
+            </HBox>
+
+        </VBox>
+
+        <HBox alignment="CENTER">
+            <padding><Insets top="20" bottom="20" /></padding>
+            <Button text="Calculate" alignment="CENTER" prefWidth="200"/>
+        </HBox>
+
+        <HBox spacing="5" alignment="CENTER">
+            <VBox spacing="10" prefWidth="40" >
+                <Label text="P(A)"/>
+                <Label text="P(B)"/>
+            </VBox>
+
+            <VBox spacing="5" >
+                <padding><Insets right="20" /> </padding>
+                <TextField prefWidth="70"/>
+                <TextField prefWidth="70"/>
+            </VBox>
+
+            <VBox spacing="10" prefWidth="40">
+                <Label text="P(A∩B)"/>
+                <Label text="P(A | B)"/>
+            </VBox>
+
+            <VBox spacing="5" >
+                <TextField prefWidth="70" />
+                <TextField prefWidth="70" />
+            </VBox>
+        </HBox>
+
+    </VBox>
+</AnchorPane>
