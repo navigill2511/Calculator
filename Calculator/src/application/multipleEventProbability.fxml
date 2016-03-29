@@ -11,7 +11,7 @@
 
     <VBox spacing="5" alignment="CENTER">
 
-        <padding><Insets bottom="5" /></padding>
+        <padding><Insets left="5" right="5" top="0" bottom="5" /></padding>
 
         <fx:include source="navigation.fxml" alignment="CENTER_LEFT" />
 
@@ -38,32 +38,37 @@
 
         </VBox>
 
-        <HBox alignment="CENTER">
+        <VBox alignment="CENTER">
             <padding><Insets top="20" bottom="20" /></padding>
             <Button text="Calculate" alignment="CENTER" prefWidth="200"/>
-        </HBox>
+        </VBox>
 
         <HBox spacing="5" alignment="CENTER">
-            <VBox spacing="10" prefWidth="40" >
-                <Label text="P(A)"/>
-                <Label text="P(B)"/>
-            </VBox>
 
-            <VBox spacing="5" >
-                <padding><Insets right="20" /> </padding>
+            <VBox spacing="5">
+            <HBox>
+                <padding><Insets right="30"/> </padding>
+                <Label text="P(A)" prefWidth="50"/>
                 <TextField prefWidth="70"/>
+            </HBox>
+            <HBox>
+                <padding><Insets right="30"/></padding>
+                <Label text="P(B)" prefWidth="50"/>
                 <TextField prefWidth="70"/>
+            </HBox>
             </VBox>
 
-            <VBox spacing="10" prefWidth="40">
-                <Label text="P(A∩B)"/>
-                <Label text="P(A | B)"/>
+            <VBox spacing="5">
+            <HBox>
+                <Label text="P(A∩B)" prefWidth="50"/>
+                <TextField prefWidth="70"/>
+            </HBox>
+            <HBox>
+                <Label text="P(A | B)" prefWidth="50"/>
+                <TextField prefWidth="70"/>
+            </HBox>
             </VBox>
 
-            <VBox spacing="5" >
-                <TextField prefWidth="70" />
-                <TextField prefWidth="70" />
-            </VBox>
         </HBox>
 
     </VBox>

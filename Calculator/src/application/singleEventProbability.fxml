@@ -20,32 +20,28 @@
             <Label fx:id="singleEventProbabilityLabel" text="Single Event Probability"/>
         </HBox>
 
-        <HBox spacing="5">
-            <VBox spacing="10" prefWidth="120" >
-                <Label text="Possible outcomes"/>
-                <Label text="Events occurred"/>
-            </VBox>
-
-            <VBox>
-                <TextField />
-                <TextField />
-            </VBox>
-        </HBox>
+        <VBox spacing="5">
+            <HBox >
+                <Label text="Possible outcomes" prefWidth="140"/>
+                <TextField  prefWidth="120"/>
+            </HBox>
+            <HBox>
+                <Label text="Events occurred" prefWidth="140"/>
+                <TextField  prefWidth="120"/>
+            </HBox>
+        </VBox>
 
         <HBox alignment="CENTER">
             <padding><Insets top="10" bottom="10" /></padding>
             <Button text="Calculate" alignment="CENTER" prefWidth="200"/>
         </HBox>
 
-        <HBox spacing="5">
-            <VBox spacing="10" prefWidth="120" >
-                <Label text="Probability"/>
-            </VBox>
-
-            <VBox>
-                <TextField />
-            </VBox>
-        </HBox>
+        <VBox spacing="5">
+            <HBox >
+                <Label text="Probability" prefWidth="140"/>
+                <TextField prefWidth="120"/>
+            </HBox>
+        </VBox>
 
     </VBox>
 </AnchorPane>
