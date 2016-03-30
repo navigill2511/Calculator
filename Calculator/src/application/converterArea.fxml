@@ -3,35 +3,19 @@
 <?import java.lang.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
 
 <AnchorPane xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.ConverterController">
-
 <VBox>
     <fx:include alignment="CENTER_LEFT" source="navigation.fxml" />
 
-    <VBox>
-    <fx:include source="converter.fxml"/>
+    <VBox alignment="CENTER">
+        <padding><Insets left="10" right="10" top="0" bottom="20"/> </padding>
+        <fx:include source="converter.fxml"/>
 
-    <VBox>
-        <HBox>
-        <ComboBox>
-        <items>
-            <FXCollections fx:factory="observableArrayList">
-                <String fx:value="meter sq"/>
-                <String fx:value="meter sq"/>
-                <String fx:value="meter sq"/>
-                <String fx:value="meter sq"/>
-                <String fx:value="meter sq"/>
-                </FXCollections>
-        </items>
-        </ComboBox>
-        <TextField/>
-        </HBox>
-    </VBox>
-
-    <VBox>
-        <HBox>
-        <ComboBox>
+        <VBox spacing="10" alignment="CENTER">
+        <HBox spacing="5" alignment="CENTER">
+        <ComboBox styleClass="comboBox" prefWidth="100">
         <items>
             <FXCollections fx:factory="observableArrayList">
                 <String fx:value="meter sq"/>
@@ -41,11 +25,32 @@
                 <String fx:value="meter sq"/>
             </FXCollections>
         </items>
+            <value>
+                <String fx:value="meter sq"/>
+            </value>
         </ComboBox>
-        <TextField/>
+        <TextField styleClass="textField" prefWidth="100"/>
         </HBox>
+
+        <HBox spacing="5" alignment="CENTER">
+        <ComboBox styleClass="comboBox" prefWidth="100">
+        <items>
+            <FXCollections fx:factory="observableArrayList">
+                <String fx:value="meter sq"/>
+                <String fx:value="meter sq"/>
+                <String fx:value="meter sq"/>
+                <String fx:value="meter sq"/>
+                <String fx:value="meter sq"/>
+            </FXCollections>
+        </items>
+            <value>
+                <String fx:value="meter sq"/>
+            </value>
+        </ComboBox>
+        <TextField styleClass="textField" prefWidth="100"/>
+        </HBox>
+        </VBox>
     </VBox>
 
-</VBox>
 </VBox>
 </AnchorPane>

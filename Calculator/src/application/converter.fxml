@@ -4,45 +4,24 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<AnchorPane xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.ConverterController">
-   
-    <VBox>
-        <fx:include alignment="CENTER_LEFT" source="navigation.fxml" />
-      
-        <VBox>
+<?import javafx.geometry.Insets?>
+<VBox xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.ConverterController" alignment="CENTER">
+    <padding><Insets top="10" bottom="30" /></padding>
+    <ComboBox styleClass="comboBox" prefWidth="200" prefHeight="40">
+        <items>
+            <FXCollections fx:factory="observableArrayList">
+                <String fx:value="Length"      />
+                <String fx:value="Energy"      />
+                <String fx:value="Weight"      />
+                <String fx:value="Force"       />
+                <String fx:value="Area"        />
+                <String fx:value="Temperature" />
+                <String fx:value="Speed"       />
+            </FXCollections>
+        </items>
+        <value>
+            <String fx:value="Length" />
+        </value>
+    </ComboBox>
+</VBox>
 
-            <VBox>
-            <ComboBox>
-            <items>
-                <FXCollections fx:factory="observableArrayList">
-                    <String fx:value="Length"      />
-                    <String fx:value="Energy"      />
-                    <String fx:value="Weight"      />
-                    <String fx:value="Force"       />
-                    <String fx:value="Area"        />
-                    <String fx:value="Temperature" />
-                    <String fx:value="Speed"       />
-                </FXCollections>
-            </items>
-                <value>
-                    <String fx:value="Length" />
-                </value>
-            </ComboBox>
-            </VBox>
-
-            <VBox>
-            <HBox>
-            <ComboBox>
-                <FXCollections fx:factory="observableArrayList">
-                    <String fx:value="Apple"/>
-                </FXCollections>
-            </ComboBox>
-            <TextField/>
-            </HBox>
-            </VBox>
-
-        </VBox>
-
-    </VBox>
-
-</AnchorPane>
