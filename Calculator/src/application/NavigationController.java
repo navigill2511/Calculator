@@ -89,7 +89,7 @@ public class NavigationController
     {
         System.out.println("Converter clicked!");
         Stage primaryStage = (Stage) menuBar.getScene().getWindow();
-        Pane myPane = FXMLLoader.load(getClass().getResource("converter.fxml"));
+        Pane myPane = FXMLLoader.load(getClass().getResource("converterArea.fxml"));
         Scene scene = new Scene(myPane);
         addScene(primaryStage, scene);
     }
