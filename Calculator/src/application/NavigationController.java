@@ -85,9 +85,13 @@ public class NavigationController
     }
 
     @FXML
-    public void handleConverterAction()
+    public void handleConverterAction() throws IOException
     {
         System.out.println("Converter clicked!");
+        Stage primaryStage = (Stage) menuBar.getScene().getWindow();
+        Pane myPane = FXMLLoader.load(getClass().getResource("converter.fxml"));
+        Scene scene = new Scene(myPane);
+        addScene(primaryStage, scene);
     }
 
     private void addScene(Stage primaryStage, Scene scene)

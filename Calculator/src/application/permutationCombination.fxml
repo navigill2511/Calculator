@@ -1,1 +1,53 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.layout.AnchorPane?>
+
+
+<?import javafx.scene.layout.VBox?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.Button?>
+<AnchorPane fx:controller="application.MultipleEventProbabilityController" xmlns:fx="http://javafx.com/fxml/1">
+
+    <VBox>
+        <fx:include source="navigation.fxml" alignment="CENTER_LEFT" />
+
+        <VBox>
+            <padding><Insets left="10" right="10" top="0" bottom="10"/></padding>
+
+            <VBox>
+                <padding><Insets top="10" bottom="20" /></padding>
+                <Label text="Permutation/Combination" styleClass="title" alignment="CENTER" prefHeight="40" prefWidth="275"/>
+            </VBox>
+
+            <VBox spacing="5">
+            <HBox alignment="CENTER">
+                <Label text="Sample points" prefWidth="120"/>
+                <TextField styleClass="textField"/>
+            </HBox>
+            <HBox alignment="CENTER">
+                <Label text="# of Sample points" prefWidth="120"/>
+                <TextField styleClass="textField"/>
+            </HBox>
+            </VBox>
+
+            <VBox alignment="CENTER">
+                <padding><Insets top="20" bottom="20" /></padding>
+                <Button text="Calculate" alignment="CENTER" prefWidth="200" prefHeight="30"/>
+            </VBox>
+
+            <VBox spacing="5" alignment="CENTER">
+                <HBox alignment="CENTER">
+                    <Label text="Permutation" prefWidth="80"/>
+                    <TextField styleClass="textField"/>
+                </HBox>
+                <HBox alignment="CENTER">
+                    <Label text="Combination" prefWidth="80"/>
+                    <TextField styleClass="textField"/>
+                </HBox>
+            </VBox>
+        </VBox>
+    </VBox>
+
+</AnchorPane>

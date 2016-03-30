@@ -11,49 +11,46 @@
 
     <VBox spacing="5" alignment="CENTER">
 
-        <padding><Insets left="5" right="5" top="0" bottom="5" /></padding>
-
         <fx:include source="navigation.fxml" alignment="CENTER_LEFT" />
 
+        <VBox alignment="CENTER">
+        <padding><Insets left="10" right="10" top="0" bottom="10" /></padding>
+
         <HBox alignment="CENTER">
-            <padding><Insets top="10" bottom="10" /></padding>
-            <Label fx:id="singleEventProbabilityLabel" text="Single Event Probability"/>
+            <padding><Insets top="10" bottom="20" /></padding>
+            <Label text="Multiple Event Probability" styleClass="title" prefHeight="40" prefWidth="275" alignment="CENTER"/>
         </HBox>
 
         <VBox spacing="5">
             <HBox >
-                <Label text="Possible outcomes" prefWidth="140"/>
-                <TextField styleClass="textField" prefWidth="120"/>
+                <Label text="Possible outcomes" prefWidth="120"/>
+                <TextField styleClass="textField" prefWidth="150"/>
             </HBox>
-
             <HBox>
-                <Label text="Events occurred in A" prefWidth="140"/>
-                <TextField styleClass="textField" prefWidth="120"/>
+                <Label text="Events occurred in A" prefWidth="120"/>
+                <TextField styleClass="textField" prefWidth="150"/>
             </HBox>
-
             <HBox>
-                <Label text="Events occurred in B" prefWidth="140"/>
-                <TextField styleClass="textField" prefWidth="120"/>
+                <Label text="Events occurred in B" prefWidth="120"/>
+                <TextField styleClass="textField" prefWidth="150"/>
             </HBox>
-
         </VBox>
 
         <VBox alignment="CENTER">
             <padding><Insets top="20" bottom="20" /></padding>
-            <Button text="Calculate" alignment="CENTER" prefWidth="200"/>
+            <Button text="Calculate" alignment="CENTER" prefWidth="200" prefHeight="30"/>
         </VBox>
 
         <HBox spacing="5" alignment="CENTER">
-
             <VBox spacing="5">
             <HBox>
                 <padding><Insets right="30"/> </padding>
-                <Label text="P(A)" prefWidth="50"/>
+                <Label text="P(A)" prefWidth="30"/>
                 <TextField styleClass="textField" prefWidth="70"/>
             </HBox>
             <HBox>
                 <padding><Insets right="30"/></padding>
-                <Label text="P(B)" prefWidth="50"/>
+                <Label text="P(B)" prefWidth="30"/>
                 <TextField styleClass="textField" prefWidth="70"/>
             </HBox>
             </VBox>
@@ -68,8 +65,8 @@
                 <TextField styleClass="textField" prefWidth="70"/>
             </HBox>
             </VBox>
-
         </HBox>
+        </VBox>
 
     </VBox>
 </AnchorPane>
