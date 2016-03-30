@@ -6,6 +6,7 @@
 .button
 {
 	-fx-font-size: 12;
+	-fx-font-family: georgia;
 	-fx-min-height: 26px;
 	-fx-background-color: #D4D4D4;
 	-fx-background-radius: 2px;
@@ -13,14 +14,12 @@
 
 .button:hover
 {
-	-fx-background-color: gold;
+	-fx-background-color: #9494B8;
 }
 
 #standardTextField
 {
 	-fx-font-size: 25px;
-	-fx-display-caret: false;
-	-fx-display-caret: false;
 }
 
 #menuInStandard
@@ -28,7 +27,23 @@
     width: 300px;
 }
 
-.Label
+.title
+{
+    -fx-background-color: #C2C2D6;
+    -fx-font-size: 15px;
+    -fx-font-family: georgia;
+    -fx-font-weight: normal;
+}
+
+.menuBar
 {
     -fx-background-color: #D4D4D4;
+}
+
+.textField
+{
+    -fx-background-color: #FFFFFF;
+    -fx-border: 2px;
+    -fx-border-color: #666;
+    -fx-display-caret: false;
 }

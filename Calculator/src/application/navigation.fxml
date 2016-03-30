@@ -6,7 +6,8 @@
 
 <HBox alignment="CENTER_LEFT" prefHeight="25" fx:controller="application.NavigationController" xmlns:fx="http://javafx.com/fxml/1">
 
-    <MenuBar fx:id="menuBar" HBox.hgrow="ALWAYS">
+    <MenuBar styleClass="menuBar" fx:id="menuBar" HBox.hgrow="ALWAYS">
+
         <Menu text="View">
             <MenuItem text="Standard"   onAction="#handleStandardAction"/>
             <MenuItem text="Scientific" onAction="#handleScientificAction"/>
@@ -20,13 +21,16 @@
                 </Menu>
             <MenuItem text="Converter"  onAction="#handleConverterAction"/>
         </Menu>
+
         <Menu text="Edit">
             <MenuItem text="Copy"  />
             <MenuItem text="Paste" />
         </Menu>
+
         <Menu text="Help">
             <MenuItem text="About" />
         </Menu>
+
     </MenuBar>
 
 </HBox>

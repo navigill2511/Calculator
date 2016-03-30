@@ -23,17 +23,17 @@
         <VBox spacing="5">
             <HBox >
                 <Label text="Possible outcomes" prefWidth="140"/>
-                <TextField prefWidth="120"/>
+                <TextField styleClass="textField" prefWidth="120"/>
             </HBox>
 
             <HBox>
                 <Label text="Events occurred in A" prefWidth="140"/>
-                <TextField prefWidth="120"/>
+                <TextField styleClass="textField" prefWidth="120"/>
             </HBox>
 
             <HBox>
                 <Label text="Events occurred in B" prefWidth="140"/>
-                <TextField prefWidth="120"/>
+                <TextField styleClass="textField" prefWidth="120"/>
             </HBox>
 
         </VBox>
@@ -49,23 +49,23 @@
             <HBox>
                 <padding><Insets right="30"/> </padding>
                 <Label text="P(A)" prefWidth="50"/>
-                <TextField prefWidth="70"/>
+                <TextField styleClass="textField" prefWidth="70"/>
             </HBox>
             <HBox>
                 <padding><Insets right="30"/></padding>
                 <Label text="P(B)" prefWidth="50"/>
-                <TextField prefWidth="70"/>
+                <TextField styleClass="textField" prefWidth="70"/>
             </HBox>
             </VBox>
 
             <VBox spacing="5">
             <HBox>
                 <Label text="P(A∩B)" prefWidth="50"/>
-                <TextField prefWidth="70"/>
+                <TextField styleClass="textField" prefWidth="70"/>
             </HBox>
             <HBox>
                 <Label text="P(A | B)" prefWidth="50"/>
-                <TextField prefWidth="70"/>
+                <TextField styleClass="textField" prefWidth="70"/>
             </HBox>
             </VBox>
 

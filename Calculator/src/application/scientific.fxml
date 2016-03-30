@@ -11,21 +11,22 @@
 
     <fx:include source="navigation.fxml" alignment="CENTER_LEFT" />
 
+    <VBox spacing="3">
+        <padding><Insets left="5" right="5" bottom="10"/></padding>
     <HBox>
-        <padding><Insets left="5" right="5" top="4" bottom="4"/></padding>
-        <TextField fx:id="scientificTextField" alignment="BASELINE_RIGHT" prefWidth="494" prefHeight="50" promptText="0" />
+        <padding><Insets top="5" bottom="5"/></padding>
+        <TextField styleClass="textField" fx:id="scientificTextField" alignment="BASELINE_RIGHT" prefWidth="506" prefHeight="50" promptText="0" />
     </HBox>
 
     <HBox spacing="10" alignment="CENTER_LEFT">
-        <padding><Insets left="5" right="5"/></padding>
 
         <HBox spacing="3" alignment="CENTER_LEFT">
-        <Button text="MOD" prefWidth="50" />
-        <Button text="π"   prefWidth="50" />
-        <Button text="e"   prefWidth="50" />
-        <Button text="\%"  prefWidth="50" />
-        <Button text="( )" prefWidth="50" />
-        <Button text="DEL" prefWidth="50" />
+        <Button text="MOD" prefWidth="52" />
+        <Button text="π"   prefWidth="52" />
+        <Button text="e"   prefWidth="52" />
+        <Button text="\%"  prefWidth="52" />
+        <Button text="( )" prefWidth="52" />
+        <Button text="DEL" prefWidth="52" />
         </HBox>
 
         <HBox spacing="3" alignment="CENTER_LEFT">
@@ -38,15 +39,14 @@
     </HBox>
 
     <HBox spacing="10" alignment="CENTER_LEFT">
-        <padding><Insets left="5" right="5"/></padding>
 
         <HBox spacing="3" alignment="CENTER_LEFT">
-        <Button text="sin"  prefWidth="50" />
-        <Button text="cos"  prefWidth="50" />
-        <Button text="tan"  prefWidth="50" />
-        <Button text="sinh" prefWidth="50" />
-        <Button text="cosh" prefWidth="50" />
-        <Button text="tanh" prefWidth="50" />
+        <Button text="sin"  prefWidth="52" />
+        <Button text="cos"  prefWidth="52" />
+        <Button text="tan"  prefWidth="52" />
+        <Button text="sinh" prefWidth="52" />
+        <Button text="cosh" prefWidth="52" />
+        <Button text="tanh" prefWidth="52" />
         </HBox>
 
         <HBox spacing="3" alignment="CENTER_LEFT">
@@ -59,15 +59,14 @@
     </HBox>
 
     <HBox spacing="10" alignment="CENTER_LEFT">
-        <padding><Insets left="5" right="5"/></padding>
 
         <HBox spacing="3" alignment="CENTER_LEFT">
-        <Button text="sin-¹"  prefWidth="50" />
-        <Button text="cos-¹"  prefWidth="50" />
-        <Button text="tan-¹"  prefWidth="50" />
-        <Button text="sinh-¹" prefWidth="50" />
-        <Button text="cosh-¹" prefWidth="50" />
-        <Button text="tanh-¹" prefWidth="50" />
+        <Button text="sin-¹"  prefWidth="52" />
+        <Button text="cos-¹"  prefWidth="52" />
+        <Button text="tan-¹"  prefWidth="52" />
+        <Button text="sinh-¹" prefWidth="52" />
+        <Button text="cosh-¹" prefWidth="52" />
+        <Button text="tanh-¹" prefWidth="52" />
         </HBox>
 
         <HBox spacing="3" alignment="CENTER_LEFT">
@@ -80,15 +79,14 @@
     </HBox>
 
     <HBox spacing="10" alignment="CENTER_LEFT">
-        <padding><Insets left="5" right="5"/></padding>
 
         <HBox spacing="3" alignment="CENTER_LEFT">
-        <Button text="x²"  prefWidth="50" />
-        <Button text="x³"  prefWidth="50" />
-        <Button text="xⁿ"  prefWidth="50" />
-        <Button text="10ⁿ" prefWidth="50" />
-        <Button text="eⁿ"  prefWidth="50" />
-        <Button text="ln"  prefWidth="50" />
+        <Button text="x²"  prefWidth="52" />
+        <Button text="x³"  prefWidth="52" />
+        <Button text="xⁿ"  prefWidth="52" />
+        <Button text="10ⁿ" prefWidth="52" />
+        <Button text="eⁿ"  prefWidth="52" />
+        <Button text="ln"  prefWidth="52" />
         </HBox>
 
         <HBox spacing="3" alignment="CENTER_LEFT">
@@ -101,15 +99,14 @@
     </HBox>
 
     <HBox spacing="10" alignment="CENTER_LEFT">
-        <padding><Insets left="5" right="5" bottom="5"/></padding>
 
         <HBox spacing="3" alignment="CENTER_LEFT">
-        <Button text="√"    prefWidth="50" />
-        <Button text="³√"   prefWidth="50" />
-        <Button text="ⁿ√"   prefWidth="50" />
-        <Button text="log"  prefWidth="50" />
-        <Button text="log2" prefWidth="50" />
-        <Button text="logn" prefWidth="50" />
+        <Button text="√"    prefWidth="52" />
+        <Button text="³√"   prefWidth="52" />
+        <Button text="ⁿ√"   prefWidth="52" />
+        <Button text="log"  prefWidth="52" />
+        <Button text="log2" prefWidth="52" />
+        <Button text="logn" prefWidth="52" />
         </HBox>
 
         <HBox spacing="3" alignment="CENTER_LEFT">
@@ -119,6 +116,7 @@
         </HBox>
 
     </HBox>
+    </VBox>
 
 </VBox>
 </AnchorPane>

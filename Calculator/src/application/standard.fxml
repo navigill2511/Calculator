@@ -3,24 +3,20 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<?import javafx.scene.Group?>
 <AnchorPane fx:controller="application.StandardController" xmlns:fx="http://javafx.com/fxml/1">
 
-    <VBox spacing="4" alignment="CENTER" >
-
-        <fx:define><Group fx:id=""/></fx:define>
-
-        <padding><Insets bottom="5" /></padding>
-
+    <VBox spacing="5">
         <fx:include source="navigation.fxml" alignment="CENTER_LEFT" />
 
+        <VBox spacing="4">
+        <padding><Insets left="5" right="5" bottom="5"/></padding>
+
         <HBox alignment="CENTER" >
-            <padding><Insets left="5" right="5" top="4" bottom="4" /></padding>
-            <TextField fx:id="standardTextField" promptText="0" alignment="BASELINE_RIGHT" prefHeight="50" prefWidth="172" />
+            <padding><Insets top="5" bottom="5" /></padding>
+            <TextField styleClass="textField" fx:id="standardTextField" alignment="BASELINE_RIGHT" prefHeight="50" prefWidth="172" />
         </HBox>
 
         <HBox spacing="4" alignment="CENTER" >
-            <padding><Insets left="5" right="5" /></padding>
             <Button text="AC"  prefWidth="40" />
             <Button text="+/-" prefWidth="40" />
             <Button text="\%"  prefWidth="40" />
@@ -28,15 +24,13 @@
         </HBox>
 
         <HBox spacing="4" alignment="CENTER" >
-            <padding><Insets left="5" right="5" /></padding>
             <Button text="7"  prefWidth="40" onAction="#number"/>
             <Button text="8"  prefWidth="40" onAction="#number"/>
             <Button text="9"  prefWidth="40" onAction="#number"/>
-            <Button text="*"  prefWidth="40" onAction="#operator"/>
+            <Button text="X"  prefWidth="40" onAction="#operator"/>
         </HBox>
 
         <HBox spacing="4" alignment="CENTER" >
-            <padding><Insets left="5" right="5" /></padding>
             <Button text="4" prefWidth="40" onAction="#number"/>
             <Button text="5" prefWidth="40" onAction="#number"/>
             <Button text="6" prefWidth="40" onAction="#number"/>
@@ -44,7 +38,6 @@
         </HBox>
 
         <HBox spacing="4" alignment="CENTER" >
-            <padding><Insets left="5" right="5" /></padding>
             <Button text="1" prefWidth="40" onAction="#number"/>
             <Button text="2" prefWidth="40" onAction="#number"/>
             <Button text="3" prefWidth="40" onAction="#number"/>
@@ -52,13 +45,12 @@
         </HBox>
 
         <HBox spacing="4" alignment="CENTER" >
-            <padding><Insets left="5" right="5" /></padding>
             <Button text="0" prefWidth="84" onAction="#number"/>
             <Button text="." prefWidth="40" onAction="#number"/>
             <Button text="=" prefWidth="40" onAction="#calculate"/>
         </HBox>
 
+        </VBox>
     </VBox>
-
 </AnchorPane>
 

@@ -1,45 +1,46 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?import javafx.scene.layout.AnchorPane?>
-
 <?import javafx.scene.layout.VBox?>
 <?import javafx.geometry.Insets?>
-
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.control.Button?>
+
 <AnchorPane fx:controller="application.ScientificController" xmlns:fx="http://javafx.com/fxml/1">
 
     <VBox spacing="5" alignment="CENTER">
         <padding><Insets bottom="5" /></padding>
 
-        <fx:include source="navigation.fxml" alignment="CENTER_LEFT" />
+        <fx:include source="navigation.fxml" alignment="CENTER_LEFT"/>
 
         <HBox alignment="CENTER">
-            <padding><Insets top="10" bottom="10" /></padding>
-            <Label fx:id="singleEventProbabilityLabel" text="Single Event Probability"/>
+            <padding><Insets top="10" bottom="10" left="10" right="10"/></padding>
+            <Label styleClass="title" prefWidth="265" prefHeight="40" alignment="CENTER" text="Single Event Probability"/>
         </HBox>
 
         <VBox spacing="5">
+            <padding><Insets left="10" right="10" top="10" bottom="10"/> </padding>
             <HBox >
-                <Label text="Possible outcomes" prefWidth="140"/>
-                <TextField  prefWidth="120"/>
+                <Label text="Possible outcomes" prefWidth="140" alignment="BASELINE_LEFT"/>
+                <TextField styleClass="textField" prefWidth="120"/>
             </HBox>
             <HBox>
-                <Label text="Events occurred" prefWidth="140"/>
-                <TextField  prefWidth="120"/>
+                <Label text="Events occurred" prefWidth="140" alignment="BASELINE_LEFT"/>
+                <TextField styleClass="textField" prefWidth="120"/>
             </HBox>
         </VBox>
 
         <HBox alignment="CENTER">
-            <padding><Insets top="10" bottom="10" /></padding>
+            <padding><Insets left="10" right="10" top="10" bottom="10" /></padding>
             <Button text="Calculate" alignment="CENTER" prefWidth="200"/>
         </HBox>
 
-        <VBox spacing="5">
-            <HBox >
-                <Label text="Probability" prefWidth="140"/>
-                <TextField prefWidth="120"/>
+        <VBox spacing="5" alignment="CENTER">
+            <padding><Insets left="10" right="10" top="10" bottom="10"/></padding>
+            <HBox alignment="CENTER">
+                <Label text="Probability" prefWidth="80" />
+                <TextField styleClass="textField" prefWidth="120"/>
             </HBox>
         </VBox>
 
