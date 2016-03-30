@@ -12,15 +12,33 @@
         <VBox>
 
             <VBox>
-                <ComboBox>
-                <items>
-                    <FXCollections fx:factory="observableArrayList">
-                        <String fx:value="Apple" />
-                        <String fx:value="Orange" />
-                        <String fx:value="Pear" />
-                    </FXCollections>
-                </items>
-                </ComboBox>
+            <ComboBox>
+            <items>
+                <FXCollections fx:factory="observableArrayList">
+                    <String fx:value="Length"      />
+                    <String fx:value="Energy"      />
+                    <String fx:value="Weight"      />
+                    <String fx:value="Force"       />
+                    <String fx:value="Area"        />
+                    <String fx:value="Temperature" />
+                    <String fx:value="Speed"       />
+                </FXCollections>
+            </items>
+                <value>
+                    <String fx:value="Length" />
+                </value>
+            </ComboBox>
+            </VBox>
+
+            <VBox>
+            <HBox>
+            <ComboBox>
+                <FXCollections fx:factory="observableArrayList">
+                    <String fx:value="Apple"/>
+                </FXCollections>
+            </ComboBox>
+            <TextField/>
+            </HBox>
             </VBox>
 
         </VBox>
