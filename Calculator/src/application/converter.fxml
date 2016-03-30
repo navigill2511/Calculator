@@ -1,46 +1,30 @@
-<?xml version="1.0" encofing="UTF-8"?>
-<?import javafx.scene.layout.AnchorPane?>
-<?import javafx.scene.layout.VBox?>
-<?import javafx.scene.layout.HBox?>
-<?import javafx.scene.control.Label?>
-<?import javafx.scene.control.ComboBox?>
-<?import javafx.scene.control.TextField?>
-<AnchorPane xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.ConverterController">
-    <VBox>
-        <fx:include source="navigation.fxml" alignment="CENTER_LEFT" />
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.collections.*?>
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
 
+<AnchorPane xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.ConverterController">
+   
+    <VBox>
+        <fx:include alignment="CENTER_LEFT" source="navigation.fxml" />
+      
         <VBox>
 
-            <VBox alignment="CENTER">
-                <ComboBox prefWidth="200">
-
+            <VBox>
+                <ComboBox>
+                <items>
+                    <FXCollections fx:factory="observableArrayList">
+                        <String fx:value="Apple" />
+                        <String fx:value="Orange" />
+                        <String fx:value="Pear" />
+                    </FXCollections>
+                </items>
                 </ComboBox>
             </VBox>
 
-            <VBox>
-                <HBox>
-                    <Label text="FROM"/>
-                </HBox>
-                <HBox>
-                    <ComboBox>
-
-                    </ComboBox>
-                    <TextField/>
-                </HBox>
-            </VBox>
-
-            <VBox>
-                <HBox>
-                    <Label text="TO"/>
-                </HBox>
-                <HBox>
-                    <ComboBox>
-
-                    </ComboBox>
-                    <TextField/>
-                </HBox>
-            </VBox>
-
         </VBox>
+
     </VBox>
+
 </AnchorPane>
