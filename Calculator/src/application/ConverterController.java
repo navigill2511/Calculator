@@ -29,7 +29,7 @@ public class ConverterController
 
         String type = (String) this.conversionComboBox.getValue();
         System.out.print(type);
-        String fxmlFile;
+        String fxmlFile = "conversionLength.fxml";
         switch(type)
         {
             case(AREA)       :fxmlFile = "converterArea.fxml";        break;
@@ -39,7 +39,6 @@ public class ConverterController
             case(SPEED)      :fxmlFile = "converterSpeed.fxml";       break;
             case(TEMPERATURE):fxmlFile = "converterTemperature.fxml"; break;
             case(WEIGHT)     :fxmlFile = "converterWeight.fxml";      break;
-            default          :fxmlFile = "converterArea.fxml";        break;
         }
 
         Stage primaryStage = (Stage) this.conversionComboBox.getScene().getWindow();
