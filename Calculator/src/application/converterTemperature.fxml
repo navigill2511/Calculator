@@ -18,15 +18,13 @@
         <ComboBox styleClass="comboBox" prefWidth="100">
         <items>
             <FXCollections fx:factory="observableArrayList">
-                <String fx:value="meter sq"/>
-                <String fx:value="meter sq"/>
-                <String fx:value="meter sq"/>
-                <String fx:value="meter sq"/>
-                <String fx:value="meter sq"/>
+                <String fx:value="Celsius"   />
+                <String fx:value="Fahrenheit"/>
+                <String fx:value="Kalvin"    />
             </FXCollections>
         </items>
             <value>
-                <String fx:value="meter sq"/>
+                <String fx:value="Celsius"/>
             </value>
         </ComboBox>
         <TextField styleClass="textField" prefWidth="100"/>
@@ -36,15 +34,13 @@
         <ComboBox styleClass="comboBox" prefWidth="100">
         <items>
             <FXCollections fx:factory="observableArrayList">
-                <String fx:value="meter sq"/>
-                <String fx:value="meter sq"/>
-                <String fx:value="meter sq"/>
-                <String fx:value="meter sq"/>
-                <String fx:value="meter sq"/>
+                <String fx:value="Celsius"   />
+                <String fx:value="Fahrenheit"/>
+                <String fx:value="Kalvin"    />
             </FXCollections>
         </items>
             <value>
-                <String fx:value="meter sq"/>
+                <String fx:value="Celsius"/>
             </value>
         </ComboBox>
         <TextField styleClass="textField" prefWidth="100"/>

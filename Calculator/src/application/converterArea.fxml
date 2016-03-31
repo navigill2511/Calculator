@@ -18,15 +18,17 @@
         <ComboBox styleClass="comboBox" prefWidth="100">
         <items>
             <FXCollections fx:factory="observableArrayList">
-                <String fx:value="meter sq"/>
-                <String fx:value="meter sq"/>
-                <String fx:value="meter sq"/>
-                <String fx:value="meter sq"/>
-                <String fx:value="meter sq"/>
+                <String fx:value="Km²"  />
+                <String fx:value="m²"   />
+                <String fx:value="mile²"/>
+                <String fx:value="yard²"/>
+                <String fx:value="ft²"  />
+                <String fx:value="in²"  />
+                <String fx:value="acre²"/>
             </FXCollections>
         </items>
             <value>
-                <String fx:value="meter sq"/>
+                <String fx:value="Km²"/>
             </value>
         </ComboBox>
         <TextField styleClass="textField" prefWidth="100"/>
@@ -36,15 +38,17 @@
         <ComboBox styleClass="comboBox" prefWidth="100">
         <items>
             <FXCollections fx:factory="observableArrayList">
-                <String fx:value="meter sq"/>
-                <String fx:value="meter sq"/>
-                <String fx:value="meter sq"/>
-                <String fx:value="meter sq"/>
-                <String fx:value="meter sq"/>
+                <String fx:value="Km²"  />
+                <String fx:value="m²"   />
+                <String fx:value="mile²"/>
+                <String fx:value="yard²"/>
+                <String fx:value="ft²"  />
+                <String fx:value="in²"  />
+                <String fx:value="acre²"/>
             </FXCollections>
         </items>
             <value>
-                <String fx:value="meter sq"/>
+                <String fx:value="Km²"/>
             </value>
         </ComboBox>
         <TextField styleClass="textField" prefWidth="100"/>

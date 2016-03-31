@@ -18,15 +18,13 @@
         <ComboBox styleClass="comboBox" prefWidth="100">
         <items>
             <FXCollections fx:factory="observableArrayList">
-                <String fx:value="meter sq"/>
-                <String fx:value="meter sq"/>
-                <String fx:value="meter sq"/>
-                <String fx:value="meter sq"/>
-                <String fx:value="meter sq"/>
+                <String fx:value="miles/hr"/>
+                <String fx:value="Km/hr"   />
+                <String fx:value="m/s"     />
             </FXCollections>
         </items>
             <value>
-                <String fx:value="meter sq"/>
+                <String fx:value="miles/hr"/>
             </value>
         </ComboBox>
         <TextField styleClass="textField" prefWidth="100"/>
@@ -36,15 +34,13 @@
         <ComboBox styleClass="comboBox" prefWidth="100">
         <items>
             <FXCollections fx:factory="observableArrayList">
-                <String fx:value="meter sq"/>
-                <String fx:value="meter sq"/>
-                <String fx:value="meter sq"/>
-                <String fx:value="meter sq"/>
-                <String fx:value="meter sq"/>
+                <String fx:value="miles/hr"/>
+                <String fx:value="Km/hr"   />
+                <String fx:value="m/s"     />
             </FXCollections>
         </items>
             <value>
-                <String fx:value="meter sq"/>
+                <String fx:value="miles/hr"/>
             </value>
         </ComboBox>
         <TextField styleClass="textField" prefWidth="100"/>

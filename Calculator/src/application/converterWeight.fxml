@@ -18,15 +18,15 @@
         <ComboBox styleClass="comboBox" prefWidth="100">
         <items>
             <FXCollections fx:factory="observableArrayList">
-                <String fx:value="meter sq"/>
-                <String fx:value="meter sq"/>
-                <String fx:value="meter sq"/>
-                <String fx:value="meter sq"/>
-                <String fx:value="meter sq"/>
+                <String fx:value="Kg"   />
+                <String fx:value="g"    />
+                <String fx:value="mg"   />
+                <String fx:value="pound"/>
+                <String fx:value="ounce"/>
             </FXCollections>
         </items>
             <value>
-                <String fx:value="meter sq"/>
+                <String fx:value="Kg"/>
             </value>
         </ComboBox>
         <TextField styleClass="textField" prefWidth="100"/>
@@ -36,15 +36,15 @@
         <ComboBox styleClass="comboBox" prefWidth="100">
         <items>
             <FXCollections fx:factory="observableArrayList">
-                <String fx:value="meter sq"/>
-                <String fx:value="meter sq"/>
-                <String fx:value="meter sq"/>
-                <String fx:value="meter sq"/>
-                <String fx:value="meter sq"/>
+                <String fx:value="Kg"   />
+                <String fx:value="g"    />
+                <String fx:value="mg"   />
+                <String fx:value="pound"/>
+                <String fx:value="ounce"/>
             </FXCollections>
         </items>
             <value>
-                <String fx:value="meter sq"/>
+                <String fx:value="Kg"/>
             </value>
         </ComboBox>
         <TextField styleClass="textField" prefWidth="100"/>

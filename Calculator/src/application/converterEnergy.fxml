@@ -18,15 +18,18 @@
         <ComboBox styleClass="comboBox" prefWidth="100">
         <items>
             <FXCollections fx:factory="observableArrayList">
-                <String fx:value="meter sq"/>
-                <String fx:value="meter sq"/>
-                <String fx:value="meter sq"/>
-                <String fx:value="meter sq"/>
-                <String fx:value="meter sq"/>
+                <String fx:value="cal" />
+                <String fx:value="Kcal"/>
+                <String fx:value="eV"  />
+                <String fx:value="J"   />
+                <String fx:value="KJ"  />
+                <String fx:value="MJ"  />
+                <String fx:value="Wh"  />
+                <String fx:value="KWh" />
             </FXCollections>
         </items>
             <value>
-                <String fx:value="meter sq"/>
+                <String fx:value="cal"/>
             </value>
         </ComboBox>
         <TextField styleClass="textField" prefWidth="100"/>
@@ -36,15 +39,18 @@
         <ComboBox styleClass="comboBox" prefWidth="100">
         <items>
             <FXCollections fx:factory="observableArrayList">
-                <String fx:value="meter sq"/>
-                <String fx:value="meter sq"/>
-                <String fx:value="meter sq"/>
-                <String fx:value="meter sq"/>
-                <String fx:value="meter sq"/>
+                <String fx:value="cal" />
+                <String fx:value="Kcal"/>
+                <String fx:value="eV"  />
+                <String fx:value="J"   />
+                <String fx:value="KJ"  />
+                <String fx:value="MJ"  />
+                <String fx:value="Wh"  />
+                <String fx:value="KWh" />
             </FXCollections>
         </items>
             <value>
-                <String fx:value="meter sq"/>
+                <String fx:value="cal" />
             </value>
         </ComboBox>
         <TextField styleClass="textField" prefWidth="100"/>
