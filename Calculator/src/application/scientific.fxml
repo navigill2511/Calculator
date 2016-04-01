@@ -6,6 +6,7 @@
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.control.Button?>
 
+<?import javafx.scene.control.RadioButton?>
 <AnchorPane fx:controller="application.ScientificController" xmlns:fx="http://javafx.com/fxml/1">
 <VBox spacing="3" alignment="CENTER">
 
@@ -22,9 +23,9 @@
 
         <HBox spacing="3" alignment="CENTER_LEFT">
         <Button text="MOD" prefWidth="52" />
+        <Button text="RAD" prefWidth="52" />
+        <Button text="DEG" prefWidth="52" />
         <Button text="π"   prefWidth="52" />
-        <Button text="e"   prefWidth="52" />
-        <Button text="\%"  prefWidth="52" />
         <Button text="( )" prefWidth="52" />
         <Button text="DEL" prefWidth="52" />
         </HBox>

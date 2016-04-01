@@ -8,13 +8,32 @@
 	-fx-font-size: 12;
 	-fx-font-family: georgia;
 	-fx-min-height: 26px;
-	-fx-background-color: #D4D4D4;
+	-fx-background-color: #c2d6d6, linear-gradient(#f0f0f5, #a3a3c2);
 	-fx-background-radius: 2px;
+	-fx-border: 1px;
+	-fx-border-color: #a3a3c2;
 }
 
 .button:hover
 {
 	-fx-background-color: #9494B8;
+}
+
+.context-menu
+{
+    -fx-background-color: #c2d6d6, linear-gradient(#f0f0f5, #a3a3c2);
+    -fx-border: 2px;
+    -fx-border-color: #29293d;
+}
+
+.menu:hover, .menu:showing, .menu-item:hover, .menu-item:focused
+{
+    -fx-background-color: #9494B8;
+}
+
+.menu-bar
+{
+    -fx-background-color: #c2d6d6, linear-gradient(#f0f0f5, #a3a3c2);
 }
 
 #standardTextField
@@ -44,6 +63,7 @@
 {
     -fx-background-color: #FFFFFF;
     -fx-border: 2px;
+    -fx-border-width: 1;
     -fx-border-color: #666;
     -fx-display-caret: false;
 }
