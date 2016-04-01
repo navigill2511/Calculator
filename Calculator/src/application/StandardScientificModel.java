@@ -16,29 +16,29 @@ public class StandardScientificModel
         this.rad = rad;
     }
 
-    public double add(double num_1, double num_2)
+    public double add(double x, double y)
     {
-        return num_1 + num_2;
+        return x + y;
     }
 
-    public double subtract(double num_1, double num_2)
+    public double subtract(double x, double y)
     {
-        return num_1 - num_2;
+        return x - y;
     }
 
-    public double multipy(double num_1, double num_2)
+    public double multipy(double x, double y)
     {
-        return num_1 * num_2;
+        return x * y;
     }
 
-    public double divide(double num_1, double num_2)
+    public double divide(double x, double y
     {
-        return num_1 / num_2;
+        return x / y;
     }
 
-    public double remainder(double num_1, double num_2)
+    public double remainder(double x, double y)
     {
-        return num_1 % num_2;
+        return x % y;
     }
 
     public double sin(double x)
