@@ -1,6 +1,6 @@
 .root
 {
-	-fx-background-color: #F4F4F4;
+	-fx-background-color: #d1d1e0, linear-gradient(#e6e6e6, #d9d9d9);
 }
 
 .button
@@ -26,14 +26,17 @@
     -fx-border-color: #29293d;
 }
 
+.menu
+{
+    -fx-font-family: georgia;
+    -fx-font-size: 11.5;
+
+
+}
+
 .menu:hover, .menu:showing, .menu-item:hover, .menu-item:focused
 {
     -fx-background-color: #9494B8;
-}
-
-.menu-bar
-{
-    -fx-background-color: #c2d6d6, linear-gradient(#f0f0f5, #a3a3c2);
 }
 
 #standardTextField
@@ -56,15 +59,15 @@
 
 .menuBar
 {
-    -fx-background-color: #D4D4D4;
+    -fx-background-color: #c2d6d6, linear-gradient(#ffffff, #c2c2d6);
 }
 
 .textField
 {
-    -fx-background-color: #FFFFFF;
+    -fx-background-color: #FFFFFF, linear-gradient(#ffffff, #d1d1e0);
     -fx-border: 2px;
     -fx-border-width: 1;
-    -fx-border-color: #666;
+    -fx-border-color: #333333;
     -fx-display-caret: false;
 }
 

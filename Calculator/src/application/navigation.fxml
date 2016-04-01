@@ -6,7 +6,7 @@
 
 <HBox alignment="CENTER_LEFT" prefHeight="25" fx:controller="application.NavigationController" xmlns:fx="http://javafx.com/fxml/1">
 
-    <MenuBar styleClass="menuBar" fx:id="menuBar" HBox.hgrow="ALWAYS">
+    <MenuBar styleClass="menuBar" fx:id="menuBar" HBox.hgrow="ALWAYS" prefWidth="3">
 
         <Menu text="View">
             <MenuItem text="Standard"   onAction="#handleStandardAction"/>
