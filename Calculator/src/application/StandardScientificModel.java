@@ -31,7 +31,7 @@ public class StandardScientificModel
         return x * y;
     }
 
-    public double divide(double x, double y
+    public double divide(double x, double y)
     {
         return x / y;
     }
