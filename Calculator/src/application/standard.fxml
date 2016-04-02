@@ -12,7 +12,7 @@
         <padding><Insets left="5" right="5" bottom="5"/></padding>
 
         <HBox alignment="CENTER" >
-            <padding><Insets top="5" bottom="5" /></padding>
+            <padding><Insets bottom="5" /></padding>
             <TextField styleClass="textField" fx:id="standardTextField" alignment="BASELINE_RIGHT" prefHeight="50" prefWidth="172" />
         </HBox>
 

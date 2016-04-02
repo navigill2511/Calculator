@@ -38,8 +38,13 @@ public class StandardController
         button = (Button)event.getSource();
 
         // Add the number related to the button to the screen.
-        output = (button.getText().equals(Object.DECIMAL)) ? Formatter.addDecimal(output):
-                        (output == null) ? button.getText() : (output + button.getText());
+        if (button.getText().equals(Object.DECIMAL)) {
+            this.output = Formatter.addDecimal(output);
+            standardTextField.setText(this.output);
+            return;
+        }
+
+        output = (output == null) ? button.getText() : (output + button.getText());
 
         standardTextField.setText(this.output);
 
@@ -63,15 +68,14 @@ public class StandardController
 
         this.operandOne = this.output;
         this.output     = Object.EMPTY;
+        this.counter    = 0;
         standardTextField.setText(this.output);
     }
 
     @FXML
     public void calculate()
     {
-        if (this.operator.equals(Object.EMPTY) || this.operandOne.equals(Object.EMPTY)) return;
-
-        if (this.output.equals(Object.EMPTY)) return;
+        if (operator.equals(Object.EMPTY) || operandOne.equals(Object.EMPTY) || output.equals(Object.EMPTY)) return;
 
         this.operandTwo = this.output;
 
