@@ -13,13 +13,11 @@ public class StandardController
 {
     private final int MAX_DIGITS = 10;
 
-    @FXML private Button button;
     @FXML private TextField standardTextField;
 
-    private String output;
+    private String output = Object.EMPTY;
     private String operandOne;
     private String operandTwo;
-    private String result;
     private String operator;
 
     private int counter = 0;
@@ -32,21 +30,17 @@ public class StandardController
     public void operand(ActionEvent event)
     {
         // If the screen is full, return.
-        if (counter >= MAX_DIGITS) return;
+        if (this.counter >= MAX_DIGITS) return;
+
+        // If this is the first digit, clear the textField.
+        if (this.counter == 0) this.standardTextField.setText(this.output = Object.CLEAR);
 
         // Get the button that caused the event.
-        button = (Button)event.getSource();
+        Button button = (Button)event.getSource();
 
-        // Add the number related to the button to the screen.
-        if (button.getText().equals(Object.DECIMAL)) {
-            this.output = Formatter.addDecimal(output);
-            standardTextField.setText(this.output);
-            return;
-        }
-
-        output = (output == null) ? button.getText() : (output + button.getText());
-
-        standardTextField.setText(this.output);
+        // Add the number to the output and display the output.
+        this.output = (this.output == null) ? button.getText() : (this.output + button.getText());
+        this.standardTextField.setText(this.output);
 
         // Increment number of digits.
         counter++;
@@ -59,29 +53,35 @@ public class StandardController
     @FXML
     public void operator(ActionEvent event)
     {
-        // If the operand one is empty return.
-        if (output.equals(Object.EMPTY)) return;
+        // If the output is empty, return.
+        if (this.output.equals(Object.EMPTY)) return;
 
         // Get the operator that caused the event.
-        button   = (Button)event.getSource();
-        operator = button.getText();
+        this.operator = ((Button)event.getSource()).getText();
 
+        // Get operand one.
         this.operandOne = this.output;
-        this.output     = Object.EMPTY;
-        this.counter    = 0;
-        standardTextField.setText(this.output);
+
+        // Clear output and textField.
+        this.standardTextField.setText(this.output = Object.EMPTY);
+
+        this.counter = 0;   // Empty counter.
     }
 
     @FXML
     public void calculate()
     {
+        // If either operator, operandOne or operandTwo are empty calculation can not be done.
         if (operator.equals(Object.EMPTY) || operandOne.equals(Object.EMPTY) || output.equals(Object.EMPTY)) return;
 
+        // Get the operand two.
         this.operandTwo = this.output;
 
         double operand_1 = Double.parseDouble(this.operandOne);
         double operand_2 = Double.parseDouble(this.operandTwo);
-        double result = 0;
+        double result    = 0;
+
+        // Perform calculation according to the operator.
         switch (this.operator)
         {
             case (Object.ADD):       result = StandardModel.add      (operand_1, operand_2); break;
@@ -91,29 +91,35 @@ public class StandardController
             case (Object.REMAINDER): result = StandardModel.remainder(operand_1, operand_2); break;
         }
 
-        this.result = Formatter.round(result, MAX_DIGITS);
+        // Display the result to the textField.
+        standardTextField.setText(this.output = Formatter.round(result, MAX_DIGITS));
 
-        standardTextField.setText(this.result);
-        resetObjects();
+        this.operandOne = Object.CLEAR;
+        this.operandTwo = Object.CLEAR;
+        this.counter    = 0;
     }
 
     @FXML
-    public void format(ActionEvent event)
+    public void negativePositive()
     {
-        button = (Button) event.getSource();
-
-        if (button.getText().equals(Object.AC)) resetObjects();
-
-        //if (button.getText() == Object.)
-
         standardTextField.setText(this.output);
     }
 
-    private void resetObjects()
+    @FXML
+    public void resetObjects()
     {
-        this.output = Object.EMPTY;
         this.operandOne = Object.EMPTY;
         this.operandTwo = Object.EMPTY;
+
+        this.standardTextField.setText(this.output = Object.EMPTY);
+
         this.counter = 0;
+    }
+
+    @FXML
+    public void decimal()
+    {
+        this.standardTextField.setText(this.output = Formatter.addDecimal(this.output));
+        counter++;
     }
 }

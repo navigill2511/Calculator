@@ -17,8 +17,8 @@
         </HBox>
 
         <HBox spacing="4" alignment="CENTER" >
-            <Button text="AC"  prefWidth="40" onAction="#format"/>
-            <Button text="+/-" prefWidth="40" onAction="#format"/>
+            <Button text="AC"  prefWidth="40" onAction="#resetObjects"/>
+            <Button text="+/-" prefWidth="40" onAction="#negativePositive"/>
             <Button text="\%"  prefWidth="40" onAction="#operator"/>
             <Button text="/"   prefWidth="40" onAction="#operator"/>
         </HBox>
@@ -46,7 +46,7 @@
 
         <HBox spacing="4" alignment="CENTER" >
             <Button text="0" prefWidth="84" onAction="#operand"/>
-            <Button text="." prefWidth="40" onAction="#operand"/>
+            <Button text="." prefWidth="40" onAction="#decimal"/>
             <Button text="=" prefWidth="40" onAction="#calculate"/>
         </HBox>
 

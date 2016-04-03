@@ -29,7 +29,6 @@ public class Formatter
         return number += Object.DECIMAL;
     }
 
-
     public static String round(double number, int maxDigits)
     {
         String stringNum = Double.toString(number);
