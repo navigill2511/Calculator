@@ -63,7 +63,7 @@ public class Formatter
         if (number.equals(Object.EMPTY)) return Object.LEFT_PARENTHESIS;
 
         // If the object to the imediate left is a digit, add right parenthesis.
-        else if (Object.DIGITS.contains(number.substring(number.length() - 1, number.length())))
+        if (Object.DIGITS.contains(number.substring(number.length() - 1, number.length())))
         {
             return number + Object.MULTIPLY + Object.LEFT_PARENTHESIS;
         }
@@ -91,5 +91,10 @@ public class Formatter
         if (rightParenthesis < 0) return number + Object.RIGHT_PARENTHESIS;
 
         return number;
+    }
+
+    public static String delete(String number)
+    {
+        return number.substring(0, number.length() - 1);
     }
 }

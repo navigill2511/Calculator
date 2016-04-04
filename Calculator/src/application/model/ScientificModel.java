@@ -27,8 +27,6 @@ public class ScientificModel
         // Obtain the tokens as an array of strings.
         String postfix = convertToPostfix(infix);
 
-        System.out.println(postfix);
-
         String[] tokens = postfix.split(Object.WHITESPACE);
 
         // Create a stack for the operands.
@@ -74,7 +72,6 @@ public class ScientificModel
         for (int i = 0; i < infix.length(); i++)
         {
             String currentChar = infix.substring(i, i + 1);
-            System.out.println(currentChar);
 
             // If the current character is not a digit, add it to the array.
             if (!Object.DIGITS.contains(currentChar))
@@ -84,13 +81,16 @@ public class ScientificModel
                 continue;
             }
 
-            if ((i + 1 != infix.length()) && !Object.DIGITS.contains(infix.substring(i + 1, i + 2)))
+            while (i < infix.length())
             {
-                tokens.add(infix.substring(digitBeginFlag, i + 1));
+                currentChar = infix.substring(i, i + 1);
+                if (!Object.DIGITS.contains(currentChar)) break;
+                i++;
             }
-        }
 
-        System.out.println(tokens.toString());
+            tokens.add(infix.substring(digitBeginFlag, i));
+            i--;
+        }
 
         // Convert to postfix and return expression as string.
         return convertToPostfix(tokens, 0, tokens.size() - 1);

@@ -24,4 +24,25 @@ public class Object
     public static final String PLUS_MINUS = "+/-";
 
     public static final String DIGITS = "1234567890";
+
+    public static final String DELETE = "DEL";
+
+    public static final String RADIANS = "RAD";
+    public static final String DEGREES = "DEG";
+
+    public static final String SIN = "sin";
+    public static final String COS = "cos";
+    public static final String TAN = "tan";
+
+    public static final String INV_SIN = "sin-¹";
+    public static final String INV_COS = "cos-¹";
+    public static final String INV_TAN = "tan-¹";
+
+    public static final String SINH = "sinh";
+    public static final String COSH = "cosh";
+    public static final String TANH = "tanh";
+
+    public static final String INV_SINH = "sinh-¹";
+    public static final String INV_COSH = "cosh-¹";
+    public static final String INV_TANH = "tanh-¹";
 }

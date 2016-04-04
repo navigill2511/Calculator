@@ -26,7 +26,7 @@
         <Button text="("   prefWidth="54" onAction="#format"/>
         <Button text=")"   prefWidth="54" onAction="#format"/>
         <Button text="π"   prefWidth="54" />
-        <Button text="DEL" prefWidth="54" />
+        <Button text="DEL" prefWidth="54" onAction="#format"/>
         </HBox>
 
         <HBox spacing="3" alignment="CENTER_LEFT">
@@ -41,12 +41,12 @@
     <HBox spacing="10" alignment="CENTER_LEFT">
 
         <HBox spacing="3" alignment="CENTER_LEFT">
-        <Button text="sin"  prefWidth="54" />
-        <Button text="cos"  prefWidth="54" />
-        <Button text="tan"  prefWidth="54" />
-        <Button text="sinh" prefWidth="54" />
-        <Button text="cosh" prefWidth="54" />
-        <Button text="tanh" prefWidth="54" />
+        <Button text="sin"  prefWidth="54" onAction="#trignometry"/>
+        <Button text="cos"  prefWidth="54" onAction="#trignometry"/>
+        <Button text="tan"  prefWidth="54" onAction="#trignometry"/>
+        <Button text="sinh" prefWidth="54" onAction="#trignometry"/>
+        <Button text="cosh" prefWidth="54" onAction="#trignometry"/>
+        <Button text="tanh" prefWidth="54" onAction="#trignometry"/>
         </HBox>
 
         <HBox spacing="3" alignment="CENTER_LEFT">
@@ -61,12 +61,12 @@
     <HBox spacing="10" alignment="CENTER_LEFT">
 
         <HBox spacing="3" alignment="CENTER_LEFT">
-        <Button text="sin-¹"  prefWidth="54" />
-        <Button text="cos-¹"  prefWidth="54" />
-        <Button text="tan-¹"  prefWidth="54" />
-        <Button text="sinh-¹" prefWidth="54" />
-        <Button text="cosh-¹" prefWidth="54" />
-        <Button text="tanh-¹" prefWidth="54" />
+        <Button text="sin-¹"  prefWidth="54" onAction="#trignometry"/>
+        <Button text="cos-¹"  prefWidth="54" onAction="#trignometry"/>
+        <Button text="tan-¹"  prefWidth="54" onAction="#trignometry"/>
+        <Button text="sinh-¹" prefWidth="54" onAction="#trignometry"/>
+        <Button text="cosh-¹" prefWidth="54" onAction="#trignometry"/>
+        <Button text="tanh-¹" prefWidth="54" onAction="#trignometry"/>
         </HBox>
 
         <HBox spacing="3" alignment="CENTER_LEFT">

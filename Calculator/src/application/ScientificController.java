@@ -13,6 +13,8 @@ public class ScientificController
     @FXML private TextField scientificTextField;
 
     private String output = Object.EMPTY;
+    private String operation = Object.EMPTY;
+    private String number = Object.EMPTY;
 
     @FXML
     public void numpad(ActionEvent event)
@@ -21,7 +23,7 @@ public class ScientificController
         Button button = (Button) event.getSource();
 
         // Get the text of the button and add it to the screen.
-        this.output = (this.output.equals(Object.EMPTY)) ? button.getText() : this.output + button.getText();
+        this.number = (this.output.equals(Object.EMPTY)) ? button.getText() : this.output + button.getText();
         this.scientificTextField.setText(this.output);
     }
 
@@ -42,6 +44,8 @@ public class ScientificController
     @FXML
     public void format(ActionEvent event)
     {
+        if (this.output.equals(Object.EMPTY)) return;
+
         Button button = (Button) event.getSource();
         if (button.getText().equals(Object.PLUS_MINUS))
         {
@@ -57,5 +61,30 @@ public class ScientificController
         {
             this.scientificTextField.setText(this.output = Formatter.addRightParenthesis(this.output));
         }
+
+        if (button.getText().equals(Object.DELETE))
+        {
+            this.scientificTextField.setText(this.output = Formatter.delete(this.output));
+        }
+
+        if (button.getText().equals(Object.RADIANS))
+        {
+            ScientificModel.rad = true;
+        }
+
+        if (button.getText().equals(Object.DEGREES))
+        {
+            ScientificModel.rad = false;
+        }
+    }
+
+    @FXML
+    public void trignometry(ActionEvent event)
+    {
+        Button button = (Button) event.getSource();
+
+        this.output = button.getText() + Object.LEFT_PARENTHESIS;
+
+        this.scientificTextField.setText(this.output);
     }
 }
