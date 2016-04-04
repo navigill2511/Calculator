@@ -51,10 +51,17 @@ public class Object
     public static final String LN = "ln";
 
     public static final String SQUARED = "x²";
+    public static final String SQUARE = "2";
     public static final String CUBED = "x³";
+    public static final String CUBE = "3";
+    public static final String POWER_N = "xⁿ";
     public static final String EXPONENT = "eⁿ";
+    public static final String E = "e";
     public static final String TO_POWER_TEN = "10ⁿ";
+    public static final String TEN = "10";
     public static final String SQUARE_ROOT = "√";
     public static final String CUBE_ROOT = "³√";
+
+    public static final String POWER = "^";
 
 }

@@ -81,12 +81,12 @@
     <HBox spacing="10" alignment="CENTER_LEFT">
 
         <HBox spacing="3" alignment="CENTER_LEFT">
-        <Button text="x²"  prefWidth="54" />
-        <Button text="x³"  prefWidth="54" />
-        <Button text="xⁿ"  prefWidth="54" />
-        <Button text="10ⁿ" prefWidth="54" />
-        <Button text="eⁿ"  prefWidth="54" />
-        <Button text="ln"  prefWidth="54" />
+        <Button text="x²"  prefWidth="54" onAction="#handlePowerOperation"/>
+        <Button text="x³"  prefWidth="54" onAction="#handlePowerOperation"/>
+        <Button text="xⁿ"  prefWidth="54" onAction="#handlePowerOperation"/>
+        <Button text="10ⁿ" prefWidth="54" onAction="#handleExponentOperation"/>
+        <Button text="eⁿ"  prefWidth="54" onAction="#handleExponentOperation"/>
+        <Button text="ln"  prefWidth="54" onAction="#trignometry"/>
         </HBox>
 
         <HBox spacing="3" alignment="CENTER_LEFT">
@@ -101,11 +101,11 @@
     <HBox spacing="10" alignment="CENTER_LEFT">
 
         <HBox spacing="3" alignment="CENTER_LEFT">
-        <Button text="√"    prefWidth="54" />
-        <Button text="³√"   prefWidth="54" />
+        <Button text="√"    prefWidth="54" onAction="#trignometry"/>
+        <Button text="³√"   prefWidth="54" onAction="#trignometry"/>
         <Button text="ⁿ√"   prefWidth="54" />
-        <Button text="log"  prefWidth="54" />
-        <Button text="log2" prefWidth="54" />
+        <Button text="log"  prefWidth="54" onAction="#trignometry"/>
+        <Button text="log2" prefWidth="54" onAction="#trignometry"/>
         <Button text="logn" prefWidth="54" />
         </HBox>
 

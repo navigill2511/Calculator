@@ -93,6 +93,12 @@ public class Formatter
         return number;
     }
 
+    public static String surroundWithParenthesis(String number)
+    {
+        return Object.LEFT_PARENTHESIS + number + Object.RIGHT_PARENTHESIS;
+
+    }
+
     public static String delete(String number)
     {
         return number.substring(0, number.length() - 1);

@@ -16,8 +16,7 @@ public class ScientificController
     private String operation = Object.EMPTY;
     private String number = Object.EMPTY;
 
-    @FXML
-    public void numpad(ActionEvent event)
+    @FXML public void numpad(ActionEvent event)
     {
         // Get the button on the number pad that caused this event.
         Button button = (Button) event.getSource();
@@ -27,8 +26,7 @@ public class ScientificController
         this.scientificTextField.setText(this.output += button.getText());
     }
 
-    @FXML
-    public void calculate()
+    @FXML public void calculate()
     {
         double result = ScientificModel.evaluate(this.number);
 
@@ -40,7 +38,7 @@ public class ScientificController
                 case (Object.COS)          : result = ScientificModel.cos(result);     break;
                 case (Object.TAN)          : result = ScientificModel.tan(result);     break;
                 case (Object.INV_SIN)      : result = ScientificModel.invSin(result);  break;
-                case (Object.INV_COS)      : result = ScientificModel.invCos(result); break;
+                case (Object.INV_COS)      : result = ScientificModel.invCos(result);  break;
                 case (Object.INV_TAN)      : result = ScientificModel.invTan(result);  break;
                 case (Object.SINH)         : result = ScientificModel.sinh(result);    break;
                 case (Object.COSH)         : result = ScientificModel.cosh(result);    break;
@@ -65,17 +63,14 @@ public class ScientificController
 
     }
 
-    @FXML
-    public void clearScreen()
+    @FXML public void clearScreen()
     {
         this.output = this.number = this.operation = Object.EMPTY;
         this.scientificTextField.setText(this.output);
     }
 
-    @FXML
-    public void format(ActionEvent event)
+    @FXML public void format(ActionEvent event)
     {
-        if (this.output.equals(Object.EMPTY)) return;
 
         Button button = (Button) event.getSource();
         if (button.getText().equals(Object.PLUS_MINUS))
@@ -109,13 +104,41 @@ public class ScientificController
         }
     }
 
-    @FXML
-    public void trignometry(ActionEvent event)
+    @FXML public void trignometry(ActionEvent event)
     {
         Button button = (Button) event.getSource();
 
-        this.output = (this.operation += button.getText()) + Object.LEFT_PARENTHESIS;
+        this.output = (this.operation = button.getText()) + Object.LEFT_PARENTHESIS;
 
         this.scientificTextField.setText(this.output);
+    }
+
+    @FXML public void handlePowerOperation(ActionEvent event)
+    {
+        // Get the button responsible for this operation.
+        String operation = ((Button) event.getSource()).getText();
+
+        if (this.output.length() > 1 && (this.output.charAt(this.output.length() - 2)  + "").equals(Object.POWER))
+        {
+            this.output = Formatter.surroundWithParenthesis(this.output);
+        }
+
+        // Set the operation according to the operation.
+        if (operation.equals(Object.SQUARED)) this.operation = Object.POWER + Object.SQUARE;
+        if (operation.equals(Object.CUBED))   this.operation = Object.POWER + Object.CUBE;
+        if (operation.equals(Object.POWER_N)) this.operation = Object.POWER;
+
+        this.scientificTextField.setText(this.output += this.operation);
+    }
+
+    @FXML public void handleExponentOperation(ActionEvent event)
+    {
+        // Get the button responsible for this operation.
+        String operation = ((Button) event.getSource()).getText();
+
+        if (operation.equals(Object.TO_POWER_TEN)) this.operation = Object.TEN + Object.POWER;
+        if (operation.equals(Object.EXPONENT)) this.operation = Object.E + Object.POWER;
+
+        this.scientificTextField.setText(this.output += this.operation);
     }
 }
