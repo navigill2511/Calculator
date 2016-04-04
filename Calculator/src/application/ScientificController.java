@@ -23,22 +23,44 @@ public class ScientificController
         Button button = (Button) event.getSource();
 
         // Get the text of the button and add it to the screen.
-        this.number = (this.output.equals(Object.EMPTY)) ? button.getText() : this.output + button.getText();
-        this.scientificTextField.setText(this.output);
+        this.number += button.getText();
+        this.scientificTextField.setText(this.output += button.getText());
     }
 
     @FXML
     public void calculate()
     {
-        this.output = Integer.toString(ScientificModel.evaluate(this.output));
-        this.scientificTextField.setText(this.output);
-        this.output = Object.CLEAR;
+        double result = ScientificModel.evaluate(this.number);
+
+        if (!this.operation.equals(Object.EMPTY))
+        {
+            switch (this.operation)
+            {
+                case (Object.SIN)      : result = ScientificModel.sin(result);     break;
+                case (Object.COS)      : result = ScientificModel.cos(result);     break;
+                case (Object.TAN)      : result = ScientificModel.tan(result);     break;
+                case (Object.INV_SIN)  : result = ScientificModel.invSin(result);  break;
+                case (Object.INV_COS)  : result = ScientificModel.invCosh(result); break;
+                case (Object.INV_TAN)  : result = ScientificModel.invTan(result);  break;
+                case (Object.SINH)     : result = ScientificModel.sinh(result);    break;
+                case (Object.COSH)     : result = ScientificModel.cosh(result);    break;
+                case (Object.TANH)     : result = ScientificModel.tanh(result);    break;
+                case (Object.INV_SINH) : result = ScientificModel.invSinh(result); break;
+                case (Object.INV_COSH) : result = ScientificModel.invCosh(result); break;
+                case (Object.INV_TANH) : result = ScientificModel.invTanh(result); break;
+            }
+        }
+
+        this.scientificTextField.setText(this.output = Double.toString(result));
+        this.output = this.number = this.operation = Object.CLEAR;
+
     }
 
     @FXML
     public void clearScreen()
     {
-        this.scientificTextField.setText(this.output = Object.EMPTY);
+        this.output = this.number = this.operation = Object.EMPTY;
+        this.scientificTextField.setText(this.output);
     }
 
     @FXML
@@ -83,7 +105,7 @@ public class ScientificController
     {
         Button button = (Button) event.getSource();
 
-        this.output = button.getText() + Object.LEFT_PARENTHESIS;
+        this.output = (this.operation += button.getText()) + Object.LEFT_PARENTHESIS;
 
         this.scientificTextField.setText(this.output);
     }

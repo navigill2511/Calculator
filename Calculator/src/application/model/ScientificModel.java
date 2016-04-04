@@ -7,9 +7,9 @@ public class ScientificModel
 {
     public static void main(String[] args)
     {
-        System.out.println(evaluate("((7+3)*(2))"));
+        System.out.println(evaluate("7"));
 
-        System.out.println(evaluate("7+3*2"));
+        System.out.println(sin(4));
     }
 
     public static boolean rad = true;
@@ -22,7 +22,7 @@ public class ScientificModel
      *                must be surrounded by at least one space.
      * @return The value of the postfix expression.
      */
-    public static int evaluate(String infix) {
+    public static double evaluate(String infix) {
 
         // Obtain the tokens as an array of strings.
         String postfix = convertToPostfix(infix);
@@ -30,20 +30,20 @@ public class ScientificModel
         String[] tokens = postfix.split(Object.WHITESPACE);
 
         // Create a stack for the operands.
-        Stack<Integer> operands = new Stack<>();
+        Stack<Double> operands = new Stack<>();
 
         // Process the tokens.
         for (String token : tokens) {		// for each token in the array of tokens do something.
 
             // If the token is an integer, it is an operand and can be placed on the stack.
             try {
-                operands.push(Integer.parseInt(token));
+                operands.push(Double.parseDouble(token));
             }
 
             // If the token is not an operand, it must be an operator.  Remove the top two
             catch (NumberFormatException nfe) {
-                int operand2 = operands.pop();
-                int operand1 = operands.pop();
+                double operand2 = operands.pop();
+                double operand1 = operands.pop();
                 if (token.equals(Object.ADD))      operands.push(operand1 + operand2);
                 if (token.equals(Object.SUBTRACT)) operands.push(operand1 - operand2);
                 if (token.equals(Object.MULTIPLY)) operands.push(operand1 * operand2);
@@ -189,47 +189,47 @@ public class ScientificModel
 
     public static double sin(double x)
     {
-        return (rad) ? Math.sin(x) : Math.toDegrees(Math.sin(Math.toRadians(x)));
+        return (rad) ? Math.sin(x) : Math.sin(Math.toRadians(x));
     }
 
     public static double cos(double x)
     {
-        return (rad) ? Math.cos(x) : Math.toDegrees(Math.cos(Math.toRadians(x)));
+        return (rad) ? Math.cos(x) : Math.cos(Math.toRadians(x));
     }
 
     public static double tan(double x)
     {
-        return (rad) ? Math.tan(x) : Math.toDegrees(Math.tan(Math.toRadians(x)));
+        return (rad) ? Math.tan(x) : Math.tan(Math.toRadians(x));
     }
 
     public static double sinh(double x)
     {
-        return (rad) ? Math.sinh(x) : Math.toDegrees(Math.sinh(Math.toRadians(x)));
+        return (rad) ? Math.sinh(x) : Math.sinh(Math.toRadians(x));
     }
 
     public static double cosh(double x)
     {
-        return (rad) ? Math.cosh(x) : Math.toDegrees(Math.cosh(Math.toRadians(x)));
+        return (rad) ? Math.cosh(x) : Math.cosh(Math.toRadians(x));
     }
 
     public static double tanh(double x)
     {
-        return (rad) ? Math.tanh(x) : Math.toDegrees(Math.tanh(Math.toRadians(x)));
+        return (rad) ? Math.tanh(x) : Math.tanh(Math.toRadians(x));
     }
 
     public static double invSin(double x)
     {
-        return (rad) ? Math.asin(x) : Math.toDegrees(Math.asin(Math.toRadians(x)));
+        return (rad) ? Math.asin(x) : Math.asin(Math.toRadians(x));
     }
 
     public static double inCos(double x)
     {
-        return (rad) ? Math.acos(x) : Math.toDegrees(Math.acos(Math.toRadians(x)));
+        return (rad) ? Math.acos(x) : Math.acos(Math.toRadians(x));
     }
 
     public static double invTan(double x)
     {
-        return (rad) ? Math.atan(x) : Math.toDegrees(Math.atan(Math.toRadians(x)));
+        return (rad) ? Math.atan(x) : Math.atan(Math.toRadians(x));
     }
 
     public static double invSinh(double x)
