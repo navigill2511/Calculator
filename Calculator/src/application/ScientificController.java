@@ -40,7 +40,7 @@ public class ScientificController
                 case (Object.COS)          : result = ScientificModel.cos(result);     break;
                 case (Object.TAN)          : result = ScientificModel.tan(result);     break;
                 case (Object.INV_SIN)      : result = ScientificModel.invSin(result);  break;
-                case (Object.INV_COS)      : result = ScientificModel.invCosh(result); break;
+                case (Object.INV_COS)      : result = ScientificModel.invCos(result); break;
                 case (Object.INV_TAN)      : result = ScientificModel.invTan(result);  break;
                 case (Object.SINH)         : result = ScientificModel.sinh(result);    break;
                 case (Object.COSH)         : result = ScientificModel.cosh(result);    break;
@@ -49,14 +49,14 @@ public class ScientificController
                 case (Object.INV_COSH)     : result = ScientificModel.invCosh(result); break;
                 case (Object.INV_TANH)     : result = ScientificModel.invTanh(result); break;
                 case (Object.LOG)          : result = ScientificModel.log(result);     break;
-                case (Object.LOG_TWO)      : result = ScientificModel.log(result);     break;
-                case (Object.LN)           : result = ScientificModel.log(result);     break;
-                case (Object.SQUARE_ROOT)  : result = ScientificModel.log(result);     break;
-                case (Object.CUBE_ROOT)    : result = ScientificModel.log(result);     break;
-                case (Object.SQUARED)      : result = ScientificModel.log(result);     break;
-                case (Object.CUBED)        : result = ScientificModel.log(result);     break;
-                case (Object.EXPONENT)     : result = ScientificModel.log(result);     break;
-                case (Object.TO_POWER_TEN) : result = ScientificModel.log(result);     break;
+                case (Object.LOG_TWO)      : result = ScientificModel.log2(result);    break;
+                case (Object.LN)           : result = ScientificModel.ln(result);      break;
+                case (Object.SQUARE_ROOT)  : result = ScientificModel.sqrt(result);    break;
+                case (Object.CUBE_ROOT)    : result = ScientificModel.cbrt(result);    break;
+                case (Object.SQUARED)      : result = ScientificModel.square(result);  break;
+                case (Object.CUBED)        : result = ScientificModel.cube(result);    break;
+                case (Object.EXPONENT)     : result = ScientificModel.eToThePower(result);   break;
+                case (Object.TO_POWER_TEN) : result = ScientificModel.tenToThePower(result); break;
             }
         }
 

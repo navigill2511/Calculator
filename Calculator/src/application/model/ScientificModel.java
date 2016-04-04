@@ -222,7 +222,7 @@ public class ScientificModel
         return (rad) ? Math.asin(x) : Math.asin(Math.toRadians(x));
     }
 
-    public static double inCos(double x)
+    public static double invCos(double x)
     {
         return (rad) ? Math.acos(x) : Math.acos(Math.toRadians(x));
     }
