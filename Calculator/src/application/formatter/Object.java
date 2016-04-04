@@ -45,4 +45,16 @@ public class Object
     public static final String INV_SINH = "sinh-¹";
     public static final String INV_COSH = "cosh-¹";
     public static final String INV_TANH = "tanh-¹";
+
+    public static final String LOG = "log";
+    public static final String LOG_TWO = "log2";
+    public static final String LN = "ln";
+
+    public static final String SQUARED = "x²";
+    public static final String CUBED = "x³";
+    public static final String EXPONENT = "eⁿ";
+    public static final String TO_POWER_TEN = "10ⁿ";
+    public static final String SQUARE_ROOT = "√";
+    public static final String CUBE_ROOT = "³√";
+
 }
