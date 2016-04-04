@@ -5,20 +5,31 @@ import java.util.ArrayList;
 
 public class ScientificModel
 {
+    public static void main(String[] args)
+    {
+        System.out.println(evaluate("((7+3)*(2))"));
+
+        System.out.println(evaluate("7+3*2"));
+    }
+
     public static boolean rad = true;
 
     /**
      * Evaluate a postfix expression.
-     * @param postfix A String that contains an expression in postfix notation.
+     * @param infix A String that contains an expression in postfix notation.
      *                The allowable operators are +, -, *, and /.  Operands are
      *                integers (signed or unsigned).  The operators and operands
      *                must be surrounded by at least one space.
      * @return The value of the postfix expression.
      */
-    public static int evaluate(String postfix) {
+    public static int evaluate(String infix) {
 
         // Obtain the tokens as an array of strings.
-        String[] tokens = convertToPostfix(postfix).split(Object.WHITESPACE);
+        String postfix = convertToPostfix(infix);
+
+        System.out.println(postfix);
+
+        String[] tokens = postfix.split(Object.WHITESPACE);
 
         // Create a stack for the operands.
         Stack<Integer> operands = new Stack<>();
@@ -59,18 +70,27 @@ public class ScientificModel
         ArrayList<String> tokens = new ArrayList<>();
 
         // Convert the expression into an array of operands and operators first.
-        int left = 0, right = 0;
-        while (right < infix.length())
+        int digitBeginFlag = 0;
+        for (int i = 0; i < infix.length(); i++)
         {
-            String nextCharacter = infix.substring(right, right + 1);
+            String currentChar = infix.substring(i, i + 1);
+            System.out.println(currentChar);
 
-            if (!Object.ALL_OPERATORS.contains(nextCharacter)) { right++; continue; }
+            // If the current character is not a digit, add it to the array.
+            if (!Object.DIGITS.contains(currentChar))
+            {
+                digitBeginFlag = i + 1;
+                tokens.add(currentChar);
+                continue;
+            }
 
-            tokens.add(infix.substring(left, right));
-            tokens.add(nextCharacter);
-            right = left = right + 1;
+            if ((i + 1 != infix.length()) && !Object.DIGITS.contains(infix.substring(i + 1, i + 2)))
+            {
+                tokens.add(infix.substring(digitBeginFlag, i + 1));
+            }
         }
-        if (left != right) tokens.add(infix.substring(left, right));
+
+        System.out.println(tokens.toString());
 
         // Convert to postfix and return expression as string.
         return convertToPostfix(tokens, 0, tokens.size() - 1);

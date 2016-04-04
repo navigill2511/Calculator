@@ -21,12 +21,12 @@
     <HBox spacing="10" alignment="CENTER_LEFT">
         <padding><Insets top="5"/></padding>
         <HBox spacing="3" alignment="CENTER_LEFT">
-        <Button text="MOD" prefWidth="52" />
-        <Button text="RAD" prefWidth="52" />
-        <Button text="DEG" prefWidth="52" />
-        <Button text="π"   prefWidth="52" />
-        <Button text="( )" prefWidth="52" />
-        <Button text="DEL" prefWidth="52" />
+        <Button text="RAD" prefWidth="54" />
+        <Button text="DEG" prefWidth="54" />
+        <Button text="("   prefWidth="54" onAction="#format"/>
+        <Button text=")"   prefWidth="54" onAction="#format"/>
+        <Button text="π"   prefWidth="54" />
+        <Button text="DEL" prefWidth="54" />
         </HBox>
 
         <HBox spacing="3" alignment="CENTER_LEFT">
@@ -41,12 +41,12 @@
     <HBox spacing="10" alignment="CENTER_LEFT">
 
         <HBox spacing="3" alignment="CENTER_LEFT">
-        <Button text="sin"  prefWidth="52" />
-        <Button text="cos"  prefWidth="52" />
-        <Button text="tan"  prefWidth="52" />
-        <Button text="sinh" prefWidth="52" />
-        <Button text="cosh" prefWidth="52" />
-        <Button text="tanh" prefWidth="52" />
+        <Button text="sin"  prefWidth="54" />
+        <Button text="cos"  prefWidth="54" />
+        <Button text="tan"  prefWidth="54" />
+        <Button text="sinh" prefWidth="54" />
+        <Button text="cosh" prefWidth="54" />
+        <Button text="tanh" prefWidth="54" />
         </HBox>
 
         <HBox spacing="3" alignment="CENTER_LEFT">
@@ -61,12 +61,12 @@
     <HBox spacing="10" alignment="CENTER_LEFT">
 
         <HBox spacing="3" alignment="CENTER_LEFT">
-        <Button text="sin-¹"  prefWidth="52" />
-        <Button text="cos-¹"  prefWidth="52" />
-        <Button text="tan-¹"  prefWidth="52" />
-        <Button text="sinh-¹" prefWidth="52" />
-        <Button text="cosh-¹" prefWidth="52" />
-        <Button text="tanh-¹" prefWidth="52" />
+        <Button text="sin-¹"  prefWidth="54" />
+        <Button text="cos-¹"  prefWidth="54" />
+        <Button text="tan-¹"  prefWidth="54" />
+        <Button text="sinh-¹" prefWidth="54" />
+        <Button text="cosh-¹" prefWidth="54" />
+        <Button text="tanh-¹" prefWidth="54" />
         </HBox>
 
         <HBox spacing="3" alignment="CENTER_LEFT">
@@ -81,12 +81,12 @@
     <HBox spacing="10" alignment="CENTER_LEFT">
 
         <HBox spacing="3" alignment="CENTER_LEFT">
-        <Button text="x²"  prefWidth="52" />
-        <Button text="x³"  prefWidth="52" />
-        <Button text="xⁿ"  prefWidth="52" />
-        <Button text="10ⁿ" prefWidth="52" />
-        <Button text="eⁿ"  prefWidth="52" />
-        <Button text="ln"  prefWidth="52" />
+        <Button text="x²"  prefWidth="54" />
+        <Button text="x³"  prefWidth="54" />
+        <Button text="xⁿ"  prefWidth="54" />
+        <Button text="10ⁿ" prefWidth="54" />
+        <Button text="eⁿ"  prefWidth="54" />
+        <Button text="ln"  prefWidth="54" />
         </HBox>
 
         <HBox spacing="3" alignment="CENTER_LEFT">
@@ -101,12 +101,12 @@
     <HBox spacing="10" alignment="CENTER_LEFT">
 
         <HBox spacing="3" alignment="CENTER_LEFT">
-        <Button text="√"    prefWidth="52" />
-        <Button text="³√"   prefWidth="52" />
-        <Button text="ⁿ√"   prefWidth="52" />
-        <Button text="log"  prefWidth="52" />
-        <Button text="log2" prefWidth="52" />
-        <Button text="logn" prefWidth="52" />
+        <Button text="√"    prefWidth="54" />
+        <Button text="³√"   prefWidth="54" />
+        <Button text="ⁿ√"   prefWidth="54" />
+        <Button text="log"  prefWidth="54" />
+        <Button text="log2" prefWidth="54" />
+        <Button text="logn" prefWidth="54" />
         </HBox>
 
         <HBox spacing="3" alignment="CENTER_LEFT">

@@ -47,5 +47,15 @@ public class ScientificController
         {
             this.scientificTextField.setText(this.output = Formatter.negativePositive(this.output));
         }
+
+        if (button.getText().equals(Object.LEFT_PARENTHESIS))
+        {
+            this.scientificTextField.setText(this.output = Formatter.addLeftParenthesis(this.output));
+        }
+
+        if (button.getText().equals(Object.RIGHT_PARENTHESIS))
+        {
+            this.scientificTextField.setText(this.output = Formatter.addRightParenthesis(this.output));
+        }
     }
 }

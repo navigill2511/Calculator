@@ -29,9 +29,7 @@ public class Formatter
         return number += Object.DECIMAL;
     }
 
-/********************************
-TODO: Not working at this point
-********************************/
+// TODO: Not working at this point
     public static String round(double number, int maxDigits)
     {
         String stringNum = Double.toString(number);
@@ -57,5 +55,41 @@ TODO: Not working at this point
 
         // If the number has a negative sign, remove it otherwise add it.
         return (negative) ? number.substring(1, number.length()) : (Object.NEGATIVE + number);
+    }
+
+    public static String addLeftParenthesis(String number)
+    {
+        // If the string is empty add left parenthesis.
+        if (number.equals(Object.EMPTY)) return Object.LEFT_PARENTHESIS;
+
+        // If the object to the imediate left is a digit, add right parenthesis.
+        else if (Object.DIGITS.contains(number.substring(number.length() - 1, number.length())))
+        {
+            return number + Object.MULTIPLY + Object.LEFT_PARENTHESIS;
+        }
+
+        return number + Object.LEFT_PARENTHESIS;
+    }
+
+    public static String addRightParenthesis(String number)
+    {
+        // If the string is empty or the imidiate left is a digit, right parenthesis can not be added.
+        if (number.equals(Object.EMPTY) ||
+                Object.ALL_OPERATORS.contains(number.substring(number.length() - 1, number.length())))
+        {
+            return number;
+        }
+
+        // Right parenthesis can only be added if their number is less than the left parenthesis.
+        int rightParenthesis = 0;
+        for (String s : number.split(""))
+        {
+            if (s.equals(Object.LEFT_PARENTHESIS))  rightParenthesis--;
+            if (s.equals(Object.RIGHT_PARENTHESIS)) rightParenthesis++;
+        }
+
+        if (rightParenthesis < 0) return number + Object.RIGHT_PARENTHESIS;
+
+        return number;
     }
 }
