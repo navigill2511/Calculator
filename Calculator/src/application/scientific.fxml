@@ -30,8 +30,8 @@
         </HBox>
 
         <HBox spacing="3" alignment="CENTER_LEFT">
-        <Button text="AC"  prefWidth="40" />
-        <Button text="+/-" prefWidth="40" onAction="#numpad"/>
+        <Button text="AC"  prefWidth="40" onAction="#clearScreen"/>
+        <Button text="+/-" prefWidth="40" onAction="#format"/>
         <Button text="\%"  prefWidth="40" onAction="#numpad"/>
         <Button text="/"   prefWidth="40" onAction="#numpad"/>
         </HBox>

@@ -1,6 +1,5 @@
 package application.model;
 import application.formatter.Object;
-
 import java.lang.Math;
 import java.util.ArrayList;
 
@@ -65,7 +64,7 @@ public class ScientificModel
         {
             String nextCharacter = infix.substring(right, right + 1);
 
-            if (!isOperator(nextCharacter)) { right++; continue; }
+            if (!Object.ALL_OPERATORS.contains(nextCharacter)) { right++; continue; }
 
             tokens.add(infix.substring(left, right));
             tokens.add(nextCharacter);
@@ -107,7 +106,7 @@ public class ScientificModel
             else
             {
                 // If the token is an operand, just output the operand.
-                if (Object.ALL_OPERATORS.indexOf(token) < 0) output += token + " ";
+                if (!Object.ALL_OPERATORS.contains(token)) output += token + " ";
                 else
                 {
                     // The token is an operator.  Output those operators on the stack
@@ -167,19 +166,6 @@ public class ScientificModel
     {
         return Object.ADD_OR_SUBTRACT.indexOf(operator) >= 0 ? 0 : 1;
     }
-
-    /**
-     * Determine if a string is an operator.
-     * @param token
-     * @return
-     */
-    private static boolean isOperator(String token)
-    {
-        return (token.equals(Object.ADD)      || token.equals(Object.SUBTRACT) ||
-                token.equals(Object.MULTIPLY) || token.equals(Object.DIVIDE)   ||
-                token.equals(Object.REMAINDER));
-    }
-
 
     public static double sin(double x)
     {

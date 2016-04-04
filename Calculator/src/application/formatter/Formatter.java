@@ -29,6 +29,9 @@ public class Formatter
         return number += Object.DECIMAL;
     }
 
+/********************************
+TODO: Not working at this point
+********************************/
     public static String round(double number, int maxDigits)
     {
         String stringNum = Double.toString(number);
@@ -40,5 +43,19 @@ public class Formatter
         if (integerPlaces + decimalPlaces <= maxDigits) return stringNum;
 
         return Double.toString(Math.round(number));
+    }
+
+    /**
+     * Makes a number negative if it is positive and positive if it is negative.
+     * @param number
+     * @return
+     */
+    public static String negativePositive(String number)
+    {
+        // Check if the number has a negative sign in it.
+        boolean negative = (number.substring(0, 1).equals(Object.NEGATIVE));
+
+        // If the number has a negative sign, remove it otherwise add it.
+        return (negative) ? number.substring(1, number.length()) : (Object.NEGATIVE + number);
     }
 }

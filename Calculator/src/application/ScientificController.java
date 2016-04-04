@@ -1,5 +1,6 @@
 package application;
 
+import application.formatter.Formatter;
 import application.formatter.Object;
 import application.model.ScientificModel;
 import javafx.event.ActionEvent;
@@ -30,5 +31,21 @@ public class ScientificController
         this.output = Integer.toString(ScientificModel.evaluate(this.output));
         this.scientificTextField.setText(this.output);
         this.output = Object.CLEAR;
+    }
+
+    @FXML
+    public void clearScreen()
+    {
+        this.scientificTextField.setText(this.output = Object.EMPTY);
+    }
+
+    @FXML
+    public void format(ActionEvent event)
+    {
+        Button button = (Button) event.getSource();
+        if (button.getText().equals(Object.PLUS_MINUS))
+        {
+            this.scientificTextField.setText(this.output = Formatter.negativePositive(this.output));
+        }
     }
 }
