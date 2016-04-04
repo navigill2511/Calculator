@@ -6,16 +6,6 @@ import java.util.ArrayList;
 
 public class ScientificModel
 {
-    private static final String ADD = "+";                // Token for addition operator.
-    private static final String SUBTRACT = "-";           // Token for subtraction operator.
-    private static final String MULTIPLY = "*";           // Token for multiplication operator.
-    private static final String DIVIDE = "/";             // Token for division operator.
-    private static final String ADD_OR_SUBTRACT = ADD + SUBTRACT;
-    private static final String ALL_OPERATORS = ADD + SUBTRACT + MULTIPLY + DIVIDE;
-    private static final String LEFT_PARENTHESIS = "(";   // Token for a left parenthesis.
-    private static final String RIGHT_PARENTHESIS = ")";  // Token for a right parenthesis.
-    private static final String WHITESPACE = "\\s+";      // Regular expression for whitespace.
-
     public static boolean rad = true;
 
     /**
@@ -29,16 +19,13 @@ public class ScientificModel
     public static int evaluate(String postfix) {
 
         // Obtain the tokens as an array of strings.
-        String[] tokens = postfix.split(WHITESPACE);
-        System.out.println(postfix);
+        String[] tokens = convertToPostfix(postfix).split(Object.WHITESPACE);
 
         // Create a stack for the operands.
         Stack<Integer> operands = new Stack<>();
 
         // Process the tokens.
         for (String token : tokens) {		// for each token in the array of tokens do something.
-
-
 
             // If the token is an integer, it is an operand and can be placed on the stack.
             try {
@@ -49,10 +36,10 @@ public class ScientificModel
             catch (NumberFormatException nfe) {
                 int operand2 = operands.pop();
                 int operand1 = operands.pop();
-                if (token.equals(ADD)) operands.push(operand1 + operand2);
-                if (token.equals(SUBTRACT)) operands.push(operand1 - operand2);
-                if (token.equals(MULTIPLY)) operands.push(operand1 * operand2);
-                if (token.equals(DIVIDE)) operands.push(operand1 / operand2);
+                if (token.equals(Object.ADD))      operands.push(operand1 + operand2);
+                if (token.equals(Object.SUBTRACT)) operands.push(operand1 - operand2);
+                if (token.equals(Object.MULTIPLY)) operands.push(operand1 * operand2);
+                if (token.equals(Object.DIVIDE))   operands.push(operand1 / operand2);
             }
             // operands, perform the appropriate operation, and place the result on the stack.
         }
@@ -84,9 +71,9 @@ public class ScientificModel
             tokens.add(nextCharacter);
             right = left = right + 1;
         }
-
         if (left != right) tokens.add(infix.substring(left, right));
 
+        // Convert to postfix and return expression as string.
         return convertToPostfix(tokens, 0, tokens.size() - 1);
     }
 
@@ -111,7 +98,7 @@ public class ScientificModel
 
             // If the token is a left parenthesis, find the matching parenthesis and
             // convert the tokens between the matching parentheses.
-            if (token.equals(LEFT_PARENTHESIS))
+            if (token.equals(Object.LEFT_PARENTHESIS))
             {
                 int match = findMatchingParenthesis(infix, first + 1, last);
                 output += convertToPostfix(infix, first + 1, match - 1) + " ";
@@ -120,7 +107,7 @@ public class ScientificModel
             else
             {
                 // If the token is an operand, just output the operand.
-                if (ALL_OPERATORS.indexOf(token) < 0) output += token + " ";
+                if (Object.ALL_OPERATORS.indexOf(token) < 0) output += token + " ";
                 else
                 {
                     // The token is an operator.  Output those operators on the stack
@@ -157,11 +144,11 @@ public class ScientificModel
             String token = tokens.get(first);
 
             // Count the number of left parentheses encountered.
-            if (token.equals(LEFT_PARENTHESIS)) left++;
+            if (token.equals(Object.LEFT_PARENTHESIS)) left++;
 
             // When a right parenthesis is encountered, it is the matching one
             // only after all the intervening left parentheses have been matched.
-            if (token.equals(RIGHT_PARENTHESIS))
+            if (token.equals(Object.RIGHT_PARENTHESIS))
             {
                 if (left == 0) return first;
                 else left--;
@@ -178,12 +165,14 @@ public class ScientificModel
      */
     private static int precedence(String operator)
     {
-        // does the same thing in a different way!
-        /**if (ADD_OR_SUBTRACT.indexOf(operator) >= 0) return 0;
-         else return 1; **/
-        return ADD_OR_SUBTRACT.indexOf(operator) >= 0 ? 0 : 1;
+        return Object.ADD_OR_SUBTRACT.indexOf(operator) >= 0 ? 0 : 1;
     }
 
+    /**
+     * Determine if a string is an operator.
+     * @param token
+     * @return
+     */
     private static boolean isOperator(String token)
     {
         return (token.equals(Object.ADD)      || token.equals(Object.SUBTRACT) ||

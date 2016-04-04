@@ -31,9 +31,9 @@
 
         <HBox spacing="3" alignment="CENTER_LEFT">
         <Button text="AC"  prefWidth="40" />
-        <Button text="+/-" prefWidth="40" />
-        <Button text="\%"  prefWidth="40" />
-        <Button text="/"   prefWidth="40" />
+        <Button text="+/-" prefWidth="40" onAction="#numpad"/>
+        <Button text="\%"  prefWidth="40" onAction="#numpad"/>
+        <Button text="/"   prefWidth="40" onAction="#numpad"/>
         </HBox>
 
     </HBox>
@@ -50,10 +50,10 @@
         </HBox>
 
         <HBox spacing="3" alignment="CENTER_LEFT">
-        <Button text="7" prefWidth="40" />
-        <Button text="8" prefWidth="40" />
-        <Button text="9" prefWidth="40" />
-        <Button text="X" prefWidth="40" />
+        <Button text="7" prefWidth="40" onAction="#numpad"/>
+        <Button text="8" prefWidth="40" onAction="#numpad"/>
+        <Button text="9" prefWidth="40" onAction="#numpad"/>
+        <Button text="*" prefWidth="40" onAction="#numpad"/>
         </HBox>
 
     </HBox>
@@ -70,10 +70,10 @@
         </HBox>
 
         <HBox spacing="3" alignment="CENTER_LEFT">
-        <Button text="4" prefWidth="40" />
-        <Button text="5" prefWidth="40" />
-        <Button text="6" prefWidth="40" />
-        <Button text="-" prefWidth="40" />
+        <Button text="4" prefWidth="40" onAction="#numpad"/>
+        <Button text="5" prefWidth="40" onAction="#numpad"/>
+        <Button text="6" prefWidth="40" onAction="#numpad"/>
+        <Button text="-" prefWidth="40" onAction="#numpad"/>
         </HBox>
 
     </HBox>
@@ -90,10 +90,10 @@
         </HBox>
 
         <HBox spacing="3" alignment="CENTER_LEFT">
-        <Button text="1" prefWidth="40" />
-        <Button text="2" prefWidth="40" />
-        <Button text="3" prefWidth="40" />
-        <Button text="+" prefWidth="40" />
+        <Button text="1" prefWidth="40" onAction="#numpad"/>
+        <Button text="2" prefWidth="40" onAction="#numpad"/>
+        <Button text="3" prefWidth="40" onAction="#numpad"/>
+        <Button text="+" prefWidth="40" onAction="#numpad"/>
         </HBox>
 
     </HBox>
@@ -110,9 +110,9 @@
         </HBox>
 
         <HBox spacing="3" alignment="CENTER_LEFT">
-        <Button text="0" prefWidth="83" />
-        <Button text="." prefWidth="40" />
-        <Button text="=" prefWidth="40" />
+        <Button text="0" prefWidth="83" onAction="#numpad"/>
+        <Button text="." prefWidth="40" onAction="#numpad"/>
+        <Button text="=" prefWidth="40" onAction="#calculate"/>
         </HBox>
 
     </HBox>
