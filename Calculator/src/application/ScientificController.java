@@ -141,4 +141,16 @@ public class ScientificController
 
         this.scientificTextField.setText(this.output += this.operation);
     }
+
+    @FXML public void handleLogOperation(ActionEvent event)
+    {
+        // Get the button responsible for this operation.
+        String operation = ((Button) event.getSource()).getText();
+
+        if (operation.equals(Object.LOG)) this.operation = Object.LOG + Object.LEFT_PARENTHESIS;
+        if (operation.equals(Object.LN)) this.operation = Object.LN + Object.LEFT_PARENTHESIS;
+        if (operation.equals(Object.LOG_TWO)) this.operation = Object.LOG_TWO + Object.LEFT_PARENTHESIS;
+
+        this.scientificTextField.setText(this.output += this.operation);
+    }
 }

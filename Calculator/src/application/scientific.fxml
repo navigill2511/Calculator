@@ -86,7 +86,7 @@
         <Button text="xⁿ"  prefWidth="54" onAction="#handlePowerOperation"/>
         <Button text="10ⁿ" prefWidth="54" onAction="#handleExponentOperation"/>
         <Button text="eⁿ"  prefWidth="54" onAction="#handleExponentOperation"/>
-        <Button text="ln"  prefWidth="54" onAction="#trignometry"/>
+        <Button text="ln"  prefWidth="54" onAction="#handleLogOperation"/>
         </HBox>
 
         <HBox spacing="3" alignment="CENTER_LEFT">
@@ -104,8 +104,8 @@
         <Button text="√"    prefWidth="54" onAction="#trignometry"/>
         <Button text="³√"   prefWidth="54" onAction="#trignometry"/>
         <Button text="ⁿ√"   prefWidth="54" />
-        <Button text="log"  prefWidth="54" onAction="#trignometry"/>
-        <Button text="log2" prefWidth="54" onAction="#trignometry"/>
+        <Button text="log"  prefWidth="54" onAction="#handleLogOperation"/>
+        <Button text="log2" prefWidth="54" onAction="#handleLogOperation"/>
         <Button text="logn" prefWidth="54" />
         </HBox>
 
