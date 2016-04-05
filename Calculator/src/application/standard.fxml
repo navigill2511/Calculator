@@ -17,35 +17,35 @@
         </HBox>
 
         <HBox spacing="4" alignment="CENTER" >
-            <Button text="AC"  prefWidth="40" onAction="#resetObjects"/>
+            <Button text="AC"  prefWidth="40" onAction="#clearScreen"/>
             <Button text="+/-" prefWidth="40" onAction="#negativePositive"/>
-            <Button text="\%"  prefWidth="40" onAction="#operator"/>
-            <Button text="/"   prefWidth="40" onAction="#operator"/>
+            <Button text="\%"  prefWidth="40" onAction="#handleInputOperation"/>
+            <Button text="/"   prefWidth="40" onAction="#handleInputOperation"/>
         </HBox>
 
         <HBox spacing="4" alignment="CENTER" >
-            <Button text="7"  prefWidth="40" onAction="#operand"/>
-            <Button text="8"  prefWidth="40" onAction="#operand"/>
-            <Button text="9"  prefWidth="40" onAction="#operand"/>
-            <Button text="X"  prefWidth="40" onAction="#operator"/>
+            <Button text="7"  prefWidth="40" onAction="#handleInputOperation"/>
+            <Button text="8"  prefWidth="40" onAction="#handleInputOperation"/>
+            <Button text="9"  prefWidth="40" onAction="#handleInputOperation"/>
+            <Button text="*"  prefWidth="40" onAction="#handleInputOperation"/>
         </HBox>
 
         <HBox spacing="4" alignment="CENTER" >
-            <Button text="4" prefWidth="40" onAction="#operand"/>
-            <Button text="5" prefWidth="40" onAction="#operand"/>
-            <Button text="6" prefWidth="40" onAction="#operand"/>
-            <Button text="-" prefWidth="40" onAction="#operator"/>
+            <Button text="4" prefWidth="40" onAction="#handleInputOperation"/>
+            <Button text="5" prefWidth="40" onAction="#handleInputOperation"/>
+            <Button text="6" prefWidth="40" onAction="#handleInputOperation"/>
+            <Button text="-" prefWidth="40" onAction="#handleInputOperation"/>
         </HBox>
 
         <HBox spacing="4" alignment="CENTER" >
-            <Button text="1" prefWidth="40" onAction="#operand"/>
-            <Button text="2" prefWidth="40" onAction="#operand"/>
-            <Button text="3" prefWidth="40" onAction="#operand"/>
-            <Button text="+" prefWidth="40" onAction="#operator"/>
+            <Button text="1" prefWidth="40" onAction="#handleInputOperation"/>
+            <Button text="2" prefWidth="40" onAction="#handleInputOperation"/>
+            <Button text="3" prefWidth="40" onAction="#handleInputOperation"/>
+            <Button text="+" prefWidth="40" onAction="#handleInputOperation"/>
         </HBox>
 
         <HBox spacing="4" alignment="CENTER" >
-            <Button text="0" prefWidth="84" onAction="#operand"/>
+            <Button text="0" prefWidth="84" onAction="#handleInputOperation"/>
             <Button text="." prefWidth="40" onAction="#decimal"/>
             <Button text="=" prefWidth="40" onAction="#calculate"/>
         </HBox>
