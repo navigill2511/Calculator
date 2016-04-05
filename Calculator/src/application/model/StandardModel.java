@@ -14,31 +14,6 @@ public class StandardModel {
         System.out.println(evaluate("232.0*3"));
     }
 
-    public static double add(double x, double y)
-    {
-        return x + y;
-    }
-
-    public static double subtract(double x, double y)
-    {
-        return x - y;
-    }
-
-    public static double multipy(double x, double y)
-    {
-        return x * y;
-    }
-
-    public static double divide(double x, double y)
-    {
-        return x / y;
-    }
-
-    public static double remainder(double x, double y)
-    {
-        return x % y;
-    }
-
     /**
      * Evaluate a postfix expression.
      * @param infix A String that contains an expression in postfix notation.
@@ -84,8 +59,6 @@ public class StandardModel {
     /**
      * Convert an infix expression to postfix notation.
      * @param infix A String that contains an expression in infix notation.
-     *              Operators, operands, and brackets must be surrounded by
-     *              at least one space.
      * @return The postfix expression, as a String, that is equivalent to the infix expression.
      */
     public static String convertToPostfix(String infix)
@@ -99,33 +72,28 @@ public class StandardModel {
         {
             String currentChar = infix.substring(i, i + 1);
 
-            System.out.println(currentChar);
             // If the current character is not a digit or a decimal, add it to 'tokens'
             if (!isDigit(currentChar))
             {
-                System.out.println("operator: " + currentChar);
-
-                digitBeginFlag = i + 1;
+                digitBeginFlag = i + 1; // Flags the beginning of digits.
                 tokens.add(currentChar);
                 continue;
             }
 
+            // Get the next number up until the operator.
             while (i < infix.length())
             {
                 currentChar = infix.substring(i, i + 1);
 
-                System.out.println("operand_or_digit: " + currentChar);
-
-                // If current object is not a digit or not a decimal, break;
+                // If current object is not a digit or not a decimal, break loop.
                 if (!isDigit(currentChar)) break;
                 i++;
             }
 
+            // Add the number to the 'tokens'.
             tokens.add(infix.substring(digitBeginFlag, i));
             i--;
         }
-
-        System.out.println(tokens.toString());
 
         // Convert to postfix and return expression as string.
         return convertToPostfix(tokens, 0, tokens.size() - 1);

@@ -1,7 +1,7 @@
 package application.formatter;
 
 /***********************************************************************************************************************
- * <h1>Created by Navi on 01/04/2016.</h1>
+ * Created by Navi on 01/04/2016.
  *
  * Class Formatter is a static class used to format a given string. It can do the following:
  *
@@ -15,6 +15,11 @@ package application.formatter;
  ***********************************************************************************************************************/
 public class Formatter
 {
+    public static void main(String[] args)
+    {
+        System.out.println(round("2.0"));
+    }
+
     /**
      * Adds a decimal to the end of a number.
      * If a decimal already exists in a number, it is not added.
@@ -28,20 +33,6 @@ public class Formatter
 
         // Otherwise add the decimal at the end of the number.
         return number += Object.DECIMAL;
-    }
-
-// TODO: Not working at this point
-    public static String round(double number, int maxDigits)
-    {
-        String stringNum = Double.toString(number);
-
-        // Separate the integers from decimals.
-        int integerPlaces = stringNum.indexOf(Object.DECIMAL);
-        int decimalPlaces = stringNum.length() - integerPlaces - 1;
-
-        if (integerPlaces + decimalPlaces <= maxDigits) return stringNum;
-
-        return Double.toString(Math.round(number));
     }
 
     /**
@@ -101,13 +92,38 @@ public class Formatter
         return number;
     }
 
+    /**
+     * Given a string, this method surrounds it with parenthesis.
+     * @param number
+     * @return String
+     */
     public static String surroundWithParenthesis(String number)
     {
         return Object.LEFT_PARENTHESIS + number + Object.RIGHT_PARENTHESIS;
     }
 
+    /**
+     * Deletes the last digit from a number
+     * @param number
+     * @return String with the deleted digit.
+     */
     public static String delete(String number)
     {
         return number.substring(0, number.length() - 1);
+    }
+
+    /**
+     * Removes a decimal if a number has a decimal value of zero.
+     * @param number
+     * @return
+     */
+    public static String round(String number)
+    {
+        // Get the decimal value.
+        int decimalIndex = number.indexOf(Object.DECIMAL);
+        int decimal = Integer.parseInt(number.substring(decimalIndex + 1, number.length()));
+
+        // Only remove the decimal if the decimal value is zero.
+        return (decimal == 0) ? number.substring(0, decimalIndex) : number;
     }
 }

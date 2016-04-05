@@ -42,7 +42,8 @@ public class StandardController
         // If either operator, operandOne or operandTwo are empty calculation can not be done.
         if (this.output.equals(Object.EMPTY)) return;
 
-        this.standardTextField.setText(this.output = Double.toString(StandardModel.evaluate(this.output)));
+        String result = Formatter.round(Double.toString(StandardModel.evaluate(this.output)));
+        this.standardTextField.setText(this.output = result);
     }
 
     /**
