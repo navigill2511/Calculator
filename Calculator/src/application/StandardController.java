@@ -46,6 +46,8 @@ public class StandardController
      */
     @FXML public void calculate()
     {
+        this.output = this.standardTextField.getText();
+
         // If either operator, operandOne or operandTwo are empty calculation can not be done.
         if (this.output.equals(Object.EMPTY)) return;
 
