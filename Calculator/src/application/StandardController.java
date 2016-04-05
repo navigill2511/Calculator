@@ -79,4 +79,5 @@ public class StandardController
     {
         this.standardTextField.setText(this.output = Formatter.addDecimal(this.output));
     }
+
 }

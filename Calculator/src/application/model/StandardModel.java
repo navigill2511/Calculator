@@ -26,6 +26,9 @@ public class StandardModel {
     {
         // Obtain the tokens as an array of strings.
         String postfix = convertToPostfix(infix);
+
+        System.out.println(postfix);
+
         String[] tokens = postfix.split(Object.WHITESPACE);
 
         // Create a stack for the operands.
@@ -34,6 +37,8 @@ public class StandardModel {
         // Process the tokens.
         for (String token : tokens)
         {
+            System.out.println(token);
+
             // If the token is an integer, it is an operand and can be placed on the stack.
             try
             {
