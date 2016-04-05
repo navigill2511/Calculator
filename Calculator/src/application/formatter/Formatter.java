@@ -13,6 +13,8 @@ import application.model.StandardModel;
  *  addRightParenthesis()       |   adds a right parenthesis.
  *  surroundWithParenthesis()   |   surrounds the string with parenthesis.
  *  delete()                    |   deletes the last character from a string.
+ *  isOperator()                |   checks if a given character is an operator.
+ *  isDigit()                   |   checks if a given character is a digit.
  *
  ***********************************************************************************************************************/
 public class Formatter
