@@ -46,6 +46,7 @@ public class ScientificController
                 case (Object.INV_SINH)     : result = ScientificModel.invSinh(result); break;
                 case (Object.INV_COSH)     : result = ScientificModel.invCosh(result); break;
                 case (Object.INV_TANH)     : result = ScientificModel.invTanh(result); break;
+
                 case (Object.LOG)          : result = ScientificModel.log(result);     break;
                 case (Object.LOG_TWO)      : result = ScientificModel.log2(result);    break;
                 case (Object.LN)           : result = ScientificModel.ln(result);      break;
@@ -60,13 +61,69 @@ public class ScientificController
 
         this.scientificTextField.setText(this.output = Double.toString(result));
         this.output = this.number = this.operation = Object.CLEAR;
-
     }
 
-    @FXML public void clearScreen()
+    @FXML public void handleTrigOperation(ActionEvent event)
     {
-        this.output = this.number = this.operation = Object.EMPTY;
+        Button button = (Button) event.getSource();
+
+        this.output = (this.operation = button.getText()) + Object.LEFT_PARENTHESIS;
+
         this.scientificTextField.setText(this.output);
+    }
+
+    @FXML public void handlePowerOperation(ActionEvent event)
+    {
+        if (this.output.equals(Object.EMPTY)) return;
+
+        // Get the button responsible for this operation.
+        String operation = ((Button) event.getSource()).getText();
+
+        if (this.output.length() > 1 && (this.output.charAt(this.output.length() - 2)  + "").equals(Object.POWER))
+        {
+            this.output = Formatter.surroundWithParenthesis(this.output);
+        }
+
+        // Set the operation according to the operation.
+        if (operation.equals(Object.SQUARED)) this.operation = Object.POWER + Object.SQUARE;
+        if (operation.equals(Object.CUBED))   this.operation = Object.POWER + Object.CUBE;
+        if (operation.equals(Object.POWER_N)) this.operation = Object.POWER;
+
+        this.scientificTextField.setText(this.output += this.operation);
+    }
+
+    @FXML public void handleExponentOperation(ActionEvent event)
+    {
+        // Get the button responsible for this operation.
+        String operation = ((Button) event.getSource()).getText();
+
+        if (operation.equals(Object.TO_POWER_TEN)) this.operation = Object.TEN + Object.POWER;
+        if (operation.equals(Object.EXPONENT)) this.operation = Object.E + Object.POWER;
+
+        this.scientificTextField.setText(this.output += this.operation);
+    }
+
+    @FXML public void handleLogOperation(ActionEvent event)
+    {
+        // Get the button responsible for this operation.
+        String operation = ((Button) event.getSource()).getText();
+
+        if (operation.equals(Object.LOG))     this.operation = Object.LOG + Object.LEFT_PARENTHESIS;
+        if (operation.equals(Object.LN))      this.operation = Object.LN + Object.LEFT_PARENTHESIS;
+        if (operation.equals(Object.LOG_TWO)) this.operation = Object.LOG_TWO + Object.LEFT_PARENTHESIS;
+
+        this.scientificTextField.setText(this.output += this.operation);
+    }
+
+    @FXML public void handleRootOperation(ActionEvent event)
+    {
+        // Get the button responsible for this operation.
+        String operation = ((Button) event.getSource()).getText();
+
+        if (operation.equals(Object.SQUARE_ROOT)) this.operation = Object.SQUARE_ROOT;
+        if (operation.equals(Object.CUBE_ROOT)) this.operation = "3" + Object.SQUARE_ROOT;
+
+        this.scientificTextField.setText(this.output += this.operation);
     }
 
     @FXML public void format(ActionEvent event)
@@ -104,53 +161,9 @@ public class ScientificController
         }
     }
 
-    @FXML public void trignometry(ActionEvent event)
+    @FXML public void clearScreen()
     {
-        Button button = (Button) event.getSource();
-
-        this.output = (this.operation = button.getText()) + Object.LEFT_PARENTHESIS;
-
+        this.output = this.number = this.operation = Object.EMPTY;
         this.scientificTextField.setText(this.output);
-    }
-
-    @FXML public void handlePowerOperation(ActionEvent event)
-    {
-        // Get the button responsible for this operation.
-        String operation = ((Button) event.getSource()).getText();
-
-        if (this.output.length() > 1 && (this.output.charAt(this.output.length() - 2)  + "").equals(Object.POWER))
-        {
-            this.output = Formatter.surroundWithParenthesis(this.output);
-        }
-
-        // Set the operation according to the operation.
-        if (operation.equals(Object.SQUARED)) this.operation = Object.POWER + Object.SQUARE;
-        if (operation.equals(Object.CUBED))   this.operation = Object.POWER + Object.CUBE;
-        if (operation.equals(Object.POWER_N)) this.operation = Object.POWER;
-
-        this.scientificTextField.setText(this.output += this.operation);
-    }
-
-    @FXML public void handleExponentOperation(ActionEvent event)
-    {
-        // Get the button responsible for this operation.
-        String operation = ((Button) event.getSource()).getText();
-
-        if (operation.equals(Object.TO_POWER_TEN)) this.operation = Object.TEN + Object.POWER;
-        if (operation.equals(Object.EXPONENT)) this.operation = Object.E + Object.POWER;
-
-        this.scientificTextField.setText(this.output += this.operation);
-    }
-
-    @FXML public void handleLogOperation(ActionEvent event)
-    {
-        // Get the button responsible for this operation.
-        String operation = ((Button) event.getSource()).getText();
-
-        if (operation.equals(Object.LOG)) this.operation = Object.LOG + Object.LEFT_PARENTHESIS;
-        if (operation.equals(Object.LN)) this.operation = Object.LN + Object.LEFT_PARENTHESIS;
-        if (operation.equals(Object.LOG_TWO)) this.operation = Object.LOG_TWO + Object.LEFT_PARENTHESIS;
-
-        this.scientificTextField.setText(this.output += this.operation);
     }
 }

@@ -3,6 +3,7 @@ import java.util.NoSuchElementException;
 
 /**
  * A stack using linked lists of nodes.
+ * Stack is used to solve expressions.
  * @param <T> The type of data permitted on this stack.
  */
 public class Stack<T>

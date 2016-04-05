@@ -41,12 +41,12 @@
     <HBox spacing="10" alignment="CENTER_LEFT">
 
         <HBox spacing="3" alignment="CENTER_LEFT">
-        <Button text="sin"  prefWidth="54" onAction="#trignometry"/>
-        <Button text="cos"  prefWidth="54" onAction="#trignometry"/>
-        <Button text="tan"  prefWidth="54" onAction="#trignometry"/>
-        <Button text="sinh" prefWidth="54" onAction="#trignometry"/>
-        <Button text="cosh" prefWidth="54" onAction="#trignometry"/>
-        <Button text="tanh" prefWidth="54" onAction="#trignometry"/>
+        <Button text="sin"  prefWidth="54" onAction="#handleTrigOperation"/>
+        <Button text="cos"  prefWidth="54" onAction="#handleTrigOperation"/>
+        <Button text="tan"  prefWidth="54" onAction="#handleTrigOperation"/>
+        <Button text="sinh" prefWidth="54" onAction="#handleTrigOperation"/>
+        <Button text="cosh" prefWidth="54" onAction="#handleTrigOperation"/>
+        <Button text="tanh" prefWidth="54" onAction="#handleTrigOperation"/>
         </HBox>
 
         <HBox spacing="3" alignment="CENTER_LEFT">
@@ -61,12 +61,12 @@
     <HBox spacing="10" alignment="CENTER_LEFT">
 
         <HBox spacing="3" alignment="CENTER_LEFT">
-        <Button text="sin-¹"  prefWidth="54" onAction="#trignometry"/>
-        <Button text="cos-¹"  prefWidth="54" onAction="#trignometry"/>
-        <Button text="tan-¹"  prefWidth="54" onAction="#trignometry"/>
-        <Button text="sinh-¹" prefWidth="54" onAction="#trignometry"/>
-        <Button text="cosh-¹" prefWidth="54" onAction="#trignometry"/>
-        <Button text="tanh-¹" prefWidth="54" onAction="#trignometry"/>
+        <Button text="sin-¹"  prefWidth="54" onAction="#handleTrigOperation"/>
+        <Button text="cos-¹"  prefWidth="54" onAction="#handleTrigOperation"/>
+        <Button text="tan-¹"  prefWidth="54" onAction="#handleTrigOperation"/>
+        <Button text="sinh-¹" prefWidth="54" onAction="#handleTrigOperation"/>
+        <Button text="cosh-¹" prefWidth="54" onAction="#handleTrigOperation"/>
+        <Button text="tanh-¹" prefWidth="54" onAction="#handleTrigOperation"/>
         </HBox>
 
         <HBox spacing="3" alignment="CENTER_LEFT">
@@ -101,8 +101,8 @@
     <HBox spacing="10" alignment="CENTER_LEFT">
 
         <HBox spacing="3" alignment="CENTER_LEFT">
-        <Button text="√"    prefWidth="54" onAction="#trignometry"/>
-        <Button text="³√"   prefWidth="54" onAction="#trignometry"/>
+        <Button text="√"    prefWidth="54" onAction="#handleRootOperation"/>
+        <Button text="³√"   prefWidth="54" onAction="#handleRootOperation"/>
         <Button text="ⁿ√"   prefWidth="54" />
         <Button text="log"  prefWidth="54" onAction="#handleLogOperation"/>
         <Button text="log2" prefWidth="54" onAction="#handleLogOperation"/>

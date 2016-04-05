@@ -1,10 +1,10 @@
 package application.formatter;
 
-/**
- * Created by Navi on 01/04/2016.
+/***********************************************************************************************************************
+ * <h1>Created by Navi on 01/04/2016.</h1>
  *
  * Class Formatter is a static class used to format a given string. It can do the following:
- *  clearScreen()               |   returns an empty string.
+ *
  *  addDecimal()                |   adds a decimal to the end if not already added.
  *  negativePositive()          |   makes a number negative if positive, positive otherwise.
  *  addLeftParenthesis()        |   adds a left parenthesis.
@@ -12,18 +12,9 @@ package application.formatter;
  *  surroundWithParenthesis()   |   surrounds the string with parenthesis.
  *  delete()                    |   deletes the last character from a string.
  *
- */
+ ***********************************************************************************************************************/
 public class Formatter
 {
-    /**
-     * Returns an empty string to clear screen.
-     * @return
-     */
-    public static String clearScreen()
-    {
-        return Object.EMPTY;
-    }
-
     /**
      * Adds a decimal to the end of a number.
      * If a decimal already exists in a number, it is not added.
