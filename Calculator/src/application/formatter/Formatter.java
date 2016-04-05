@@ -59,7 +59,7 @@ public class Formatter
         // If the string is empty add left parenthesis.
         if (number.equals(Object.EMPTY)) return Object.LEFT_PARENTHESIS;
 
-        // If the object to the imediate left is a digit, add right parenthesis.
+        // If the object to the immediate left is a digit, add right parenthesis.
         if (Object.DIGITS.contains(number.substring(number.length() - 1, number.length())))
         {
             return number + Object.MULTIPLY + Object.LEFT_PARENTHESIS;
@@ -75,7 +75,7 @@ public class Formatter
      */
     public static String addRightParenthesis(String number)
     {
-        // If the string is empty or the imidiate left is an operator, right parenthesis can not be added.
+        // If the string is empty or the immediate left is an operator, right parenthesis can not be added.
         if (Object.ALL_OPERATORS.contains(number.charAt(number.length() - 1) + "")) return number;
 
         // Right parenthesis can only be added if their number is less than the left parenthesis.

@@ -1,5 +1,4 @@
 package application;
-
 import application.formatter.Formatter;
 import application.formatter.Object;
 import application.model.StandardModel;
@@ -8,14 +7,19 @@ import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
 
-
+/***********************************************************************************************************************
+ * Class StandardController controls the operations in standard view of the calculator.
+ * The standard view is created by 'standard.fxml'
+ * This class controls what is displayed on the TextField and evaluates the expressions using StandardModel class.
+ *
+ ***********************************************************************************************************************/
 public class StandardController
 {
     @FXML private TextField standardTextField;  // TextField as defined in 'Standard.fxml'.
     private String output;                      // Output to be displayed in TextField.
 
     /**
-     *
+     * Constructor assigns an empty string to 'output'.
      */
     public StandardController()
     {
@@ -23,6 +27,8 @@ public class StandardController
     }
 
     /**
+     * On click of a number or operator button, this method is called.
+     * It adds the new object to the text field.
      * @param event
      */
     @FXML public void handleInputOperation(ActionEvent event)
@@ -35,19 +41,23 @@ public class StandardController
     }
 
     /**
-     *
+     * When equal (=) is pressed, this method is called.
+     * It evaluates the expression in the TextField and displays the result.
      */
     @FXML public void calculate()
     {
         // If either operator, operandOne or operandTwo are empty calculation can not be done.
         if (this.output.equals(Object.EMPTY)) return;
 
+        // Get the formatted result.
         String result = Formatter.round(Double.toString(StandardModel.evaluate(this.output)));
+
+        // Display the result.
         this.standardTextField.setText(this.output = result);
     }
 
     /**
-     *
+     * Adds or removes a negative. This method is called when '+/-' is pressed.
      */
     @FXML public void negativePositive()
     {
@@ -55,7 +65,7 @@ public class StandardController
     }
 
     /**
-     *
+     * Clears the TextField. This method is called when 'AC' is pressed.
      */
     @FXML public void clearScreen()
     {
@@ -63,7 +73,7 @@ public class StandardController
     }
 
     /**
-     *
+     * Adds a decimal to the number. This method is called when '.' is pressed.
      */
     @FXML public void decimal()
     {

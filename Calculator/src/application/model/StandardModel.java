@@ -49,6 +49,7 @@ public class StandardModel {
                 if (token.equals(Object.SUBTRACT)) operands.push(operand1 - operand2);
                 if (token.equals(Object.MULTIPLY)) operands.push(operand1 * operand2);
                 if (token.equals(Object.DIVIDE))   operands.push(operand1 / operand2);
+                if (token.equals(Object.REMAINDER))operands.push(operand1 % operand2);
             }
             // operands, perform the appropriate operation, and place the result on the stack.
         }
