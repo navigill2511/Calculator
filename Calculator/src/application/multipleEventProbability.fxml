@@ -24,21 +24,21 @@
         <VBox spacing="5">
             <HBox >
                 <Label text="Possible outcomes" prefWidth="120"/>
-                <TextField styleClass="textField" prefWidth="150"/>
+                <TextField styleClass="textField" prefWidth="150" onKeyReleased="#handleOutcomeEvent"/>
             </HBox>
             <HBox>
                 <Label text="Events occurred in A" prefWidth="120"/>
-                <TextField styleClass="textField" prefWidth="150"/>
+                <TextField styleClass="textField" prefWidth="150" onKeyReleased="#handleOccurrenceAEvent"/>
             </HBox>
             <HBox>
                 <Label text="Events occurred in B" prefWidth="120"/>
-                <TextField styleClass="textField" prefWidth="150"/>
+                <TextField styleClass="textField" prefWidth="150" onKeyReleased="#handleOccurrenceBEvent"/>
             </HBox>
         </VBox>
 
         <VBox alignment="CENTER">
             <padding><Insets top="20" bottom="20" /></padding>
-            <Button text="Calculate" alignment="CENTER" prefWidth="200" prefHeight="30"/>
+            <Button text="Calculate" alignment="CENTER" prefWidth="200" prefHeight="30" onAction="#calculate"/>
         </VBox>
 
         <HBox spacing="5" alignment="CENTER">
@@ -46,23 +46,23 @@
             <HBox>
                 <padding><Insets right="30"/> </padding>
                 <Label text="P(A)" prefWidth="30"/>
-                <TextField styleClass="textField" prefWidth="70"/>
+                <TextField fx:id="probabilityA" styleClass="textField" prefWidth="70"/>
             </HBox>
             <HBox>
                 <padding><Insets right="30"/></padding>
                 <Label text="P(B)" prefWidth="30"/>
-                <TextField styleClass="textField" prefWidth="70"/>
+                <TextField fx:id="probabilityB" styleClass="textField" prefWidth="70"/>
             </HBox>
             </VBox>
 
             <VBox spacing="5">
             <HBox>
                 <Label text="P(A∩B)" prefWidth="50"/>
-                <TextField styleClass="textField" prefWidth="70"/>
+                <TextField fx:id="probabilityA_and_B" styleClass="textField" prefWidth="70"/>
             </HBox>
             <HBox>
                 <Label text="P(A | B)" prefWidth="50"/>
-                <TextField styleClass="textField" prefWidth="70"/>
+                <TextField fx:id="probabilityA_or_B" styleClass="textField" prefWidth="70"/>
             </HBox>
             </VBox>
         </HBox>

@@ -41,7 +41,7 @@ public class StatisticsModel
     }
 
     /**
-     *
+     * Calculates factorial of a given integer. Uses recursion.
      * @param x
      * @return
      */
@@ -61,5 +61,19 @@ public class StatisticsModel
     public static double singleEventProbability(double occurrences, double outcomes)
     {
         return (occurrences / outcomes);
+    }
+
+    public static double A_and_B_probability(double occurrencesInA, double occurrencesInB, double outcomes)
+    {
+        double probability_A = singleEventProbability(occurrencesInA, outcomes);
+        double probability_B = singleEventProbability(occurrencesInB, outcomes);
+        return probability_A * probability_B;
+    }
+
+    public static double A_or_B_Probability(double occurrencesInA, double occurrencesInB, double outcomes)
+    {
+        double probability_A_and_B = A_and_B_probability(occurrencesInA, occurrencesInB, outcomes);
+        double probability_B = singleEventProbability(occurrencesInB, outcomes);
+        return probability_A_and_B / probability_B;
     }
 }
