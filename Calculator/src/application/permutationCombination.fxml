@@ -7,7 +7,7 @@
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.control.Button?>
 
-<AnchorPane fx:controller="application.MultipleEventProbabilityController" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane fx:controller="application.PermutationCombinationController" xmlns:fx="http://javafx.com/fxml/1">
 
     <VBox>
         <fx:include source="navigation.fxml" alignment="CENTER_LEFT" />
@@ -23,27 +23,27 @@
             <VBox spacing="5">
             <HBox alignment="CENTER">
                 <Label text="Sample points" prefWidth="120"/>
-                <TextField styleClass="textField"/>
+                <TextField fx:id="nTextField" styleClass="textField" onKeyReleased="#handleNAction"/>
             </HBox>
             <HBox alignment="CENTER">
                 <Label text="# of Sample points" prefWidth="120"/>
-                <TextField styleClass="textField"/>
+                <TextField fx:id="rTextField" styleClass="textField" onKeyReleased="#handleRAction"/>
             </HBox>
             </VBox>
 
             <VBox alignment="CENTER">
                 <padding><Insets top="20" bottom="20" /></padding>
-                <Button text="Calculate" alignment="CENTER" prefWidth="200" prefHeight="30"/>
+                <Button text="Calculate" alignment="CENTER" prefWidth="200" prefHeight="30" onAction="#calculate"/>
             </VBox>
 
             <VBox spacing="5" alignment="CENTER">
                 <HBox alignment="CENTER">
                     <Label text="Permutation" prefWidth="80"/>
-                    <TextField styleClass="textField"/>
+                    <TextField fx:id="permutationTextField" disable="true" styleClass="textField" />
                 </HBox>
                 <HBox alignment="CENTER">
                     <Label text="Combination" prefWidth="80"/>
-                    <TextField styleClass="textField"/>
+                    <TextField fx:id="combinationTextField" disabled="true" styleClass="textField" />
                 </HBox>
             </VBox>
         </VBox>
