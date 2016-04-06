@@ -43,7 +43,7 @@
                 </HBox>
                 <HBox alignment="CENTER">
                     <Label text="Combination" prefWidth="80"/>
-                    <TextField fx:id="combinationTextField" disabled="true" styleClass="textField" />
+                    <TextField fx:id="combinationTextField" disable="true" styleClass="textField" />
                 </HBox>
             </VBox>
         </VBox>
