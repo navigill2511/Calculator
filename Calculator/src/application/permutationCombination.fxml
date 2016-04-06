@@ -23,11 +23,11 @@
             <VBox spacing="5">
             <HBox alignment="CENTER">
                 <Label text="Sample points" prefWidth="120"/>
-                <TextField fx:id="nTextField" styleClass="textField" onKeyReleased="#handleNAction"/>
+                <TextField styleClass="textField" onKeyReleased="#handleNAction"/>
             </HBox>
             <HBox alignment="CENTER">
                 <Label text="# of Sample points" prefWidth="120"/>
-                <TextField fx:id="rTextField" styleClass="textField" onKeyReleased="#handleRAction"/>
+                <TextField styleClass="textField" onKeyReleased="#handleRAction"/>
             </HBox>
             </VBox>
 
