@@ -7,7 +7,7 @@
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.control.Button?>
 
-<AnchorPane fx:controller="application.ScientificController" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane fx:controller="application.SingleEventProbabilityController" xmlns:fx="http://javafx.com/fxml/1">
 
     <VBox spacing="5" alignment="CENTER">
         <padding><Insets bottom="5" /></padding>
@@ -23,24 +23,24 @@
             <padding><Insets left="10" right="10" top="10" bottom="10"/> </padding>
             <HBox >
                 <Label text="Possible outcomes" prefWidth="140" alignment="BASELINE_LEFT"/>
-                <TextField styleClass="textField" prefWidth="120"/>
+                <TextField styleClass="textField" prefWidth="120" onKeyReleased="#handleOutcomeOperation"/>
             </HBox>
             <HBox>
                 <Label text="Events occurred" prefWidth="140" alignment="BASELINE_LEFT"/>
-                <TextField styleClass="textField" prefWidth="120"/>
+                <TextField styleClass="textField" prefWidth="120" onKeyReleased="#handleOccurrenceOperation"/>
             </HBox>
         </VBox>
 
         <HBox alignment="CENTER">
             <padding><Insets left="10" right="10" top="10" bottom="10" /></padding>
-            <Button text="Calculate" alignment="CENTER" prefWidth="200"/>
+            <Button text="Calculate" alignment="CENTER" prefWidth="200" onAction="#calculate"/>
         </HBox>
 
         <VBox spacing="5" alignment="CENTER">
             <padding><Insets left="10" right="10" top="10" bottom="10"/></padding>
             <HBox alignment="CENTER">
                 <Label text="Probability" prefWidth="80" />
-                <TextField styleClass="textField" prefWidth="120"/>
+                <TextField fx:id="singleEventProbability" disable="true" styleClass="textField" prefWidth="150"/>
             </HBox>
         </VBox>
 
