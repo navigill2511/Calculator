@@ -49,7 +49,7 @@ public class MultipleEventProbabilityController
             this.OccurrencesInB.equals(Object.EMPTY)) return;
 
         double occurrencesInA = Double.parseDouble(this.OccurrencesInA);
-        double occurrencesInB = Double.parseDouble(this.possibleOutcomes);
+        double occurrencesInB = Double.parseDouble(this.OccurrencesInB);
         double outcomes       = Double.parseDouble(this.possibleOutcomes);
 
         double probabilityOfA       = StatisticsModel.singleEventProbability(occurrencesInA, outcomes);
