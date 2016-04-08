@@ -37,17 +37,17 @@
         <HBox spacing="15">
             <VBox spacing="5">
                 <HBox spacing="3"><Label text="Count" prefWidth="40"/>
-                <TextField disable="true" styleClass="textField" prefWidth="100"/></HBox>
+                <TextField fx:id="count" disable="true" styleClass="textField" prefWidth="100"/></HBox>
 
                 <HBox spacing="3"><Label text="Mean" prefWidth="40"/>
-                <TextField disable="true" styleClass="textField" prefWidth="100" /></HBox>
+                <TextField fx:id="mean" disable="true" styleClass="textField" prefWidth="100" /></HBox>
             </VBox>
             <VBox spacing="5">
                 <HBox spacing="3"><Label text="Sum" prefWidth="40"/>
-                <TextField disable="true" styleClass="textField" prefWidth="100"/></HBox>
+                <TextField fx:id="sum" disable="true" styleClass="textField" prefWidth="100"/></HBox>
 
                 <HBox spacing="3"><Label text="StdDev" prefWidth="40"/>
-                <TextField disable="true" styleClass="textField" prefWidth="100"/></HBox>
+                <TextField fx:id="stdDev" disable="true" styleClass="textField" prefWidth="100"/></HBox>
 
             </VBox>
         </HBox>

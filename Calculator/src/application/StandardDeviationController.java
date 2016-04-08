@@ -2,10 +2,13 @@ package application;
 
 import application.formatter.Formatter;
 import application.formatter.Object;
+import application.model.StatisticsModel;
 import javafx.event.Event;
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextArea;
+import javafx.scene.control.TextField;
+
 import java.util.ArrayList;
 
 /**
@@ -18,6 +21,11 @@ public class StandardDeviationController
 
     @FXML private TextArea stdDevTextArea;
     @FXML private Label wrongInputLabel;
+    @FXML private TextField count;
+    @FXML private TextField sum;
+    @FXML private TextField mean;
+    @FXML private TextField stdDev;
+
     private String data;
 
     @FXML public void handleInputAction(Event event)
@@ -41,12 +49,18 @@ public class StandardDeviationController
 
     @FXML public void calculate()
     {
-        ArrayList<String> dataArrayList = Formatter.toArrayList(this.data);
+        ArrayList<Double> dataArrayList = Formatter.toDouble(Formatter.toArrayList(this.data));
 
-        for (String s : dataArrayList)
-        {
-            System.out.print(s + " ");
-        }
+        double count = dataArrayList.size();
+        double sum   = StatisticsModel.sum(dataArrayList);
+        double mean  = StatisticsModel.mean(sum, count);
+        double stdDev = StatisticsModel.standardDeviation(dataArrayList, count, mean);
+
+        this.count.setText(Double.toString(count));
+        this.sum.setText(Double.toString(sum));
+        this.mean.setText(Double.toString(mean));
+        this.stdDev.setText(Double.toString(stdDev));
+
     }
 
     private boolean validInput(String input)

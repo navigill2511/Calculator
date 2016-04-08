@@ -3,6 +3,7 @@ package application.formatter;
 import application.model.StandardModel;
 
 import java.util.ArrayList;
+import java.util.stream.Collectors;
 
 /***********************************************************************************************************************
  * Created by Navi on 01/04/2016.
@@ -188,5 +189,10 @@ public class Formatter
         }
 
         return tokens;
+    }
+
+    public static ArrayList<Double> toDouble(ArrayList<String> tokens)
+    {
+        return tokens.stream().map(Double::parseDouble).collect(Collectors.toCollection(ArrayList::new));
     }
 }
