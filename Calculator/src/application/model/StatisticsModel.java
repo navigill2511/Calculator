@@ -1,6 +1,9 @@
 package application.model;
 
 import java.math.BigInteger;
+import java.util.ArrayList;
+import java.util.DoubleSummaryStatistics;
+import java.util.Map;
 
 /**
  * Created by Navi on 4/5/2016.
@@ -19,8 +22,8 @@ public class StatisticsModel
     /**
      * Calculates permutations using formula below.
      * nPr = n! / (n - r)!
-     * @param n
-     * @param r
+     * @param n number of occurrences.
+     * @param r number of
      * @return
      */
     public static BigInteger permutation(BigInteger n, BigInteger r)
@@ -75,5 +78,29 @@ public class StatisticsModel
         double probability_A_and_B = A_and_B_probability(occurrencesInA, occurrencesInB, outcomes);
         double probability_B = singleEventProbability(occurrencesInB, outcomes);
         return probability_A_and_B / probability_B;
+    }
+
+    public static double sum(ArrayList<Double> tokens)
+    {
+        return sum(tokens, tokens.size() - 1);
+    }
+
+    private static double sum(ArrayList<Double> tokens, int last)
+    {
+        if (last == 0) return tokens.get(last);
+        return tokens.get(last) + sum(tokens, last - 1);
+    }
+
+    public static double mean(double sum, double length)
+    {
+        return sum / length;
+    }
+
+    public static double standardDeviation(ArrayList<Double> tokens, double count, double mean)
+    {
+        int sum = 0;
+        for (double current : tokens) sum += ((current - mean) * (current - mean));
+
+        return Math.sqrt(sum / count);
     }
 }
