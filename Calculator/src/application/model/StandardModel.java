@@ -1,4 +1,5 @@
 package application.model;
+import application.formatter.Formatter;
 import application.formatter.Object;
 import java.util.ArrayList;
 
@@ -24,17 +25,14 @@ public class StandardModel {
      */
     public static double evaluate(String infix)
     {
-        // Obtain the tokens as an array of strings.
+        // 1. Convert to postfix and put the tokens into an array.
         String postfix = convertToPostfix(infix);
-
-        System.out.println(postfix);
-
         String[] tokens = postfix.split(Object.WHITESPACE);
 
-        // Create a stack for the operands.
+        // 2. Create a stack for the operands.
         Stack<Double> operands = new Stack<>();
 
-        // Process the tokens.
+        // 3. Process the tokens.
         for (String token : tokens)
         {
             System.out.println(token);
@@ -67,7 +65,7 @@ public class StandardModel {
      * @param infix A String that contains an expression in infix notation.
      * @return The postfix expression, as a String, that is equivalent to the infix expression.
      */
-    public static String convertToPostfix(String infix)
+    private static String convertToPostfix(String infix)
     {
         // Obtain the infix expression tokens as an array of strings.
         ArrayList<String> tokens = new ArrayList<>();
@@ -79,7 +77,7 @@ public class StandardModel {
             String currentChar = infix.substring(i, i + 1);
 
             // If the current character is not a digit or a decimal, add it to 'tokens'
-            if (!isDigit(currentChar))
+            if (!Formatter.isDigit(currentChar))
             {
                 digitBeginFlag = i + 1; // Flags the beginning of digits.
                 tokens.add(currentChar);
@@ -92,7 +90,7 @@ public class StandardModel {
                 currentChar = infix.substring(i, i + 1);
 
                 // If current object is not a digit or not a decimal, break loop.
-                if (!isDigit(currentChar)) break;
+                if (!Formatter.isDigit(currentChar)) break;
                 i++;
             }
 
@@ -113,7 +111,7 @@ public class StandardModel {
      * @param last The index of the last token to be processed.
      * @return The postfix expression, as a String, that is equivalent to the infix expression.
      */
-    public static String convertToPostfix(ArrayList<String> infix, int first, int last)
+    private static String convertToPostfix(ArrayList<String> infix, int first, int last)
     {
         // Create a stack for the operators and a string for the output expression.
         Stack<String> operators = new Stack<>();
@@ -194,13 +192,5 @@ public class StandardModel {
     private static int precedence(String operator)
     {
         return Object.ADD_OR_SUBTRACT.indexOf(operator) >= 0 ? 0 : 1;
-    }
-
-    private static boolean isDigit(String character)
-    {
-        return (character.equals("1") || character.equals("2") || character.equals("3") ||
-                character.equals("4") || character.equals("5") || character.equals("6") ||
-                character.equals("7") || character.equals("8") || character.equals("9") ||
-                character.equals("0") || character.equals("."));
     }
 }

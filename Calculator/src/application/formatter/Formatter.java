@@ -2,6 +2,8 @@ package application.formatter;
 
 import application.model.StandardModel;
 
+import java.util.ArrayList;
+
 /***********************************************************************************************************************
  * Created by Navi on 01/04/2016.
  *
@@ -150,5 +152,41 @@ public class Formatter
         return (character.equals(Object.ADD)      || character.equals(Object.SUBTRACT) ||
                 character.equals(Object.MULTIPLY) || character.equals(Object.DIVIDE)   ||
                 character.equals(Object.REMAINDER));
+    }
+
+    public static ArrayList<String> toArrayList(String data)
+    {
+        // Obtain the infix expression tokens as an array of strings.
+        ArrayList<String> tokens = new ArrayList<>();
+
+        // Convert the expression into an array of operands and operators first.
+        int digitBeginFlag = 0;
+        for (int i = 0; i < data.length(); i++)
+        {
+            String currentChar = data.substring(i, i + 1);
+
+            // If the current character is not a digit or a decimal, add it to 'tokens'
+            if (!isDigit(currentChar))
+            {
+                digitBeginFlag = i + 1; // Flags the beginning of digits.
+                continue;
+            }
+
+            // Get the next number up until the operator.
+            while (i < data.length())
+            {
+                currentChar = data.substring(i, i + 1);
+
+                // If current object is not a digit or not a decimal, break loop.
+                if (!isDigit(currentChar)) break;
+                i++;
+            }
+
+            // Add the number to the 'tokens'.
+            tokens.add(data.substring(digitBeginFlag, i));
+            i--;
+        }
+
+        return tokens;
     }
 }

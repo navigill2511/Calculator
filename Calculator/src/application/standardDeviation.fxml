@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.Button?>
+
+<?import javafx.scene.control.TextArea?>
+<AnchorPane fx:controller="application.StandardDeviationController" xmlns:fx="http://javafx.com/fxml/1">
+    <VBox>
+    <fx:include source="navigation.fxml" alignment="CENTER_LEFT" />
+    <VBox>
+
+        <padding><Insets left="10" right="10" top="0" bottom="10"/></padding>
+
+        <HBox alignment="CENTER">
+            <padding><Insets top="10" bottom="20" /></padding>
+            <Label text="Standard Deviation" styleClass="title" alignment="CENTER" prefHeight="40" prefWidth="275"/>
+        </HBox>
+
+        <HBox spacing="5" alignment="CENTER">
+            <Label text="Data" alignment="CENTER"/>
+            <TextArea fx:id="stdDevTextArea" styleClass="textField" prefWidth="275" prefHeight="50" onKeyPressed="#handleInputAction" onKeyReleased="#handleInputAction"/>
+        </HBox>
+
+        <HBox alignment="CENTER" prefWidth="300">
+            <Label fx:id="wrongInputLabel" alignment="CENTER"/>
+        </HBox>
+
+        <HBox alignment="CENTER">
+            <padding><Insets top="20" bottom="20" /></padding>
+            <Button text="Calculate" alignment="CENTER" prefWidth="200" prefHeight="30" onAction="#calculate"/>
+        </HBox>
+
+        <HBox spacing="15">
+            <VBox spacing="5">
+                <HBox spacing="3"><Label text="Count" prefWidth="40"/>
+                <TextField disable="true" styleClass="textField" prefWidth="100"/></HBox>
+
+                <HBox spacing="3"><Label text="Mean" prefWidth="40"/>
+                <TextField disable="true" styleClass="textField" prefWidth="100" /></HBox>
+            </VBox>
+            <VBox spacing="5">
+                <HBox spacing="3"><Label text="Sum" prefWidth="40"/>
+                <TextField disable="true" styleClass="textField" prefWidth="100"/></HBox>
+
+                <HBox spacing="3"><Label text="StdDev" prefWidth="40"/>
+                <TextField disable="true" styleClass="textField" prefWidth="100"/></HBox>
+
+            </VBox>
+        </HBox>
+
+    </VBox>
+    </VBox>
+</AnchorPane>
