@@ -25,7 +25,7 @@
             <TextArea fx:id="stdDevTextArea" styleClass="textField" prefWidth="275" prefHeight="50" onKeyPressed="#handleInputAction" onKeyReleased="#handleInputAction"/>
         </HBox>
 
-        <HBox alignment="CENTER" prefWidth="300">
+        <HBox alignment="CENTER" prefWidth="300" prefHeight="50">
             <Label fx:id="wrongInputLabel" alignment="CENTER"/>
         </HBox>
 

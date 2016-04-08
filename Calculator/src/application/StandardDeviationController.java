@@ -16,6 +16,8 @@ import java.util.ArrayList;
  */
 public class StandardDeviationController
 {
+    private final String HELP  = "Enter data separated by \",\" or space.\n"+
+                                 "   For example: \"12, 22, 53, 34, 53\"   ";
     private final String ERROR = "Data must of integers or decimals separated by \",\" and a space\n"+
                                  "              For example: \"12, 22, 53, 34, 53\"                 ";
 
@@ -31,7 +33,7 @@ public class StandardDeviationController
     @FXML public void handleInputAction(Event event)
     {
         this.data = ((TextArea) event.getSource()).getText();
-        this.wrongInputLabel.setText("");
+        this.wrongInputLabel.setText(HELP);
 
         if (this.data.equals(Object.EMPTY)) return;
 
