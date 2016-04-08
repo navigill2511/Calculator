@@ -2,8 +2,6 @@ package application.model;
 
 import java.math.BigInteger;
 import java.util.ArrayList;
-import java.util.DoubleSummaryStatistics;
-import java.util.Map;
 
 /**
  * Created by Navi on 4/5/2016.
