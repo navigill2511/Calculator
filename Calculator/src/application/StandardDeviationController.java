@@ -21,8 +21,8 @@ public class StandardDeviationController
     private final String ERROR = "Data must of integers or decimals separated by \",\" and a space\n"+
                                  "              For example: \"12, 22, 53, 34, 53\"                 ";
 
-    @FXML private TextArea stdDevTextArea;
-    @FXML private Label wrongInputLabel;
+    @FXML private TextArea  stdDevTextArea;
+    @FXML private Label     helpLabel;
     @FXML private TextField count;
     @FXML private TextField sum;
     @FXML private TextField mean;
@@ -33,7 +33,6 @@ public class StandardDeviationController
     @FXML public void handleInputAction(Event event)
     {
         this.data = ((TextArea) event.getSource()).getText();
-        this.wrongInputLabel.setText(HELP);
 
         if (this.data.equals(Object.EMPTY)) return;
 
@@ -41,7 +40,6 @@ public class StandardDeviationController
 
        if (!validInput(current))
        {
-           this.wrongInputLabel.setText(ERROR);
            this.data = Formatter.delete(this.data);
        }
 
@@ -63,6 +61,11 @@ public class StandardDeviationController
         this.mean.setText(Double.toString(mean));
         this.stdDev.setText(Double.toString(stdDev));
 
+    }
+
+    @FXML public void handleHelpAction()
+    {
+        this.helpLabel.setText(HELP);
     }
 
     private boolean validInput(String input)
