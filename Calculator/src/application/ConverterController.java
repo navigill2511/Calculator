@@ -14,22 +14,21 @@ public class ConverterController
 {
     @FXML private ComboBox conversionComboBox;
 
-    @FXML private final String AREA        = "Area";
-    @FXML private final String ENERGY      = "Energy";
-    @FXML private final String FORCE       = "Force";
-    @FXML private final String LENGTH      = "Length";
-    @FXML private final String SPEED       = "Speed";
-    @FXML private final String TEMPERATURE = "Temperature";
-    @FXML private final String WEIGHT      = "Weight";
+    private final String AREA        = "Area";
+    private final String ENERGY      = "Energy";
+    private final String FORCE       = "Force";
+    private final String LENGTH      = "Length";
+    private final String SPEED       = "Speed";
+    private final String TEMPERATURE = "Temperature";
+    private final String WEIGHT      = "Weight";
 
-    @FXML
-    public void handleConverterAction(ActionEvent event) throws IOException
+    @FXML public void handleConverterAction(ActionEvent event) throws IOException
     {
         this.conversionComboBox = (ComboBox) event.getSource();
 
         String type = (String) this.conversionComboBox.getValue();
-        System.out.print(type);
-        String fxmlFile = "conversionLength.fxml";
+
+        String fxmlFile = "conversionArea.fxml";
         switch(type)
         {
             case(AREA)       :fxmlFile = "converterArea.fxml";        break;

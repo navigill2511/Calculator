@@ -7,12 +7,30 @@
 
 <AnchorPane xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.ConverterController">
 <VBox>
-    <fx:include alignment="CENTER_LEFT" source="navigation.fxml" />
+    <fx:include source="navigation.fxml" alignment="CENTER_LEFT" />
 
     <VBox alignment="CENTER">
         <padding><Insets left="10" right="10" top="0" bottom="20"/> </padding>
-        <fx:include source="converter.fxml"/>
+        <VBox>
+            <padding><Insets top="10" bottom="30" /></padding>
+            <ComboBox fx:id="conversionComboBox" styleClass="comboBox" prefWidth="200" prefHeight="40" onAction="#handleConverterAction">
+                <items>
+                    <FXCollections fx:factory="observableArrayList">
+                        <String fx:value="Area"       />
+                        <String fx:value="Energy"     />
+                        <String fx:value="Force"      />
+                        <String fx:value="Length"     />
+                        <String fx:value="Speed"      />
+                        <String fx:value="Temperature"/>
+                        <String fx:value="Weight"     />
+                    </FXCollections>
+                </items>
+                <value>
+                    <String fx:value="Speed"       />
+                </value>
+            </ComboBox>
 
+        </VBox>
         <VBox spacing="10" alignment="CENTER">
         <HBox spacing="5" alignment="CENTER">
         <ComboBox styleClass="comboBox" prefWidth="100">
