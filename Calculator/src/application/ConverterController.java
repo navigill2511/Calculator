@@ -1,5 +1,7 @@
 package application;
 
+import application.formatter.Formatter;
+import application.formatter.Object;
 import application.model.ConverterModel;
 import application.model.ScientificModel;
 import application.model.StatisticsModel;
@@ -34,7 +36,16 @@ public class ConverterController
 
     @FXML public void handleInputAction(Event event)
     {
-        this.fromTextField  = ((TextField) event.getSource());
+        String current = (this.fromTextField  = ((TextField) event.getSource())).getText();
+
+        if (current.equals(Object.EMPTY)) return;
+
+        if (!Formatter.isDigit(current.substring(current.length() - 1, current.length())))
+        {
+            this.fromTextField.setText(current = Formatter.delete(current));
+            this.fromTextField.positionCaret(current.length());
+            if (current.equals(Object.EMPTY)) return;
+        }
 
         // Get the type of conversion being performed.
         String typeOfConversion = (String) this.conversionComboBox.getValue();

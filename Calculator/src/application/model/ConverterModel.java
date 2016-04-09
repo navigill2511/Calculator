@@ -192,9 +192,9 @@ public class ConverterModel
     private static final double MPH_TO_MPH    = 1000.0;
     private static final double MPH_TO_KPH    = 1000.0;
     private static final double MPH_TO_MPS    = 1000.0;
-    private static final double KPH_TO_MPH   = 1000.0;
-    private static final double KPH_TO_KPH   = 1000.0;
-    private static final double KPH_TO_MPS   = 1000.0;
+    private static final double KPH_TO_MPH    = 1000.0;
+    private static final double KPH_TO_KPH    = 1000.0;
+    private static final double KPH_TO_MPS    = 1000.0;
     private static final double MPS_TO_MPH    = 1000.0;
     private static final double MPS_TO_KPH    = 1000.0;
     private static final double MPS_TO_MPS    = 1000.0;
