@@ -27,14 +27,14 @@
                     </FXCollections>
                 </items>
                 <value>
-                    <String fx:value="Weight"       />
+                    <String fx:value="Weight"/>
                 </value>
             </ComboBox>
 
         </VBox>
         <VBox spacing="10" alignment="CENTER">
         <HBox spacing="5" alignment="CENTER">
-        <ComboBox styleClass="comboBox" prefWidth="100">
+        <ComboBox fx:id="fromComboBox" styleClass="comboBox" prefWidth="100">
         <items>
             <FXCollections fx:factory="observableArrayList">
                 <String fx:value="Kg"   />
@@ -48,11 +48,11 @@
                 <String fx:value="Kg"/>
             </value>
         </ComboBox>
-        <TextField styleClass="textField" prefWidth="100"/>
+        <TextField fx:id="fromTextField" styleClass="textField" prefWidth="100" onKeyReleased="#handleInputAction"/>
         </HBox>
 
         <HBox spacing="5" alignment="CENTER">
-        <ComboBox styleClass="comboBox" prefWidth="100">
+        <ComboBox fx:id="toComboBox" styleClass="comboBox" prefWidth="100">
         <items>
             <FXCollections fx:factory="observableArrayList">
                 <String fx:value="Kg"   />
@@ -66,7 +66,7 @@
                 <String fx:value="Kg"/>
             </value>
         </ComboBox>
-        <TextField styleClass="textField" prefWidth="100"/>
+        <TextField fx:id="toTextField" styleClass="textField" prefWidth="100"/>
         </HBox>
         </VBox>
     </VBox>

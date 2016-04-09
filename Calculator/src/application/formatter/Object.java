@@ -64,4 +64,12 @@ public class Object
 
     public static final String POWER = "^";
 
+    public static final String KM_SQ   = "Km²";
+    public static final String M_SQ    = "m²";
+    public static final String MILE_SQ = "mile²";
+    public static final String YARD_SQ = "yard²";
+    public static final String FEET_SQ = "feet²";
+    public static final String INCH_SQ = "in²";
+    public static final String ACRE    = "acre";
+
 }
