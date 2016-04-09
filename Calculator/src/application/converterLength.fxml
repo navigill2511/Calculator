@@ -60,8 +60,6 @@
                 <String fx:value="Km"  />
                 <String fx:value="m"   />
                 <String fx:value="cm"  />
-                <String fx:value="mm"  />
-                <String fx:value="nm"  />
                 <String fx:value="mile"/>
                 <String fx:value="yard"/>
                 <String fx:value="ft"  />

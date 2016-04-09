@@ -41,7 +41,6 @@
                 <String fx:value="g"    />
                 <String fx:value="mg"   />
                 <String fx:value="pound"/>
-                <String fx:value="ounce"/>
             </FXCollections>
         </items>
             <value>
@@ -59,7 +58,6 @@
                 <String fx:value="g"    />
                 <String fx:value="mg"   />
                 <String fx:value="pound"/>
-                <String fx:value="ounce"/>
             </FXCollections>
         </items>
             <value>

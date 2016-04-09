@@ -9,7 +9,7 @@ import application.formatter.Object;
  ***********************************************************************************************************************/
 public class ConverterModel
 {
-    /**************** Area conversion factors ****************/
+    /**************** AREA CONVERSION FACTORS ****************/
     private static final double KMSQ_TO_KMSQ     = 1.0;
     private static final double KMSQ_TO_MSQ      = 1000000.0;
     private static final double KMSQ_TO_MILESQ   = 1000000.0;
@@ -60,7 +60,7 @@ public class ConverterModel
     private static final double ACRE_TO_INCHSQ   = 1000000.0;
     private static final double ACRE_TO_ACRE     = 1.0;
 
-    /**************** Energy conversion factors ****************/
+    /**************** ENERGY CONVERSION FACTORS ****************/
     private static final double CAL_TO_CAL         = 1.0;
     private static final double CAL_TO_KCAL        = 1000.0;
     private static final double CAL_TO_JOULES      = 1000.0;
@@ -111,7 +111,7 @@ public class ConverterModel
     private static final double KWHATT_TO_WHATT    = 1000.0;
     private static final double KWHATT_TO_KWHATT   = 1000.0;
 
-    /**************** Force conversion factors ****************/
+    /**************** FORCE CONVERSION FACTORS ****************/
     private static final double NEWTON_TO_NEWTON   = 1000.0;
     private static final double NEWTON_TO_KNEWTON  = 1000.0;
     private static final double NEWTON_TO_MNEWTON  = 1000.0;
@@ -121,6 +121,84 @@ public class ConverterModel
     private static final double MNEWTON_TO_NEWTON  = 1000.0;
     private static final double MNEWTON_TO_KNEWTON = 1000.0;
     private static final double MNEWTON_TO_MNEWTON = 1000.0;
+
+    /**************** LENGTH CONVERSION FACTORS ****************/
+    private static final double KM_TO_KM       = 1000.0;
+    private static final double KM_TO_METER    = 1000.0;
+    private static final double KM_TO_CM       = 1000.0;
+    private static final double KM_TO_MM       = 1000.0;
+    private static final double KM_TO_MILE     = 1000.0;
+    private static final double KM_TO_YARD     = 1000.0;
+    private static final double KM_TO_FEET     = 1000.0;
+    private static final double KM_TO_INCH     = 1000.0;
+    private static final double METER_TO_KM    = 1000.0;
+    private static final double METER_TO_METER = 1000.0;
+    private static final double METER_TO_CM    = 1000.0;
+    private static final double METER_TO_MM    = 1000.0;
+    private static final double METER_TO_MILE  = 1000.0;
+    private static final double METER_TO_YARD  = 1000.0;
+    private static final double METER_TO_FEET  = 1000.0;
+    private static final double METER_TO_INCH  = 1000.0;
+    private static final double CM_TO_KM       = 1000.0;
+    private static final double CM_TO_METER    = 1000.0;
+    private static final double CM_TO_CM       = 1000.0;
+    private static final double CM_TO_MM       = 1000.0;
+    private static final double CM_TO_MILE     = 1000.0;
+    private static final double CM_TO_YARD     = 1000.0;
+    private static final double CM_TO_FEET     = 1000.0;
+    private static final double CM_TO_INCH     = 1000.0;
+    private static final double MM_TO_KM       = 1000.0;
+    private static final double MM_TO_METER    = 1000.0;
+    private static final double MM_TO_CM       = 1000.0;
+    private static final double MM_TO_MM       = 1000.0;
+    private static final double MM_TO_MILE     = 1000.0;
+    private static final double MM_TO_YARD     = 1000.0;
+    private static final double MM_TO_FEET     = 1000.0;
+    private static final double MM_TO_INCH     = 1000.0;
+    private static final double MILE_TO_KM     = 1000.0;
+    private static final double MILE_TO_METER  = 1000.0;
+    private static final double MILE_TO_CM     = 1000.0;
+    private static final double MILE_TO_MM     = 1000.0;
+    private static final double MILE_TO_MILE   = 1000.0;
+    private static final double MILE_TO_YARD   = 1000.0;
+    private static final double MILE_TO_FEET   = 1000.0;
+    private static final double MILE_TO_INCH   = 1000.0;
+    private static final double YARD_TO_KM     = 1000.0;
+    private static final double YARD_TO_METER  = 1000.0;
+    private static final double YARD_TO_CM     = 1000.0;
+    private static final double YARD_TO_MM     = 1000.0;
+    private static final double YARD_TO_MILE   = 1000.0;
+    private static final double YARD_TO_YARD   = 1000.0;
+    private static final double YARD_TO_FEET   = 1000.0;
+    private static final double YARD_TO_INCH   = 1000.0;
+    private static final double FEET_TO_KM     = 1000.0;
+    private static final double FEET_TO_METER  = 1000.0;
+    private static final double FEET_TO_CM     = 1000.0;
+    private static final double FEET_TO_MM     = 1000.0;
+    private static final double FEET_TO_MILE   = 1000.0;
+    private static final double FEET_TO_YARD   = 1000.0;
+    private static final double FEET_TO_FEET   = 1000.0;
+    private static final double FEET_TO_INCH   = 1000.0;
+    private static final double INCH_TO_KM     = 1000.0;
+    private static final double INCH_TO_METER  = 1000.0;
+    private static final double INCH_TO_CM     = 1000.0;
+    private static final double INCH_TO_MM     = 1000.0;
+    private static final double INCH_TO_MILE   = 1000.0;
+    private static final double INCH_TO_YARD   = 1000.0;
+    private static final double INCH_TO_FEET   = 1000.0;
+    private static final double INCH_TO_INCH   = 1000.0;
+
+    /**************** SPEED CONVERSION FACTORS ****************/
+    private static final double MPH_TO_MPH    = 1000.0;
+    private static final double MPH_TO_KPH    = 1000.0;
+    private static final double MPH_TO_MPS    = 1000.0;
+    private static final double KMPH_TO_MPH   = 1000.0;
+    private static final double KMPH_TO_KPH   = 1000.0;
+    private static final double KMPH_TO_MPS   = 1000.0;
+    private static final double MPS_TO_MPH    = 1000.0;
+    private static final double MPS_TO_KPH    = 1000.0;
+    private static final double MPS_TO_MPS    = 1000.0;
+
 
 
     /*******************************************************************************************************************

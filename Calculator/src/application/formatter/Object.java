@@ -64,6 +64,8 @@ public class Object
 
     public static final String POWER = "^";
 
+    /**************** UNIT CONVERTER DEFINATIONS ****************/
+    // AREA
     public static final String KM_SQ   = "Km²";
     public static final String M_SQ    = "m²";
     public static final String MILE_SQ = "mile²";
@@ -71,15 +73,44 @@ public class Object
     public static final String FEET_SQ = "feet²";
     public static final String INCH_SQ = "in²";
     public static final String ACRE    = "acre";
-    public static final String CAL      = "cal";
-    public static final String KCAL     = "Kcal";
-    public static final String JOULES   = "J";
-    public static final String KJOULES  = "KJ";
-    public static final String MJOULES  = "MJ";
-    public static final String WHATT    = "Wh";
-    public static final String KWHATT   = "KWh";
-    public static final String NEWTON   = "N";
-    public static final String KNEWTON  = "KN";
-    public static final String MNEWTON  = "MN";
 
+    // ENERGY
+    public static final String CAL     = "cal";
+    public static final String KCAL    = "Kcal";
+    public static final String JOULES  = "J";
+    public static final String KJOULES = "KJ";
+    public static final String MJOULES = "MJ";
+    public static final String WHATT   = "Wh";
+    public static final String KWHATT  = "KWh";
+
+    // FORCE
+    public static final String NEWTON  = "N";
+    public static final String KNEWTON = "KN";
+    public static final String MNEWTON = "MN";
+
+    // LENGTH
+    public static final String KM      = "Km";
+    public static final String METER   = "m";
+    public static final String CM      = "cm";
+    public static final String MM      = "mm";
+    public static final String MILE    = "mile";
+    public static final String YARD    = "yard";
+    public static final String FEET    = "feet";
+    public static final String INCH    = "in";
+
+    // SPEED
+    public static final String MPH     = "miles/hr";
+    public static final String KPH     = "Km/hr";
+    public static final String MPS     = "m/s";
+
+    // TEMPERATURE
+    public static final String CEL     = "celcius";
+    public static final String FEH     = "Fahrenheit";
+    public static final String KAL     = "Kalvin";
+
+    // WEIGHT
+    public static final String KGRAM   = "Kalvin";
+    public static final String GRAM    = "Kalvin";
+    public static final String MGRAM   = "Kalvin";
+    public static final String POUND   = "Kalvin";
 }
