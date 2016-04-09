@@ -23,13 +23,13 @@ public class ConverterController
     @FXML private TextField fromTextField;
     @FXML private TextField toTextField;
 
-    private final String AREA        = "Area";
-    private final String ENERGY      = "Energy";
-    private final String FORCE       = "Force";
-    private final String LENGTH      = "Length";
-    private final String SPEED       = "Speed";
-    private final String TEMP        = "Temperature";
-    private final String WEIGHT      = "Weight";
+    private final String AREA   = "Area";
+    private final String ENERGY = "Energy";
+    private final String FORCE  = "Force";
+    private final String LENGTH = "Length";
+    private final String SPEED  = "Speed";
+    private final String TEMP   = "Temperature";
+    private final String WEIGHT = "Weight";
 
 
     @FXML public void handleInputAction(Event event)
@@ -38,8 +38,6 @@ public class ConverterController
 
         // Get the type of conversion being performed.
         String typeOfConversion = (String) this.conversionComboBox.getValue();
-
-
 
         double number = Double.parseDouble(this.fromTextField.getText());
         String from   = (String) this.fromComboBox.getValue();

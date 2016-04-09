@@ -71,5 +71,15 @@ public class Object
     public static final String FEET_SQ = "feet²";
     public static final String INCH_SQ = "in²";
     public static final String ACRE    = "acre";
+    public static final String CAL      = "cal";
+    public static final String KCAL     = "Kcal";
+    public static final String JOULES   = "J";
+    public static final String KJOULES  = "KJ";
+    public static final String MJOULES  = "MJ";
+    public static final String WHATT    = "Wh";
+    public static final String KWHATT   = "KWh";
+    public static final String NEWTON   = "N";
+    public static final String KNEWTON  = "KN";
+    public static final String MNEWTON  = "MN";
 
 }
