@@ -109,8 +109,8 @@ public class Object
     public static final String KAL     = "Kalvin";
 
     // WEIGHT
-    public static final String KGRAM   = "Kalvin";
-    public static final String GRAM    = "Kalvin";
-    public static final String MGRAM   = "Kalvin";
-    public static final String POUND   = "Kalvin";
+    public static final String KGRAM   = "Kg";
+    public static final String GRAM    = "g";
+    public static final String MGRAM   = "mg";
+    public static final String POUND   = "pound";
 }

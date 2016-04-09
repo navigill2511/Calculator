@@ -192,13 +192,41 @@ public class ConverterModel
     private static final double MPH_TO_MPH    = 1000.0;
     private static final double MPH_TO_KPH    = 1000.0;
     private static final double MPH_TO_MPS    = 1000.0;
-    private static final double KMPH_TO_MPH   = 1000.0;
-    private static final double KMPH_TO_KPH   = 1000.0;
-    private static final double KMPH_TO_MPS   = 1000.0;
+    private static final double KPH_TO_MPH   = 1000.0;
+    private static final double KPH_TO_KPH   = 1000.0;
+    private static final double KPH_TO_MPS   = 1000.0;
     private static final double MPS_TO_MPH    = 1000.0;
     private static final double MPS_TO_KPH    = 1000.0;
     private static final double MPS_TO_MPS    = 1000.0;
 
+    /************* TEMPERATURE CONVERSION FACTORS *************/
+    private static final double CEL_TO_CEL = 1.0;
+    private static final double CEL_TO_FEH = 1000.0;
+    private static final double CEL_TO_KAL = 1000.0;
+    private static final double FEH_TO_CEL = 1.0;
+    private static final double FEH_TO_FEH = 1000.0;
+    private static final double FEH_TO_KAL = 1000.0;
+    private static final double KAL_TO_CEL = 1.0;
+    private static final double KAL_TO_FEH = 1000.0;
+    private static final double KAL_TO_KAL = 1000.0;
+
+    /*************** WEIGHT CONVERSION FACTORS ****************/
+    private static final double KGRAM_TO_KGRAM = 1000.0;
+    private static final double KGRAM_TO_GRAM  = 1000.0;
+    private static final double KGRAM_TO_MGRAM = 1000.0;
+    private static final double KGRAM_TO_POUND = 1000.0;
+    private static final double GRAM_TO_KGRAM  = 1000.0;
+    private static final double GRAM_TO_GRAM   = 1000.0;
+    private static final double GRAM_TO_MGRAM  = 1000.0;
+    private static final double GRAM_TO_POUND  = 1000.0;
+    private static final double MGRAM_TO_KGRAM = 1000.0;
+    private static final double MGRAM_TO_GRAM  = 1000.0;
+    private static final double MGRAM_TO_MGRAM = 1000.0;
+    private static final double MGRAM_TO_POUND = 1000.0;
+    private static final double POUND_TO_KGRAM = 1000.0;
+    private static final double POUND_TO_GRAM  = 1000.0;
+    private static final double POUND_TO_MGRAM = 1000.0;
+    private static final double POUND_TO_POUND = 1000.0;
 
 
     /*******************************************************************************************************************
@@ -466,24 +494,277 @@ public class ConverterModel
         return result;
     }
 
+    /*******************************************************************************************************************
+     *
+     * @param number
+     * @param from
+     * @param to
+     * @return
+     *******************************************************************************************************************/
     public static double lengthConverter(double number, String from, String to)
     {
+        double result = -1;
+        if (from.equals(Object.KM))
+        {
+            switch (to)
+            {
+                case (Object.KM)   :result = (number * KM_TO_KM);    break;
+                case (Object.METER):result = (number * KM_TO_METER); break;
+                case (Object.CM)   :result = (number * KM_TO_CM);    break;
+                case (Object.MM)   :result = (number * KM_TO_MM);    break;
+                case (Object.MILE) :result = (number * KM_TO_MILE);  break;
+                case (Object.YARD) :result = (number * KM_TO_YARD);  break;
+                case (Object.FEET) :result = (number * KM_TO_FEET);  break;
+                case (Object.INCH) :result = (number * KM_TO_INCH);  break;
+            }
+        }
+
+        if (from.equals(Object.METER))
+        {
+            switch (to)
+            {
+                case (Object.KM)   :result = (number * METER_TO_KM);    break;
+                case (Object.METER):result = (number * METER_TO_METER); break;
+                case (Object.CM)   :result = (number * METER_TO_CM);    break;
+                case (Object.MM)   :result = (number * METER_TO_MM);    break;
+                case (Object.MILE) :result = (number * METER_TO_MILE);  break;
+                case (Object.YARD) :result = (number * METER_TO_YARD);  break;
+                case (Object.FEET) :result = (number * METER_TO_FEET);  break;
+                case (Object.INCH) :result = (number * METER_TO_INCH);  break;
+            }
+        }
+
+        if (from.equals(Object.CM))
+        {
+            switch (to)
+            {
+                case (Object.KM)   :result = (number * CM_TO_KM);    break;
+                case (Object.METER):result = (number * CM_TO_METER); break;
+                case (Object.CM)   :result = (number * CM_TO_CM);    break;
+                case (Object.MM)   :result = (number * CM_TO_MM);    break;
+                case (Object.MILE) :result = (number * CM_TO_MILE);  break;
+                case (Object.YARD) :result = (number * CM_TO_YARD);  break;
+                case (Object.FEET) :result = (number * CM_TO_FEET);  break;
+                case (Object.INCH) :result = (number * CM_TO_INCH);  break;
+            }
+        }
+
+        if (from.equals(Object.MM))
+        {
+            switch (to)
+            {
+                case (Object.KM)   :result = (number * MM_TO_KM);    break;
+                case (Object.METER):result = (number * MM_TO_METER); break;
+                case (Object.CM)   :result = (number * MM_TO_CM);    break;
+                case (Object.MM)   :result = (number * MM_TO_MM);    break;
+                case (Object.MILE) :result = (number * MM_TO_MILE);  break;
+                case (Object.YARD) :result = (number * MM_TO_YARD);  break;
+                case (Object.FEET) :result = (number * MM_TO_FEET);  break;
+                case (Object.INCH) :result = (number * MM_TO_INCH);  break;
+            }
+        }
+
+        if (from.equals(Object.MILE))
+        {
+            switch (to)
+            {
+                case (Object.KM)   :result = (number * MILE_TO_KM);    break;
+                case (Object.METER):result = (number * MILE_TO_METER); break;
+                case (Object.CM)   :result = (number * MILE_TO_CM);    break;
+                case (Object.MM)   :result = (number * MILE_TO_MM);    break;
+                case (Object.MILE) :result = (number * MILE_TO_MILE);  break;
+                case (Object.YARD) :result = (number * MILE_TO_YARD);  break;
+                case (Object.FEET) :result = (number * MILE_TO_FEET);  break;
+                case (Object.INCH) :result = (number * MILE_TO_INCH);  break;
+            }
+        }
+
+        if (from.equals(Object.YARD))
+        {
+            switch (to)
+            {
+                case (Object.KM)   :result = (number * YARD_TO_KM);    break;
+                case (Object.METER):result = (number * YARD_TO_METER); break;
+                case (Object.CM)   :result = (number * YARD_TO_CM);    break;
+                case (Object.MM)   :result = (number * YARD_TO_MM);    break;
+                case (Object.MILE) :result = (number * YARD_TO_MILE);  break;
+                case (Object.YARD) :result = (number * YARD_TO_YARD);  break;
+                case (Object.FEET) :result = (number * YARD_TO_FEET);  break;
+                case (Object.INCH) :result = (number * YARD_TO_INCH);  break;
+            }
+        }
+
+        if (from.equals(Object.FEET))
+        {
+            switch (to)
+            {
+                case (Object.KM)   :result = (number * FEET_TO_KM);    break;
+                case (Object.METER):result = (number * FEET_TO_METER); break;
+                case (Object.CM)   :result = (number * FEET_TO_CM);    break;
+                case (Object.MM)   :result = (number * FEET_TO_MM);    break;
+                case (Object.MILE) :result = (number * FEET_TO_MILE);  break;
+                case (Object.YARD) :result = (number * FEET_TO_YARD);  break;
+                case (Object.FEET) :result = (number * FEET_TO_FEET);  break;
+                case (Object.INCH) :result = (number * FEET_TO_INCH);  break;
+            }
+        }
+
+        if (from.equals(Object.INCH))
+        {
+            switch (to)
+            {
+                case (Object.KM)   :result = (number * INCH_TO_KM);    break;
+                case (Object.METER):result = (number * INCH_TO_METER); break;
+                case (Object.CM)   :result = (number * INCH_TO_CM);    break;
+                case (Object.MM)   :result = (number * INCH_TO_MM);    break;
+                case (Object.MILE) :result = (number * INCH_TO_MILE);  break;
+                case (Object.YARD) :result = (number * INCH_TO_YARD);  break;
+                case (Object.FEET) :result = (number * INCH_TO_FEET);  break;
+                case (Object.INCH) :result = (number * INCH_TO_INCH);  break;
+            }
+        }
         return 0;
     }
 
+    /*******************************************************************************************************************
+     *
+     * @param number
+     * @param from
+     * @param to
+     * @return
+     *******************************************************************************************************************/
     public static double speedConverter(double number, String from, String to)
     {
-        return 0;
+        double result = -1;
+        if (from.equals(Object.MPH))
+        {
+            switch (to)
+            {
+                case (Object.MPH) :result = (number * MPH_TO_MPH); break;
+                case (Object.KPH) :result = (number * MPH_TO_KPH); break;
+                case (Object.MPS) :result = (number * MPH_TO_MPS); break;
+            }
+        }
+
+        if (from.equals(Object.KPH))
+        {
+            switch (to)
+            {
+                case (Object.MPH) :result = (number * KPH_TO_MPH); break;
+                case (Object.KPH) :result = (number * KPH_TO_KPH); break;
+                case (Object.MPS) :result = (number * KPH_TO_MPS); break;
+            }
+        }
+
+        if (from.equals(Object.MPS))
+        {
+            switch (to)
+            {
+                case (Object.MPH) :result = (number * MPS_TO_MPH); break;
+                case (Object.KPH) :result = (number * MPS_TO_KPH); break;
+                case (Object.MPS) :result = (number * MPS_TO_MPS); break;
+            }
+        }
+        return -1;
     }
 
+    /*******************************************************************************************************************
+     *
+     * @param number
+     * @param from
+     * @param to
+     * @return
+     *******************************************************************************************************************/
     public static double tempConverter(double number, String from, String to)
     {
-        return 0;
+        double result = -1;
+        if (from.equals(Object.CEL))
+        {
+            switch (to)
+            {
+                case (Object.CEL) :result = (number * CEL_TO_CEL); break;
+                case (Object.FEH) :result = (number * CEL_TO_FEH); break;
+                case (Object.KAL) :result = (number * CEL_TO_KAL); break;
+            }
+        }
+
+        if (from.equals(Object.FEH))
+        {
+            switch (to)
+            {
+                case (Object.CEL) :result = (number * FEH_TO_CEL); break;
+                case (Object.FEH) :result = (number * FEH_TO_FEH); break;
+                case (Object.KAL) :result = (number * FEH_TO_KAL); break;
+            }
+        }
+
+        if (from.equals(Object.KAL))
+        {
+            switch (to)
+            {
+                case (Object.CEL) :result = (number * KAL_TO_CEL); break;
+                case (Object.FEH) :result = (number * KAL_TO_FEH); break;
+                case (Object.KAL) :result = (number * KAL_TO_KAL); break;
+            }
+        }
+        return result;
     }
 
+    /*******************************************************************************************************************
+     *
+     * @param number
+     * @param from
+     * @param to
+     * @return
+     *******************************************************************************************************************/
     public static double weightConverter(double number, String from, String to)
     {
-        return 0;
+        double result = -1;
+        if (from.equals(Object.KGRAM))
+        {
+            switch (to)
+            {
+                case (Object.KGRAM) :result = (number * KGRAM_TO_KGRAM); break;
+                case (Object.GRAM)  :result = (number * KGRAM_TO_GRAM);  break;
+                case (Object.MGRAM) :result = (number * KGRAM_TO_MGRAM); break;
+                case (Object.POUND) :result = (number * KGRAM_TO_POUND); break;
+            }
+        }
+
+        if (from.equals(Object.KGRAM))
+        {
+            switch (to)
+            {
+                case (Object.KGRAM) :result = (number * GRAM_TO_KGRAM); break;
+                case (Object.GRAM)  :result = (number * GRAM_TO_GRAM);  break;
+                case (Object.MGRAM) :result = (number * GRAM_TO_MGRAM); break;
+                case (Object.POUND) :result = (number * GRAM_TO_POUND); break;
+            }
+        }
+
+        if (from.equals(Object.KGRAM))
+        {
+            switch (to)
+            {
+                case (Object.KGRAM) :result = (number * MGRAM_TO_KGRAM); break;
+                case (Object.GRAM)  :result = (number * MGRAM_TO_GRAM);  break;
+                case (Object.MGRAM) :result = (number * MGRAM_TO_MGRAM); break;
+                case (Object.POUND) :result = (number * MGRAM_TO_POUND); break;
+            }
+        }
+
+        if (from.equals(Object.KGRAM))
+        {
+            switch (to)
+            {
+                case (Object.KGRAM) :result = (number * POUND_TO_KGRAM); break;
+                case (Object.GRAM)  :result = (number * POUND_TO_GRAM);  break;
+                case (Object.MGRAM) :result = (number * POUND_TO_MGRAM); break;
+                case (Object.POUND) :result = (number * POUND_TO_POUND); break;
+            }
+        }
+
+        return result;
     }
 
 }
