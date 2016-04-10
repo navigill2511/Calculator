@@ -3,6 +3,9 @@ import application.formatter.Object;
 import java.lang.Math;
 import java.util.ArrayList;
 
+/***********************************************************************************************************************
+ * TODO: FUNCTIONALITY
+ ***********************************************************************************************************************/
 public class ScientificModel
 {
     public static void main(String[] args)
