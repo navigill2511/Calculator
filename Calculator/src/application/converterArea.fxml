@@ -29,50 +29,57 @@
                     <String fx:value="Area"/>
                 </value>
             </ComboBox>
-
         </VBox>
-        <VBox spacing="10" alignment="CENTER">
-        <HBox spacing="5" alignment="CENTER">
-        <ComboBox fx:id="fromComboBox" styleClass="comboBox" prefWidth="100">
-        <items>
-            <FXCollections fx:factory="observableArrayList">
-                <String fx:value="Km²"  />
-                <String fx:value="m²"   />
-                <String fx:value="mile²"/>
-                <String fx:value="yard²"/>
-                <String fx:value="ft²"  />
-                <String fx:value="in²"  />
-                <String fx:value="acre²"/>
-            </FXCollections>
-        </items>
-            <value>
-                <String fx:value="Km²"/>
-            </value>
-        </ComboBox>
-        <TextField fx:id="fromTextField" styleClass="textField" prefWidth="100" onKeyReleased="#handleInputAction"/>
-        </HBox>
 
-        <HBox spacing="5" alignment="CENTER">
-        <ComboBox fx:id="toComboBox" styleClass="comboBox" prefWidth="100">
-        <items>
-            <FXCollections fx:factory="observableArrayList">
-                <String fx:value="Km²"  />
-                <String fx:value="m²"   />
-                <String fx:value="mile²"/>
-                <String fx:value="yard²"/>
-                <String fx:value="ft²"  />
-                <String fx:value="in²"  />
-                <String fx:value="acre²"/>
-            </FXCollections>
-        </items>
-            <value>
-                <String fx:value="Km²"/>
-            </value>
-        </ComboBox>
-        <TextField fx:id="toTextField" styleClass="textField" prefWidth="100"/>
-        </HBox>
+        <VBox spacing="30" alignment="CENTER">
+
+        <VBox spacing="5">
+            <Label text="FROM"/>
+            <HBox spacing="5" alignment="CENTER">
+            <ComboBox fx:id="fromComboBox" styleClass="comboBox" prefWidth="100">
+            <items>
+                <FXCollections fx:factory="observableArrayList">
+                    <String fx:value="Km²"  />
+                    <String fx:value="m²"   />
+                    <String fx:value="mile²"/>
+                    <String fx:value="yard²"/>
+                    <String fx:value="ft²"  />
+                    <String fx:value="in²"  />
+                    <String fx:value="acre²"/>
+                </FXCollections>
+            </items>
+                <value>
+                    <String fx:value="Km²"/>
+                </value>
+            </ComboBox>
+            <TextField fx:id="fromTextField" styleClass="textField" prefWidth="100" onKeyReleased="#handleInputAction"/>
+            </HBox>
+        </VBox>
+
+        <VBox spacing="5">
+            <Label text="TO"/>
+            <HBox spacing="5" alignment="CENTER">
+            <ComboBox fx:id="toComboBox" styleClass="comboBox" prefWidth="100">
+            <items>
+                <FXCollections fx:factory="observableArrayList">
+                    <String fx:value="Km²"  />
+                    <String fx:value="m²"   />
+                    <String fx:value="mile²"/>
+                    <String fx:value="yard²"/>
+                    <String fx:value="ft²"  />
+                    <String fx:value="in²"  />
+                    <String fx:value="acre²"/>
+                </FXCollections>
+            </items>
+                <value>
+                    <String fx:value="Km²"/>
+                </value>
+            </ComboBox>
+            <TextField disable="true" fx:id="toTextField" styleClass="textField" prefWidth="100"/>
+            </HBox>
+        </VBox>
+
         </VBox>
     </VBox>
-
 </VBox>
 </AnchorPane>

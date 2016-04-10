@@ -31,7 +31,11 @@
             </ComboBox>
 
         </VBox>
-        <VBox spacing="10" alignment="CENTER">
+
+        <VBox spacing="30" alignment="CENTER">
+
+        <VBox spacing="5">
+        <Label text="FROM"/>
         <HBox spacing="5" alignment="CENTER">
         <ComboBox fx:id="fromComboBox" styleClass="comboBox" prefWidth="100">
         <items>
@@ -47,7 +51,10 @@
         </ComboBox>
         <TextField fx:id="fromTextField" styleClass="textField" prefWidth="100" onKeyReleased="#handleInputAction"/>
         </HBox>
+        </VBox>
 
+        <VBox spacing="5">
+        <Label text="TO"/>
         <HBox spacing="5" alignment="CENTER">
         <ComboBox fx:id="toComboBox" styleClass="comboBox" prefWidth="100">
         <items>
@@ -61,8 +68,9 @@
                 <String fx:value="N"/>
             </value>
         </ComboBox>
-        <TextField fx:id="toTextField" styleClass="textField" prefWidth="100"/>
+        <TextField disable="true" fx:id="toTextField" styleClass="textField" prefWidth="100"/>
         </HBox>
+        </VBox>
         </VBox>
     </VBox>
 
