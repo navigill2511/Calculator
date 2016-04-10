@@ -7,6 +7,10 @@
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.control.Button?>
 
+<!-- multipleEventProbability.fxml builds the mutiple event probability interface which is part of the Statistics
+     functionality of the application.
+     Controller: MultipleEventProbabilityController
+     -->
 <AnchorPane fx:controller="application.MultipleEventProbabilityController" xmlns:fx="http://javafx.com/fxml/1">
 
     <VBox spacing="5" alignment="CENTER">

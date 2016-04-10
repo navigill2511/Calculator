@@ -5,6 +5,11 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.geometry.Insets?>
 
+<!-- converterArea.fxml builds the part of the converter interface. When "Area" is clicked in the first comboBox,
+     this file is used to set the area view.
+
+     Controller: application.ConverterController
+     -->
 <AnchorPane xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.ConverterController">
 <VBox>
     <fx:include source="navigation.fxml" alignment="CENTER_LEFT" />
