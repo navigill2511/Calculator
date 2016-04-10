@@ -3,9 +3,14 @@ import application.formatter.Formatter;
 import application.formatter.Object;
 import java.util.ArrayList;
 
-/**
+/***********************************************************************************************************************
  * Created by Navi on 01/04/2016.
- */
+ *
+ * Class StandardModel models the standard functionality of the application. It used a stack to evaluate a given
+ * expression. StandardModel has the following functions:
+ *  evaluate()          |   Given an infix expression, it is first converted to prefix so it can be evaluated
+ *                      |   using a stack.
+ ***********************************************************************************************************************/
 public class StandardModel {
 
     public static void main (String[] args)

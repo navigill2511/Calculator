@@ -15,6 +15,7 @@ public class MultipleEventProbabilityController
     String OccurrencesInA;
     String OccurrencesInB;
 
+    // Objects as in the fxml file.
     @FXML TextField probabilityA;
     @FXML TextField probabilityB;
     @FXML TextField probabilityA_and_B;
