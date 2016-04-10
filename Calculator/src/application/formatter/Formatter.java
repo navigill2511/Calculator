@@ -18,6 +18,7 @@ import java.util.stream.Collectors;
  *  delete()                    |   deletes the last character from a string.
  *  isOperator()                |   checks if a given character is an operator.
  *  isDigit()                   |   checks if a given character is a digit.
+ *  toArrayList()               |   converts a given string of numbers into an arrayList of numbers.
  *
  ***********************************************************************************************************************/
 public class Formatter
@@ -140,14 +141,24 @@ public class Formatter
         return (decimal == 0) ? number.substring(0, decimalIndex) : number;
     }
 
+    /**
+     * Determines if a given character is an integer. A decimal and a "-" is consodered an integer.
+     * @param character
+     * @return
+     */
     public static boolean isDigit(String character)
     {
         return (character.equals("1") || character.equals("2") || character.equals("3") ||
                 character.equals("4") || character.equals("5") || character.equals("6") ||
                 character.equals("7") || character.equals("8") || character.equals("9") ||
-                character.equals("0") || character.equals("."));
+                character.equals("0") || character.equals("-") || character.equals(".") );
     }
 
+    /**
+     * Determines if a given operator is an operator.
+     * @param character
+     * @return
+     */
     public static boolean isOperator(String character)
     {
         return (character.equals(Object.ADD)      || character.equals(Object.SUBTRACT) ||
@@ -155,6 +166,12 @@ public class Formatter
                 character.equals(Object.REMAINDER));
     }
 
+    /**
+     * Converts a data given in the form of, "1, 2, 3, 4" or "1 2 3 4" into an
+     * arrayList of numbers. numbers are kept as a string, they are not parsed.
+     * @param data
+     * @return
+     */
     public static ArrayList<String> toArrayList(String data)
     {
         // Obtain the infix expression tokens as an array of strings.
@@ -191,6 +208,11 @@ public class Formatter
         return tokens;
     }
 
+    /**
+     * Converts a given arrayList of numbers as a String into an arrayList of Double.
+     * @param tokens
+     * @return
+     */
     public static ArrayList<Double> toDouble(ArrayList<String> tokens)
     {
         return tokens.stream().map(Double::parseDouble).collect(Collectors.toCollection(ArrayList::new));

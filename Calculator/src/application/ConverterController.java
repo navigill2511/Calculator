@@ -3,8 +3,6 @@ package application;
 import application.formatter.Formatter;
 import application.formatter.Object;
 import application.model.ConverterModel;
-import application.model.ScientificModel;
-import application.model.StatisticsModel;
 import javafx.event.ActionEvent;
 import javafx.event.Event;
 import javafx.fxml.FXML;

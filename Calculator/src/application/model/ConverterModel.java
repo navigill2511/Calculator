@@ -5,7 +5,15 @@ import application.formatter.Object;
 /***********************************************************************************************************************
  * Created by Navi on 4/8/2016.
  *
- * Class ConverterModel
+ * Class ConverterModl models the unit conversion functionality of the application. The constants represent the factors
+ * that are needed to for conversions. ConverterModel has the followinf methods:
+ *  areaConverter()         |   handles convertions related to area.
+ *  energyConverter()       |   handles convertions related to energy.
+ *  forceConverter()        |   handles convertions related to force.
+ *  lengthConverter()       |   handles convertions related to length.
+ *  speedConverter()        |   handles convertions related to speed.
+ *  temperatureConverter()  |   handles convertions related to temperature.
+ *  weightConverter()       |   handles convertions related to weight.
  ***********************************************************************************************************************/
 public class ConverterModel
 {
@@ -230,7 +238,8 @@ public class ConverterModel
 
 
     /*******************************************************************************************************************
-     *
+     * Handles conversions related to area. Can perform conversions between kilometer sq, meter sq, mile sq, yard sq,
+     * feet sq, inch sq and acres.
      * @param number
      * @param from
      * @param to
@@ -341,7 +350,8 @@ public class ConverterModel
     }
 
     /*******************************************************************************************************************
-     *
+     * Handles energy conversions. Can convert between calories, kilocalories, joules, kilo joules, megajoules, whatts
+     * and kilo whatts.
      * @param number
      * @param from
      * @param to
@@ -452,7 +462,7 @@ public class ConverterModel
     }
 
     /*******************************************************************************************************************
-     *
+     * Hansles conversions related to force. Can convert between newtons, kilonewtons and meganewtons.
      * @param number
      * @param from
      * @param to
@@ -495,7 +505,8 @@ public class ConverterModel
     }
 
     /*******************************************************************************************************************
-     *
+     * Handles convertions related to length. Can convert between kilometers, meters, centimeters,  millimeters,
+     * miles, yards, feet and inches.
      * @param number
      * @param from
      * @param to
@@ -623,11 +634,12 @@ public class ConverterModel
                 case (Object.INCH) :result = (number * INCH_TO_INCH);  break;
             }
         }
-        return 0;
+        return result;
     }
 
     /*******************************************************************************************************************
-     *
+     * Handles convertions related to speed. Can convert between miles per hour, kilometers per hour and
+     * meters per second.
      * @param number
      * @param from
      * @param to
@@ -669,7 +681,7 @@ public class ConverterModel
     }
 
     /*******************************************************************************************************************
-     *
+     * Handles temperature related conversions. Can cinvert between celius, fahrenheit and kalvin.
      * @param number
      * @param from
      * @param to
@@ -711,7 +723,7 @@ public class ConverterModel
     }
 
     /*******************************************************************************************************************
-     *
+     * Handles convertions related to weight. Can convert between kilograms, grams, milligrams and pounds.
      * @param number
      * @param from
      * @param to
