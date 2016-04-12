@@ -3,6 +3,9 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
+<!-- standard.fxml builds the standard window of the application.
+     Controller: StandardController
+     -->
 <AnchorPane fx:controller="application.StandardController" xmlns:fx="http://javafx.com/fxml/1">
 
     <VBox spacing="5">

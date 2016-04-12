@@ -13,9 +13,9 @@ import javafx.scene.control.TextField;
  ***********************************************************************************************************************/
 public class MultipleEventProbabilityController
 {
-    private String possibleOutcomes;
-    private String OccurrencesInA;
-    private String OccurrencesInB;
+    private String possibleOutcomes;    // All possible outcomes.
+    private String OccurrencesInA;      // A
+    private String OccurrencesInB;      // B
 
     // Objects as in the fxml file.
     @FXML TextField probabilityA;

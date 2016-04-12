@@ -1,7 +1,5 @@
 package application.formatter;
 
-import application.model.StandardModel;
-
 import java.util.ArrayList;
 import java.util.stream.Collectors;
 
@@ -23,11 +21,6 @@ import java.util.stream.Collectors;
  ***********************************************************************************************************************/
 public class Formatter
 {
-    public static void main(String[] args)
-    {
-        System.out.println(round(Double.toString(StandardModel.evaluate("2.06+3"))));
-    }
-
     /**
      * Adds a decimal to the end of a number or an expression with operators.
      * If a decimal already exists in a number, it is not added.
@@ -151,7 +144,7 @@ public class Formatter
         return (character.equals("1") || character.equals("2") || character.equals("3") ||
                 character.equals("4") || character.equals("5") || character.equals("6") ||
                 character.equals("7") || character.equals("8") || character.equals("9") ||
-                character.equals("0") || character.equals("-") || character.equals(".") );
+                character.equals("0") || character.equals(".") );
     }
 
     /**

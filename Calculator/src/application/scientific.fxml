@@ -6,6 +6,9 @@
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.control.Button?>
 
+<!-- Scientific.fxml builds the scientific window of the application
+     Controller: ScientificController.fxml
+     -->
 <AnchorPane fx:controller="application.ScientificController" xmlns:fx="http://javafx.com/fxml/1">
 <VBox spacing="3" alignment="CENTER">
 

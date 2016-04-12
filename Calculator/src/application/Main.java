@@ -6,6 +6,13 @@ import javafx.scene.layout.Pane;
 import javafx.stage.Stage;
 import java.io.IOException;
 
+/*******************************************************************************************************************
+ * Class Main
+ *
+ * This class is executed when the application starts. The Main class sets the window of the application to the
+ * standard view using standard.fxml file. Therefore, when the user first starts the application, it is always
+ * started in the standard view.
+ *******************************************************************************************************************/
 public class Main extends Application
 {
     /**

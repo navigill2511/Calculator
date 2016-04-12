@@ -8,14 +8,25 @@ import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
 
+/***********************************************************************************************************************
+ * Class ScientificController   TODO: Most of the functionality still needs to be done.
+ *
+ * For each button in the scientific window of the application, this application is responsible for calculation.
+ * It uses ScientificModel class to perfor all calculations.
+ ***********************************************************************************************************************/
 public class ScientificController
 {
-    @FXML private TextField scientificTextField;
+    @FXML private TextField scientificTextField;    // scientific.fxml
 
-    private String output = Object.EMPTY;
+    private String output    = Object.EMPTY;
     private String operation = Object.EMPTY;
-    private String number = Object.EMPTY;
+    private String number    = Object.EMPTY;
 
+    /**
+     * If a number is pressed, this method catches that event.
+     * Current digit is added to the TextField.
+     * @param event
+     */
     @FXML public void numpad(ActionEvent event)
     {
         // Get the button on the number pad that caused this event.
@@ -26,6 +37,9 @@ public class ScientificController
         this.scientificTextField.setText(this.output += button.getText());
     }
 
+    /**
+     *
+     */
     @FXML public void calculate()
     {
         double result = ScientificModel.evaluate(this.number);
@@ -63,6 +77,10 @@ public class ScientificController
         this.output = this.number = this.operation = Object.CLEAR;
     }
 
+    /**
+     *
+     * @param event
+     */
     @FXML public void handleTrigOperation(ActionEvent event)
     {
         Button button = (Button) event.getSource();
@@ -72,6 +90,10 @@ public class ScientificController
         this.scientificTextField.setText(this.output);
     }
 
+    /**
+     *
+     * @param event
+     */
     @FXML public void handlePowerOperation(ActionEvent event)
     {
         if (this.output.equals(Object.EMPTY)) return;
@@ -92,6 +114,10 @@ public class ScientificController
         this.scientificTextField.setText(this.output += this.operation);
     }
 
+    /**
+     *
+     * @param event
+     */
     @FXML public void handleExponentOperation(ActionEvent event)
     {
         // Get the button responsible for this operation.
@@ -103,6 +129,10 @@ public class ScientificController
         this.scientificTextField.setText(this.output += this.operation);
     }
 
+    /**
+     *
+     * @param event
+     */
     @FXML public void handleLogOperation(ActionEvent event)
     {
         // Get the button responsible for this operation.
@@ -115,6 +145,10 @@ public class ScientificController
         this.scientificTextField.setText(this.output += this.operation);
     }
 
+    /**
+     *
+     * @param event
+     */
     @FXML public void handleRootOperation(ActionEvent event)
     {
         // Get the button responsible for this operation.
@@ -126,6 +160,10 @@ public class ScientificController
         this.scientificTextField.setText(this.output += this.operation);
     }
 
+    /**
+     *
+     * @param event
+     */
     @FXML public void format(ActionEvent event)
     {
 
@@ -161,6 +199,9 @@ public class ScientificController
         }
     }
 
+    /**
+     *
+     */
     @FXML public void clearScreen()
     {
         this.output = this.number = this.operation = Object.EMPTY;

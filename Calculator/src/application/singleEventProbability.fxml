@@ -7,6 +7,9 @@
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.control.Button?>
 
+<!-- singleEventProbability.fxml builds the single event window of the application.
+     Controller: singleEventProbabilityController
+     -->
 <AnchorPane fx:controller="application.SingleEventProbabilityController" xmlns:fx="http://javafx.com/fxml/1">
 
     <VBox spacing="5" alignment="CENTER">

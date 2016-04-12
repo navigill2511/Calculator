@@ -7,6 +7,9 @@
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.control.Button?>
 
+<!-- permutationCombination.fxml builds the Permutation/Combination window of the application.
+     Controller: PermutationCombinationController
+     -->
 <AnchorPane fx:controller="application.PermutationCombinationController" xmlns:fx="http://javafx.com/fxml/1">
 
     <VBox>

@@ -17,7 +17,7 @@ public class StandardModel {
     {
         //if (Object.DIGITS.contains("*")) System.out.println("yay");
 
-        System.out.println(evaluate("232.0*3"));
+        System.out.println(evaluate("23-3"));
     }
 
     /**
@@ -32,6 +32,9 @@ public class StandardModel {
     {
         // 1. Convert to postfix and put the tokens into an array.
         String postfix = convertToPostfix(infix);
+
+        System.out.println(postfix);
+
         String[] tokens = postfix.split(Object.WHITESPACE);
 
         // 2. Create a stack for the operands.
