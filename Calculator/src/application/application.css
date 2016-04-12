@@ -1,3 +1,7 @@
+/**
+ ** Styles the objects of the application
+ **/
+
 .root
 {
 	-fx-background-color: #e6e6e6, linear-gradient(#ffffff, #cccccc);
