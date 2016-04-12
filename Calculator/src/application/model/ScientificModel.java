@@ -4,7 +4,9 @@ import java.lang.Math;
 import java.util.ArrayList;
 
 /***********************************************************************************************************************
- * TODO: FUNCTIONALITY
+ * TODO: FUNCTIONALITY - Not completely functioning yet.
+ *
+ * ScientificModel class models the scientific part of the application. It is responsible for all the calculations
  ***********************************************************************************************************************/
 public class ScientificModel
 {

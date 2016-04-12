@@ -3,6 +3,8 @@ package application.model;
 import application.formatter.Object;
 
 /***********************************************************************************************************************
+ * TODO: Area conversion factors are not assigned correct values yet.
+ *
  * Created by Navi on 4/8/2016.
  *
  * Class ConverterModl models the unit conversion functionality of the application. The constants represent the factors
