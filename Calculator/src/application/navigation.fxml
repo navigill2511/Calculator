@@ -16,7 +16,7 @@
         <Menu text="View">
             <MenuItem text="Standard"   onAction="#handleStandardAction"/>
             <MenuItem text="Scientific" onAction="#handleScientificAction"/>
-                <Menu text="Scientific">
+                <Menu text="Statistics">
                     <MenuItem text="Permutation/Combination" onAction="#handlePermCombAction"/>
                     <Menu text="Probability">
                         <MenuItem text="Single Event" onAction="#handleSingleEventProbabilityAction"/>
