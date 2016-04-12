@@ -11,15 +11,8 @@ import java.util.ArrayList;
  *  evaluate()          |   Given an infix expression, it is first converted to prefix so it can be evaluated
  *                      |   using a stack.
  ***********************************************************************************************************************/
-public class StandardModel {
-
-    public static void main (String[] args)
-    {
-        //if (Object.DIGITS.contains("*")) System.out.println("yay");
-
-        System.out.println(evaluate("23-3"));
-    }
-
+public class StandardModel
+{
     /**
      * Evaluate a postfix expression.
      * @param infix A String that contains an expression in postfix notation.

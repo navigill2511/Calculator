@@ -4,20 +4,12 @@ import java.lang.Math;
 import java.util.ArrayList;
 
 /***********************************************************************************************************************
- * TODO: FUNCTIONALITY - Not completely functioning yet.
- *
- * ScientificModel class models the scientific part of the application. It is responsible for all the calculations
+ * ScientificModel class
+ * Models the scientific part of the application. It is responsible for all the calculations for each button.
  ***********************************************************************************************************************/
 public class ScientificModel
 {
-    public static void main(String[] args)
-    {
-        System.out.println(evaluate("7"));
-
-        System.out.println(sin(4));
-    }
-
-    public static boolean rad = true;
+    public static boolean rad = true;   // Radians or Degrees
 
     /**
      * Evaluate a postfix expression.
@@ -192,51 +184,61 @@ public class ScientificModel
         return Object.ADD_OR_SUBTRACT.indexOf(operator) >= 0 ? 0 : 1;
     }
 
+    // Calculate sin
     public static double sin(double x)
     {
         return (rad) ? Math.sin(x) : Math.sin(Math.toRadians(x));
     }
 
+    // Calculate cos
     public static double cos(double x)
     {
         return (rad) ? Math.cos(x) : Math.cos(Math.toRadians(x));
     }
 
+    // Calculate tan
     public static double tan(double x)
     {
         return (rad) ? Math.tan(x) : Math.tan(Math.toRadians(x));
     }
 
+    // Calculate sinh
     public static double sinh(double x)
     {
         return (rad) ? Math.sinh(x) : Math.sinh(Math.toRadians(x));
     }
 
+    // Calculate cosh
     public static double cosh(double x)
     {
         return (rad) ? Math.cosh(x) : Math.cosh(Math.toRadians(x));
     }
 
+    // Calculate tanh
     public static double tanh(double x)
     {
         return (rad) ? Math.tanh(x) : Math.tanh(Math.toRadians(x));
     }
 
+    // Calculate inverse sin
     public static double invSin(double x)
     {
         return (rad) ? Math.asin(x) : Math.asin(Math.toRadians(x));
     }
 
+    // Calculate inverse cos
     public static double invCos(double x)
     {
         return (rad) ? Math.acos(x) : Math.acos(Math.toRadians(x));
     }
 
+    // Calculate inverse tan
     public static double invTan(double x)
     {
         return (rad) ? Math.atan(x) : Math.atan(Math.toRadians(x));
     }
 
+    // Calculate inverse sinh
     public static double invSinh(double x)
     {
         if (!rad) x = Math.toRadians(x);
@@ -245,6 +247,7 @@ public class ScientificModel
         return (rad) ? x : Math.toDegrees(x);
     }
 
+    // Calculate inverse cosh
     public static double invCosh(double x)
     {
         if (!rad) x= Math.toRadians(x);
@@ -253,6 +256,7 @@ public class ScientificModel
         return (rad) ? x : Math.toDegrees(x);
     }
 
+    // Calculate inverse tanh
     public static double invTanh(double x)
     {
         if (!rad) x= Math.toRadians(x);
@@ -261,21 +265,25 @@ public class ScientificModel
         return (rad) ? x : Math.toDegrees(x);
     }
 
+    // Calculate square
     public static double square(double num)
     {
         return num * num;
     }
 
+    // Calculate cuve
     public static double cube(double num)
     {
         return num * num * num;
     }
 
+    // Calculate power of come number
     public static double toThePower(double base, int exponent)
     {
         return Math.pow(base, exponent);
     }
 
+    // Calculate 10^x
     public static double tenToThePower(double x)
     {
         if (x == 0) return 1;
@@ -288,41 +296,49 @@ public class ScientificModel
         return num;
     }
 
+    // Calculate e^x
     public static double eToThePower(double x)
     {
         return Math.exp(x);
     }
 
+    // Calculate ln(x)
     public static double ln(double x)
     {
         return Math.log(x);
     }
 
+    // Calculate log base 10
     public static double log(double x)
     {
         return Math.log10(x);
     }
 
+    // Calculate log base 2
     public static double log2(double x)
     {
         return (Math.log10(x) / Math.log10(2));
     }
 
+    // Calculate log of any base.
     public static double logx(double x, int base)
     {
         return (Math.log10(x) / Math.log10(base));
     }
 
+    // Calculate sqrt(x)
     public static double sqrt(double x)
     {
         return Math.sqrt(x);
     }
 
+    // Calculate cbrt(x)
     public static double cbrt(double x)
     {
         return Math.cbrt(x);
     }
 
+    // Calculate any root.
     public static double nroot(double x, int n)
     {
         return Math.pow(x, 1 / n);
